@@ -11,7 +11,7 @@ using TanoApp.Infrastructure.Interfaces;
 
 namespace TanoApp.Application.Implementation
 {
-    class ProductCategoryService : IProductCategoryService
+    public class ProductCategoryService : IProductCategoryService
     {
         IProductCategoryRepository _productCategoryRepository;
         IUnitOfWork _unitOfWork;

@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using TanoApp.Infrastructure.ShareKernel;
 
 namespace TanoApp.Data.Entities
 {
     [Table("ProductImages")]
-    public class ProductImage
+    public class ProductImage: DomainEntity<int>
     {
         [StringLength(255)]
         public int ProductId { set; get; }

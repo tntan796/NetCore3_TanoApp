@@ -6,12 +6,16 @@
 
   <ItemGroup>
     <Folder Include="AutoMapper\" />
-    <Folder Include="Implementation\" />
-    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TanoApp.Data\TanoApp.Data.csproj" />
+    <ProjectReference Include="..\TanoApp.Infrastructure\TanoApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\TanoApp.Utilities\TanoApp.Utilities.csproj" />
   </ItemGroup>
 
 </Project>

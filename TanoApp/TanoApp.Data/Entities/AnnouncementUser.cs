@@ -18,7 +18,6 @@ namespace TanoApp.Data.Entities
             UserId = userId;
             HasRead = hasRead;
         }
-        [StringLength(128)]
         [Required]
         public string AnnouncementId { set; get; }
         public Guid UserId { set; get; }

@@ -8,8 +8,6 @@ namespace TanoApp.Data.Entities
     public class ProductTag: DomainEntity<int>
     {
         public int ProductId { get; set; }
-
-        [StringLength(50)]
         public string TagId { set; get; }
 
         [ForeignKey("ProductId")]

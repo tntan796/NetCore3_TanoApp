@@ -14,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using TanoApp.Application.AutoMapper;
 using TanoApp.Application.Implementation;
 using TanoApp.Application.Interfaces;
@@ -61,8 +62,9 @@ namespace TanoApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddFile("Logs/Tano{Date}");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

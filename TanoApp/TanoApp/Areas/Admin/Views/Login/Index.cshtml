@@ -49,6 +49,7 @@
                 <div class="col-sm-12">
                     <div class="login-card card-block">
                         <form class="md-float-material">
+                            @Html.AntiForgeryToken();
                             <div class="text-center">
                                 <img src="~/admin-side/images/logo-blue.png">
                             </div>
@@ -67,7 +68,7 @@
                                 <div class="col-sm-6 ">
                                     <div class="rkmd-checkbox checkbox-rotate checkbox-ripple m-b-25">
                                         <label class="input-checkbox checkbox-primary">
-                                            <input type="checkbox" id="checkbox">
+                                            <input type="checkbox" id="rememberMe" name="rememberMe">
                                             <span class="checkbox"></span>
                                         </label>
                                         <div class="captions">Remember Me</div>
@@ -171,7 +172,16 @@
     <!-- Custom js -->
     <script type="text/javascript" src="~/admin-side/pages/elements.js"></script>
     <script type="text/javascript" src="~/admin-side/js/common-pages.min.js"></script>
-    <script type="text/javascript" src="~/admin-side/pages/notification.js"></script>
+
+    <!-- Notification -->
+    <script src="~/admin-side/plugins/notification/js/bootstrap-growl.min.js"></script>
+    <script src="~/app/shared/custom-notification.js"></script>
+
+    <script src="~/app/controllers/login/index.js"></script>
     <script src="~/app/shared/tano.js"></script>
+    <script>
+        var login = new loginControllerJS();
+        login.initialize();
+    </script>
 </body>
 </html>

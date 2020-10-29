@@ -29,10 +29,8 @@ namespace TanoApp.Application.Implementation
         public ProductCategoryViewModel Add(ProductCategoryViewModel productCategoryVm)
         {
             var product = _mapper.Map<ProductCategoryViewModel, ProductCategory>(productCategoryVm);
-            var product1 = _mapper.Map<ProductCategory, ProductCategoryViewModel>(product);
             _productCategoryRepository.Add(product);
             return productCategoryVm;
-
         }
 
         public void Delete(int id)
@@ -42,18 +40,27 @@ namespace TanoApp.Application.Implementation
 
         public List<ProductCategoryViewModel> GetAll()
         {
-            var mapper = _productCategoryRepository.FindAll().OrderBy(x => x.ParentId).Select(x => x).ToList();
-            return _mapper.Map<List<ProductCategoryViewModel>>(mapper);
+            List<ProductCategory> productCategories = _productCategoryRepository.FindAll().OrderBy(x => x.ParentId).Select(x => x).ToList();
+            List<ProductCategoryViewModel> productCategoryViewModels = _mapper.Map<List<ProductCategory>, List<ProductCategoryViewModel>>(productCategories);
+            return productCategoryViewModels;
         }
 
         public List<ProductCategoryViewModel> GetAll(string keyword)
         {
-            throw new NotImplementedException();
+            List<ProductCategory> productCategories = new List<ProductCategory>();
+            if (!string.IsNullOrEmpty(keyword))
+                productCategories = _productCategoryRepository.FindAll(x => x.Name.Contains(keyword) || x.Description.Contains(keyword))
+                    .OrderBy(x => x.ParentId).ToList();
+            else
+                productCategories = _productCategoryRepository.FindAll().OrderBy(x => x.ParentId).ToList();
+            return _mapper.Map<List<ProductCategory>, List<ProductCategoryViewModel>>(productCategories);
         }
 
         public List<ProductCategoryViewModel> GetAllByParentId(int parentId)
         {
-            throw new NotImplementedException();
+            List<ProductCategory> productCategories = _productCategoryRepository.FindAll(x => x.Status == Status.Active
+            && x.ParentId == parentId).ToList();
+            return _mapper.Map<List<ProductCategory>, List<ProductCategoryViewModel>>(productCategories);
         }
 
         public ProductCategoryViewModel GetById(int id)
@@ -63,22 +70,31 @@ namespace TanoApp.Application.Implementation
 
         public List<ProductCategoryViewModel> GetHomeCategories(int top)
         {
-            throw new NotImplementedException();
+            List<ProductCategory> productCategories = _productCategoryRepository
+            .FindAll(x => x.HomeFlag == true, c => c.Products)
+              .OrderBy(x => x.HomeOrder)
+              .Take(top).ToList();
+            //foreach (var category in categories)
+            //{
+                //category.Products = _productRepository
+                //    .FindAll(x => x.HotFlag == true && x.CategoryId == category.Id)
+                //    .OrderByDescending(x => x.DateCreated)
+                //    .Take(5)
+                //    .ProjectTo<ProductViewModel>().ToList();
+            //}
+            return _mapper.Map<List<ProductCategory>, List<ProductCategoryViewModel>>(productCategories);
         }
 
         public void ReOrder(int sourceId, int targetId)
         {
-            //var sourceCategory = _productCategoryRepository.FindById(sourceId);
-            //sourceCategory.ParentId = targetId;
-            //_productCategoryRepository.Update(sourceCategory);
+            var source = _productCategoryRepository.FindById(sourceId);
+            var target = _productCategoryRepository.FindById(targetId);
+            int tempOrder = source.SortOrder;
+            source.SortOrder = target.SortOrder;
+            target.SortOrder = tempOrder;
 
-            ////Get all sibling
-            //var sibling = _productCategoryRepository.FindAll(x => items.ContainsKey(x.Id));
-            //foreach (var child in sibling)
-            //{
-            //    child.SortOrder = items[child.Id];
-            //    _productCategoryRepository.Update(child);
-            //}
+            _productCategoryRepository.Update(source);
+            _productCategoryRepository.Update(target);
         }
 
         public void Save()

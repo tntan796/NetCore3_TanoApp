@@ -4,7 +4,7 @@ using TanoApp.Infrastructure.Interfaces;
 
 namespace TanoApp.Data.IRepositories
 {
-    interface IProductCategoryRepository: IRepository<ProductCategory, int>
+    public interface IProductCategoryRepository: IRepository<ProductCategory, int>
     {
         List<ProductCategory> GetByAlias(string alias);
     }

@@ -65,8 +65,16 @@ namespace TanoApp
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
             loggerFactory.AddFile("Logs/Tano{Date}");
+            app.UseStaticFiles();
+
             if (env.IsDevelopment())
             {
+                app.UseStaticFiles(new StaticFileOptions()
+                {
+                    FileProvider = new PhysicalFileProvider(
+                    Path.Combine(Directory.GetCurrentDirectory(), @"node_modules")),
+                    RequestPath = new PathString("/vendor")
+                });
                 app.UseDeveloperExceptionPage();
             }
             else
@@ -75,7 +83,6 @@ namespace TanoApp
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseStaticFiles();
             app.UseHttpsRedirection();
 
             app.UseRouting();

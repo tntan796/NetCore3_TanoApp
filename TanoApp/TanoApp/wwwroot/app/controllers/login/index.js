@@ -1,4 +1,32 @@
-﻿var loginControllerJS = function () {
+﻿$(function () {
+    $("#loginForm").validate({
+        rules: {
+            // The key name on the left side is the name attribute
+            // of an input field. Validation rules are defined
+            // on the right side
+            username: "required",
+            password: {
+                required: true,
+                minlength: 5
+            }
+        },
+        messages: {
+            username: "Please enter your firstname",
+            password: {
+                required: "Please provide a password",
+                minlength: "Your password must be at least 5 characters long"
+            }
+        },
+        // Make sure the form is submitted to the destination defined
+        // in the "action" attribute of the form when valid
+        submitHandler: function (form) {
+            form.submit();
+        }
+    });
+});
+
+
+var loginControllerJS = function () {
     this.initialize = function () {
         registerEvents();
     }

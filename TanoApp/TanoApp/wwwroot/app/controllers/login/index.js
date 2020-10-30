@@ -24,15 +24,14 @@
             dataType: 'json',
             url: '/admin/login/authen',
             success: function (res) {
-                if (res.sucess) {
-                    //notify('', '', '', 'success', "animated fadeInDown", "animated fadeOutDown")
+                if (res.success) {
+                    customNotify("Đăng nhập thành công", types.success);
                 } else {
-                    alert("Đăng nhập không đúng");
-                    //notify('', '', '', 'success', "animated fadeInDown", "animated fadeOutDown")
+                    customNotify("Đăng nhập không đúng", types.danger);
                 }
             },
-            error: function (result) {
-                alert(result);
+            error: function (err) {
+                console.log(err);
             }
         })
     }

@@ -4,19 +4,27 @@
 /*
     * Notifications
     */
-var notify = function(from, align, icon, type, animIn, animOut) {
+var types = {
+    success: 'success',
+    warning: 'warning',
+    info: 'info',
+    inverse: 'inverse',
+    danger: 'danger'
+};
+var customNotify = function (message = '', type = types.success) {
     $.growl({
-        icon: icon,
-        title: ' Bootstrap Growl ',
-        message: 'Turning standard Bootstrap alerts into awesome notifications',
+        icon: undefined,
+        title: undefined,
+        message: message,
         url: ''
-    }, {
+    },
+    {
         element: 'body',
         type: type,
         allow_dismiss: true,
         placement: {
-            from: from,
-            align: align
+            from: undefined,
+            align: undefined
         },
         offset: {
             x: 30,
@@ -29,8 +37,8 @@ var notify = function(from, align, icon, type, animIn, animOut) {
         url_target: '_blank',
         mouse_over: false,
         animate: {
-            enter: animIn,
-            exit: animOut
+            enter: undefined,
+            exit: undefined
         },
         icon_type: 'class',
         template: '<div data-growl="container" class="alert" role="alert">' +

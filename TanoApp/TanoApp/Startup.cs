@@ -69,12 +69,16 @@ namespace TanoApp
 
             if (env.IsDevelopment())
             {
-                app.UseStaticFiles(new StaticFileOptions()
+                try
                 {
-                    FileProvider = new PhysicalFileProvider(
-                    Path.Combine(Directory.GetCurrentDirectory(), @"node_modules")),
-                    RequestPath = new PathString("/vendor")
-                });
+                    app.UseStaticFiles(new StaticFileOptions()
+                    {
+                        FileProvider = new PhysicalFileProvider(
+                        Path.Combine(Directory.GetCurrentDirectory(), @"node_modules")),
+                        RequestPath = new PathString("/vendor")
+                    });
+                }
+                catch (Exception) {}
                 app.UseDeveloperExceptionPage();
             }
             else

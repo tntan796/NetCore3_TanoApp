@@ -11,6 +11,7 @@
     "gulp-uglify": "3.0.2",
     "jquery-validation": "1.19.2",
     "jquery-validation-unobtrusive": "^3.2.11",
-    "rimraf": "3.0.2"
+    "rimraf": "3.0.2",
+    "jquery": "3.5.1"
   }
 }

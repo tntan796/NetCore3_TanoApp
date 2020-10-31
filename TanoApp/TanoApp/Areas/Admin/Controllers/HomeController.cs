@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using TanoApp.Extensions;
 
 namespace TanoApp.Areas.Admin.Controllers
 {
@@ -11,11 +12,7 @@ namespace TanoApp.Areas.Admin.Controllers
     {
         public IActionResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Test()
-        {
+            var userName = User.GetSpecificClaim("UserName");
             return View();
         }
     }

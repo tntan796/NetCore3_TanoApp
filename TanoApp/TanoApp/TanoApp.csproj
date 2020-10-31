@@ -5,12 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Areas\Admin\Models\**" />
     <Compile Remove="wwwroot\bower_components\**" />
     <Compile Remove="wwwroot\plugins\**" />
+    <Content Remove="Areas\Admin\Models\**" />
     <Content Remove="wwwroot\bower_components\**" />
     <Content Remove="wwwroot\plugins\**" />
+    <EmbeddedResource Remove="Areas\Admin\Models\**" />
     <EmbeddedResource Remove="wwwroot\bower_components\**" />
     <EmbeddedResource Remove="wwwroot\plugins\**" />
+    <None Remove="Areas\Admin\Models\**" />
     <None Remove="wwwroot\bower_components\**" />
     <None Remove="wwwroot\plugins\**" />
   </ItemGroup>
@@ -262,8 +266,19 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.9" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.9" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+    <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -275,7 +290,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="wwwroot\admin-side\bower_components\ckeditor\samples\toolbarconfigurator\lib\" />
     <Folder Include="wwwroot\admin-side\plugins\ckeditor\samples\toolbarconfigurator\lib\" />
   </ItemGroup>

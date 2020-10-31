@@ -13,9 +13,9 @@ namespace TanoApp.Data.EF.EF
 {
     public class DbInitializer
     {
-        private AppDbContext _context;
-        private UserManager<AppUser> _userManager;
-        private RoleManager<AppRole> _roleManager;
+        private readonly AppDbContext _context;
+        private readonly UserManager<AppUser> _userManager;
+        private readonly RoleManager<AppRole> _roleManager;
         public DbInitializer(AppDbContext context, UserManager<AppUser> userManager, RoleManager<AppRole> roleManager)
         {
             _context = context;
@@ -50,16 +50,16 @@ namespace TanoApp.Data.EF.EF
             {
                 await _userManager.CreateAsync(new AppUser()
                 {
-                    UserName = "admin",
+                    UserName = "tano",
                     FullName = "Administrator",
-                    Email = "admin@gmail.com",
+                    Email = "tano@gmail.com",
                     Balance = 0,
                     DateCreated = DateTime.Now,
                     DateModified = DateTime.Now,
                     Status = Status.Active
-                }, "Spring@2018");
+                }, "Tano2019@");
 
-                var user = await _userManager.FindByNameAsync("admin");
+                var user = await _userManager.FindByNameAsync("tano");
                 if (user != null)
                 {
                     await _userManager.AddToRoleAsync(user, "Admin");
@@ -70,14 +70,14 @@ namespace TanoApp.Data.EF.EF
                 _context.Contacts.Add(new Contact()
                 {
                     Id = CommonConstants.DefaultContactId,
-                    Address = "No 36 Lane 133 Nguyen Phong Sac Cau Giay",
-                    Email = "pandashop@gmail.com",
-                    Name = "Panda Shop",
-                    Phone = "0942 324 543",
+                    Address = "To Hieu, Thuong Tin, Ha Noi",
+                    Email = "tano@gmail.com",
+                    Name = "Tano Shop",
+                    Phone = "0964909796",
                     Status = Status.Active,
-                    Website = "http://pandashop.com",
-                    Lat = 21.0435009,
-                    Long = 105.7894758
+                    Website = "http://tanoshop.com",
+                    Lat = 14.0435009,
+                    Long = 07.7894758
                 });
             }
             if (_context.Functions.Count() == 0)

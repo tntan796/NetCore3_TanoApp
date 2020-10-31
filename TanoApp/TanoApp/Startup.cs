@@ -14,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using TanoApp.Application.AutoMapper;
 using TanoApp.Application.Implementation;
 using TanoApp.Application.Interfaces;
@@ -21,6 +22,7 @@ using TanoApp.Data.EF.EF;
 using TanoApp.Data.EF.Repositories;
 using TanoApp.Data.Entities;
 using TanoApp.Data.IRepositories;
+using TanoApp.Helpers;
 using TanoApp.Infrastructure.Interfaces;
 
 namespace TanoApp
@@ -50,6 +52,8 @@ namespace TanoApp
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
 
+            services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipleFactory>();
+
             services.AddTransient<DbInitializer>();
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
@@ -61,10 +65,23 @@ namespace TanoApp
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddFile("Logs/Tano{Date}");
+            app.UseStaticFiles();
+
             if (env.IsDevelopment())
             {
+                try
+                {
+                    app.UseStaticFiles(new StaticFileOptions()
+                    {
+                        FileProvider = new PhysicalFileProvider(
+                        Path.Combine(Directory.GetCurrentDirectory(), @"node_modules")),
+                        RequestPath = new PathString("/vendor")
+                    });
+                }
+                catch (Exception) {}
                 app.UseDeveloperExceptionPage();
             }
             else
@@ -73,7 +90,6 @@ namespace TanoApp
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseStaticFiles();
             app.UseHttpsRedirection();
 
             app.UseRouting();

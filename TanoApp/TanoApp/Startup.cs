@@ -22,6 +22,7 @@ using TanoApp.Data.EF.EF;
 using TanoApp.Data.EF.Repositories;
 using TanoApp.Data.Entities;
 using TanoApp.Data.IRepositories;
+using TanoApp.Helpers;
 using TanoApp.Infrastructure.Interfaces;
 
 namespace TanoApp
@@ -50,6 +51,8 @@ namespace TanoApp
             // Add application services.
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
+
+            services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipleFactory>();
 
             services.AddTransient<DbInitializer>();
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();

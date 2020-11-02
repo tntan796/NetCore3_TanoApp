@@ -12,7 +12,7 @@ namespace TanoApp.Areas.Admin.Controllers
     {
         public IActionResult Index()
         {
-            var userName = User.GetSpecificClaim("UserName");
+            var email = User.GetSpecificClaim("Email");
             return View();
         }
     }

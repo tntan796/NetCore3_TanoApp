@@ -52,14 +52,22 @@ namespace TanoApp
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
 
-            services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipleFactory>();
-
             services.AddTransient<DbInitializer>();
+
+            services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
+
+            // Repositories
+            services.AddTransient<IFunctionRepository, FunctionRepository>();
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+
+            // Services
+            services.AddTransient<IFunctionService, FunctionService>();
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
+
+            // Unit of work
             services.AddTransient<IUnitOfWork, EFUnitOfWork>();
 
-
+            // Auto mapper
             IMapper mapper = AutoMapperConfig.RegisterMappings().CreateMapper();
             services.AddSingleton(mapper);
         }
@@ -93,7 +101,8 @@ namespace TanoApp
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            
+
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

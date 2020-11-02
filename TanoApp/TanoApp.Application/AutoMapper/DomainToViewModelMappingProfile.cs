@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using TanoApp.Application.ViewModels.Products;
+using TanoApp.Application.ViewModels.System;
 using TanoApp.Data.Entities;
 
 namespace TanoApp.Application.AutoMapper
@@ -9,6 +10,8 @@ namespace TanoApp.Application.AutoMapper
         public DomainToViewModelMappingProfile()
         {
             CreateMap<ProductCategory, ProductCategoryViewModel>();
+
+            CreateMap<Function, FunctionViewModel>();
         }
     }
 }

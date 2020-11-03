@@ -34,6 +34,8 @@
     <link rel="stylesheet" type="text/css" href="~/admin-side/css/main.css">
     <!-- Responsive.css-->
     <link rel="stylesheet" type="text/css" href="~/admin-side/css/responsive.css">
+    <!-- Font Awesome -->
+    <link href="~/admin-side/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!--color css-->
     <link rel="stylesheet" type="text/css" href="~/admin-side/css/color/color-1.min.css" id="color" />
 </head>
@@ -195,7 +197,7 @@
             </nav>
         </header>
         <!-- Side-Nav-->
-        @await Component.InvokeAsync("SideBar"); 
+        @await Component.InvokeAsync("SideBar");
         <!-- Sidebar chat start -->
         <div id="sidebar" class="p-fixed header-users showChat">
             <div class="had-container">
@@ -507,6 +509,8 @@
         <!-- Counter js  -->
         <script type="text/javascript" src="~/admin-side/bower_components/waypoints/js/jquery.waypoints.min.js"></script>
         <script src="~/admin-side/plugins/countdown/js/jquery.counterup.js"></script>
+        <!-- custom font-awesome js -->
+        <script src="~/admin-side/pages/font-awesome.js"></script>
         <!-- custom js -->
         <script type="text/javascript" src="~/admin-side/js/main.min.js"></script>
         <script src="~/admin-side/pages/notification.js"></script>

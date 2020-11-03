@@ -28,7 +28,7 @@ namespace TanoApp.Areas.Admin.Components
             {
                 functionViewModels = new List<FunctionViewModel>();
             }
-            return View();
+            return View(functionViewModels);
         }
     }
 }

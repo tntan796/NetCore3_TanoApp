@@ -1,0 +1,1090 @@
+2020-11-03T22:05:09.3795639+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-03T22:05:09.4015966+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-03T22:05:09.4040521+07:00  [INF] Content root path: "D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp" (b5d60022)
+2020-11-03T22:05:09.4426299+07:00 80000074-0004-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/   (ca22a1cb)
+2020-11-03T22:05:09.4955160+07:00 80000074-0004-fe00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:05:09.5341743+07:00 80000074-0004-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:05:09.5591402+07:00 80000074-0004-fe00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:05:09.7598495+07:00 80000074-0004-fe00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 200.883ms. (f66409e9)
+2020-11-03T22:05:09.7631487+07:00 80000074-0004-fe00-b63f-84710c7967bb [INF] Executed action "TanoApp.Controllers.HomeController.Index (TanoApp)" in 225.9433ms (afa2e885)
+2020-11-03T22:05:09.7676526+07:00 80000074-0004-fe00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:05:09.7850549+07:00 80000074-0004-fe00-b63f-84710c7967bb [INF] Request finished in 345.6392ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:05:09.7922318+07:00 8000005e-0006-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/lib/bootstrap/dist/js/bootstrap.bundle.min.js   (ca22a1cb)
+2020-11-03T22:05:09.7971916+07:00 8000003b-0004-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/css/site.css   (ca22a1cb)
+2020-11-03T22:05:09.8031676+07:00 80000080-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/lib/bootstrap/dist/css/bootstrap.min.css   (ca22a1cb)
+2020-11-03T22:05:09.8052666+07:00 80000061-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/lib/jquery/dist/jquery.min.js   (ca22a1cb)
+2020-11-03T22:05:09.8389639+07:00 80000018-0006-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/js/site.js?v=4q1jwFhaPaZgr8WAUSrux6hAuh0XDg9kPS3xIVq36I0   (ca22a1cb)
+2020-11-03T22:05:09.8917725+07:00 80000080-0002-fd00-b63f-84710c7967bb [INF] The file "/lib/bootstrap/dist/css/bootstrap.min.css" was not modified (f1f8d725)
+2020-11-03T22:05:09.8941801+07:00 80000061-0004-fa00-b63f-84710c7967bb [INF] The file "/lib/jquery/dist/jquery.min.js" was not modified (f1f8d725)
+2020-11-03T22:05:09.8971071+07:00 8000003b-0004-ff00-b63f-84710c7967bb [INF] The file "/css/site.css" was not modified (f1f8d725)
+2020-11-03T22:05:09.8994948+07:00 8000005e-0006-fb00-b63f-84710c7967bb [INF] The file "/lib/bootstrap/dist/js/bootstrap.bundle.min.js" was not modified (f1f8d725)
+2020-11-03T22:05:09.9025266+07:00 80000018-0006-fd00-b63f-84710c7967bb [INF] The file "/js/site.js" was not modified (f1f8d725)
+2020-11-03T22:05:09.9083003+07:00 80000061-0004-fa00-b63f-84710c7967bb [INF] Request finished in 113.2987ms 304 application/javascript (791a596a)
+2020-11-03T22:05:09.9113771+07:00 80000080-0002-fd00-b63f-84710c7967bb [INF] Request finished in 117.9629ms 304 text/css (791a596a)
+2020-11-03T22:05:09.9183916+07:00 8000003b-0004-ff00-b63f-84710c7967bb [INF] Request finished in 117.7874ms 304 text/css (791a596a)
+2020-11-03T22:05:09.9199340+07:00 8000005e-0006-fb00-b63f-84710c7967bb [INF] Request finished in 117.8071ms 304 application/javascript (791a596a)
+2020-11-03T22:05:09.9233458+07:00 80000018-0006-fd00-b63f-84710c7967bb [INF] Request finished in 115.0428ms 304 application/javascript (791a596a)
+2020-11-03T22:15:18.7030626+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-03T22:15:18.7360462+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-03T22:15:18.7407593+07:00  [INF] Content root path: "D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp" (b5d60022)
+2020-11-03T22:15:18.7999906+07:00 8000004f-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/   (ca22a1cb)
+2020-11-03T22:15:18.9322237+07:00 8000004f-0008-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:15:19.0107372+07:00 8000004f-0008-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:15:19.1305586+07:00 8000004f-0008-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:15:19.4260956+07:00 8000004f-0008-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 300.4011ms. (f66409e9)
+2020-11-03T22:15:19.4299940+07:00 8000004f-0008-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Controllers.HomeController.Index (TanoApp)" in 415.0603ms (afa2e885)
+2020-11-03T22:15:19.4340937+07:00 8000004f-0008-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:15:19.4421828+07:00 8000004f-0008-fd00-b63f-84710c7967bb [INF] Request finished in 660.1399ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:15:38.4578663+07:00 80000031-0002-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/login   (ca22a1cb)
+2020-11-03T22:15:38.4735154+07:00 80000031-0002-fe00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:15:38.4855785+07:00 80000031-0002-fe00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Login\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:15:38.5084678+07:00 80000031-0002-fe00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:15:38.5956313+07:00 80000031-0002-fe00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 90.9322ms. (f66409e9)
+2020-11-03T22:15:38.6005000+07:00 80000031-0002-fe00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)" in 109.8889ms (afa2e885)
+2020-11-03T22:15:38.6039573+07:00 80000031-0002-fe00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:15:38.6087819+07:00 80000031-0002-fe00-b63f-84710c7967bb [INF] Request finished in 151.8394ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:15:38.6377990+07:00 80000036-0009-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/icon/icofont/css/icofont.css   (ca22a1cb)
+2020-11-03T22:15:38.6403033+07:00 8000000f-0007-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/css/font-awesome.min.css   (ca22a1cb)
+2020-11-03T22:15:38.6485376+07:00 8000002f-0003-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/bootstrap/css/bootstrap.min.css   (ca22a1cb)
+2020-11-03T22:15:38.6599920+07:00 80000026-0000-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/css/color/color-1.min.css   (ca22a1cb)
+2020-11-03T22:15:38.6762051+07:00 8000004c-0000-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/waves/css/waves.min.css   (ca22a1cb)
+2020-11-03T22:15:38.6834333+07:00 80000023-0000-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/css/main.css   (ca22a1cb)
+2020-11-03T22:15:38.6867908+07:00 80000036-0000-f800-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/css/responsive.css   (ca22a1cb)
+2020-11-03T22:15:38.6946848+07:00 80000046-0000-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/app/controllers/login/index.css   (ca22a1cb)
+2020-11-03T22:15:38.6983781+07:00 80000060-0006-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/jquery-ui/js/jquery-ui.min.js   (ca22a1cb)
+2020-11-03T22:15:38.7948532+07:00 80000051-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/app/shared/custom-notification.js   (ca22a1cb)
+2020-11-03T22:15:38.7994509+07:00 80000033-0002-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/pages/elements.js   (ca22a1cb)
+2020-11-03T22:15:38.8126370+07:00 8000002b-0009-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/waves/js/waves.min.js   (ca22a1cb)
+2020-11-03T22:15:38.8176283+07:00 80000014-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/app/shared/tano.js   (ca22a1cb)
+2020-11-03T22:15:38.8406704+07:00 80000023-0000-fb00-b63f-84710c7967bb [INF] The file "/admin-side/css/main.css" was not modified (f1f8d725)
+2020-11-03T22:15:38.8463219+07:00 8000002f-0003-fc00-b63f-84710c7967bb [INF] The file "/admin-side/bower_components/bootstrap/css/bootstrap.min.css" was not modified (f1f8d725)
+2020-11-03T22:15:38.8516481+07:00 80000026-0000-f900-b63f-84710c7967bb [INF] The file "/admin-side/css/color/color-1.min.css" was not modified (f1f8d725)
+2020-11-03T22:15:38.8585642+07:00 8000004c-0000-fc00-b63f-84710c7967bb [INF] The file "/admin-side/plugins/waves/css/waves.min.css" was not modified (f1f8d725)
+2020-11-03T22:15:38.8616532+07:00 8000000f-0007-fa00-b63f-84710c7967bb [INF] The file "/admin-side/css/font-awesome.min.css" was not modified (f1f8d725)
+2020-11-03T22:15:38.8670701+07:00 80000036-0009-fd00-b63f-84710c7967bb [INF] The file "/admin-side/icon/icofont/css/icofont.css" was not modified (f1f8d725)
+2020-11-03T22:15:38.8738255+07:00 80000036-0000-f800-b63f-84710c7967bb [INF] The file "/admin-side/css/responsive.css" was not modified (f1f8d725)
+2020-11-03T22:15:38.8766301+07:00 80000046-0000-fe00-b63f-84710c7967bb [INF] The file "/app/controllers/login/index.css" was not modified (f1f8d725)
+2020-11-03T22:15:38.8819813+07:00 80000060-0006-fb00-b63f-84710c7967bb [INF] The file "/admin-side/bower_components/jquery-ui/js/jquery-ui.min.js" was not modified (f1f8d725)
+2020-11-03T22:15:38.8889189+07:00 80000051-0008-fd00-b63f-84710c7967bb [INF] The file "/app/shared/custom-notification.js" was not modified (f1f8d725)
+2020-11-03T22:15:38.9185252+07:00 8000000f-0007-fa00-b63f-84710c7967bb [INF] Request finished in 256.1918ms 304 text/css (791a596a)
+2020-11-03T22:15:38.9318783+07:00 8000002f-0003-fc00-b63f-84710c7967bb [INF] Request finished in 255.6886ms 304 text/css (791a596a)
+2020-11-03T22:15:38.9411826+07:00 80000026-0000-f900-b63f-84710c7967bb [INF] Request finished in 248.202ms 304 text/css (791a596a)
+2020-11-03T22:15:38.9444899+07:00 8000004c-0000-fc00-b63f-84710c7967bb [INF] Request finished in 242.2485ms 304 text/css (791a596a)
+2020-11-03T22:15:38.9524713+07:00 80000020-0003-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/popper.js/js/popper.min.js   (ca22a1cb)
+2020-11-03T22:15:38.9577967+07:00 8000000c-0002-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/js/common-pages.min.js   (ca22a1cb)
+2020-11-03T22:15:38.9643548+07:00 80000006-0000-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/images/logo-tano-app.png   (ca22a1cb)
+2020-11-03T22:15:38.9704181+07:00 8000000c-0002-fc00-b63f-84710c7967bb [INF] The file "/admin-side/js/common-pages.min.js" was not modified (f1f8d725)
+2020-11-03T22:15:38.9764254+07:00 80000020-0003-fe00-b63f-84710c7967bb [INF] The file "/admin-side/bower_components/popper.js/js/popper.min.js" was not modified (f1f8d725)
+2020-11-03T22:15:38.9795072+07:00 80000006-0000-fa00-b63f-84710c7967bb [INF] The file "/admin-side/images/logo-tano-app.png" was not modified (f1f8d725)
+2020-11-03T22:15:38.9891878+07:00 8000000c-0002-fc00-b63f-84710c7967bb [INF] Request finished in 23.7276ms 304 application/javascript (791a596a)
+2020-11-03T22:15:38.9991256+07:00 80000020-0003-fe00-b63f-84710c7967bb [INF] Request finished in 43.9238ms 304 application/javascript (791a596a)
+2020-11-03T22:15:38.9994542+07:00 80000006-0000-fa00-b63f-84710c7967bb [INF] Request finished in 35.5819ms 304 image/png (791a596a)
+2020-11-03T22:15:39.0056915+07:00 80000041-0002-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/notification/js/bootstrap-growl.min.js   (ca22a1cb)
+2020-11-03T22:15:39.0132716+07:00 8000000e-0003-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/bootstrap/js/bootstrap.min.js   (ca22a1cb)
+2020-11-03T22:15:39.0170004+07:00 80000028-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/app/controllers/login/index.js   (ca22a1cb)
+2020-11-03T22:15:39.0248277+07:00 80000041-0002-ff00-b63f-84710c7967bb [INF] The file "/admin-side/plugins/notification/js/bootstrap-growl.min.js" was not modified (f1f8d725)
+2020-11-03T22:15:39.0286106+07:00 80000028-0006-fa00-b63f-84710c7967bb [INF] The file "/app/controllers/login/index.js" was not modified (f1f8d725)
+2020-11-03T22:15:39.0340395+07:00 8000000e-0003-fb00-b63f-84710c7967bb [INF] The file "/admin-side/bower_components/bootstrap/js/bootstrap.min.js" was not modified (f1f8d725)
+2020-11-03T22:15:39.0404098+07:00 80000041-0002-ff00-b63f-84710c7967bb [INF] Request finished in 29.8014ms 304 application/javascript (791a596a)
+2020-11-03T22:15:39.0474842+07:00 80000028-0006-fa00-b63f-84710c7967bb [INF] Request finished in 28.678ms 304 application/javascript (791a596a)
+2020-11-03T22:15:39.0664297+07:00 80000036-0009-fd00-b63f-84710c7967bb [INF] Request finished in 256.0032ms 304 text/css (791a596a)
+2020-11-03T22:15:39.0664297+07:00 8000001a-0006-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/jquery/js/jquery.min.js   (ca22a1cb)
+2020-11-03T22:15:39.0727425+07:00 80000023-0000-fb00-b63f-84710c7967bb [INF] Request finished in 249.1014ms 304 text/css (791a596a)
+2020-11-03T22:15:39.0697652+07:00 8000000e-0003-fb00-b63f-84710c7967bb [INF] Request finished in 38.4732ms 304 application/javascript (791a596a)
+2020-11-03T22:15:39.0892114+07:00 80000036-0000-f800-b63f-84710c7967bb [INF] Request finished in 225.0298ms 304 text/css (791a596a)
+2020-11-03T22:15:39.1113826+07:00 8000003d-0004-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/css/generic-class.css   (ca22a1cb)
+2020-11-03T22:15:39.1144890+07:00 80000046-0000-fe00-b63f-84710c7967bb [INF] Request finished in 224.9013ms 304 text/css (791a596a)
+2020-11-03T22:15:39.1143117+07:00 80000060-0006-fb00-b63f-84710c7967bb [INF] Request finished in 201.7968ms 304 application/javascript (791a596a)
+2020-11-03T22:15:39.1149211+07:00 80000051-0008-fd00-b63f-84710c7967bb [INF] Request finished in 207.9835ms 304 application/javascript (791a596a)
+2020-11-03T22:15:39.1145531+07:00 80000033-0002-fe00-b63f-84710c7967bb [INF] The file "/admin-side/pages/elements.js" was not modified (f1f8d725)
+2020-11-03T22:15:39.1194843+07:00 8000002b-0009-fc00-b63f-84710c7967bb [INF] The file "/admin-side/plugins/waves/js/waves.min.js" was not modified (f1f8d725)
+2020-11-03T22:15:39.1240864+07:00 80000014-0000-fd00-b63f-84710c7967bb [INF] The file "/app/shared/tano.js" was not modified (f1f8d725)
+2020-11-03T22:15:39.1409391+07:00 80000049-000a-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/notification/css/notification.css   (ca22a1cb)
+2020-11-03T22:15:39.1471533+07:00 8000001a-0006-fd00-b63f-84710c7967bb [INF] The file "/admin-side/bower_components/jquery/js/jquery.min.js" was not modified (f1f8d725)
+2020-11-03T22:15:39.1512488+07:00 80000063-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/css/svg-weather.css   (ca22a1cb)
+2020-11-03T22:15:39.1532953+07:00 80000011-0007-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/search/css/component.css   (ca22a1cb)
+2020-11-03T22:15:39.1565646+07:00 80000053-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/notification/css/animate.min.css   (ca22a1cb)
+2020-11-03T22:15:39.1623198+07:00 80000035-0007-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/css/menu.css   (ca22a1cb)
+2020-11-03T22:15:39.1786298+07:00 8000002b-0009-fc00-b63f-84710c7967bb [INF] Request finished in 456.7191ms 304 application/javascript (791a596a)
+2020-11-03T22:15:39.1789996+07:00 80000014-0000-fd00-b63f-84710c7967bb [INF] Request finished in 470.0335ms 304 application/javascript (791a596a)
+2020-11-03T22:15:39.1789996+07:00 80000033-0002-fe00-b63f-84710c7967bb [INF] Request finished in 461.1499ms 304 application/javascript (791a596a)
+2020-11-03T22:15:39.1822918+07:00 8000003d-0004-ff00-b63f-84710c7967bb [INF] The file "/admin-side/css/generic-class.css" was not modified (f1f8d725)
+2020-11-03T22:15:39.1938314+07:00 8000001a-0006-fd00-b63f-84710c7967bb [INF] Request finished in 248.0945ms 304 application/javascript (791a596a)
+2020-11-03T22:15:39.1996154+07:00 80000063-0004-fa00-b63f-84710c7967bb [INF] The file "/admin-side/css/svg-weather.css" was not modified (f1f8d725)
+2020-11-03T22:15:39.2062641+07:00 80000049-000a-fc00-b63f-84710c7967bb [INF] The file "/admin-side/plugins/notification/css/notification.css" was not modified (f1f8d725)
+2020-11-03T22:15:39.2186511+07:00 8000003d-0004-ff00-b63f-84710c7967bb [INF] Request finished in 133.4547ms 304 text/css (791a596a)
+2020-11-03T22:15:39.2229102+07:00 80000053-0008-fd00-b63f-84710c7967bb [INF] The file "/admin-side/plugins/notification/css/animate.min.css" was not modified (f1f8d725)
+2020-11-03T22:15:39.2231354+07:00 80000011-0007-fa00-b63f-84710c7967bb [INF] The file "/admin-side/plugins/search/css/component.css" was not modified (f1f8d725)
+2020-11-03T22:15:39.2288977+07:00 80000035-0007-fe00-b63f-84710c7967bb [INF] The file "/admin-side/css/menu.css" was not modified (f1f8d725)
+2020-11-03T22:15:39.2424694+07:00 80000063-0004-fa00-b63f-84710c7967bb [INF] Request finished in 107.5587ms 304 text/css (791a596a)
+2020-11-03T22:15:39.2427158+07:00 80000049-000a-fc00-b63f-84710c7967bb [INF] Request finished in 128.574ms 304 text/css (791a596a)
+2020-11-03T22:15:39.2484272+07:00 80000053-0008-fd00-b63f-84710c7967bb [INF] Request finished in 109.7129ms 304 text/css (791a596a)
+2020-11-03T22:15:39.2538720+07:00 80000011-0007-fa00-b63f-84710c7967bb [INF] Request finished in 112.1793ms 304 text/css (791a596a)
+2020-11-03T22:15:39.2572464+07:00 80000035-0007-fe00-b63f-84710c7967bb [INF] Request finished in 105.3416ms 304 text/css (791a596a)
+2020-11-03T22:15:39.3720714+07:00 80000016-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/images/authentication-bg.jpg   (ca22a1cb)
+2020-11-03T22:15:39.3797311+07:00 80000016-0000-fd00-b63f-84710c7967bb [INF] The file "/admin-side/images/authentication-bg.jpg" was not modified (f1f8d725)
+2020-11-03T22:15:39.3875716+07:00 80000016-0000-fd00-b63f-84710c7967bb [INF] Request finished in 17.7345ms 304 image/jpeg (791a596a)
+2020-11-03T22:15:39.5250233+07:00 80000037-0007-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:15:39.5289524+07:00 80000035-0002-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/icon/icofont/fonts/icofont.ttf?v=1.0.0-beta   (ca22a1cb)
+2020-11-03T22:15:39.5336733+07:00 80000035-0002-fe00-b63f-84710c7967bb [INF] The file "/admin-side/icon/icofont/fonts/icofont.ttf" was not modified (f1f8d725)
+2020-11-03T22:15:39.5403395+07:00 80000035-0002-fe00-b63f-84710c7967bb [INF] Request finished in 8.9176ms 304 application/x-font-ttf (791a596a)
+2020-11-03T22:15:39.5520736+07:00 80000037-0007-fe00-b63f-84710c7967bb [INF] Request finished in 29.127ms 404  (791a596a)
+2020-11-03T22:15:43.5908104+07:00 80000065-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/login   (ca22a1cb)
+2020-11-03T22:15:43.5976406+07:00 80000065-0004-fa00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:15:43.6042699+07:00 80000065-0004-fa00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Login\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:15:43.6190006+07:00 80000065-0004-fa00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:15:43.6328269+07:00 80000065-0004-fa00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 13.8734ms. (f66409e9)
+2020-11-03T22:15:43.6385449+07:00 80000065-0004-fa00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)" in 28.381ms (afa2e885)
+2020-11-03T22:15:43.6449105+07:00 80000065-0004-fa00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:15:43.6511039+07:00 80000065-0004-fa00-b63f-84710c7967bb [INF] Request finished in 59.0863ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:15:43.7535993+07:00 8000001c-0006-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:15:43.7601448+07:00 8000001c-0006-fd00-b63f-84710c7967bb [INF] Request finished in 5.8666ms 404  (791a596a)
+2020-11-03T22:15:48.6828572+07:00 80000020-0005-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin   (ca22a1cb)
+2020-11-03T22:15:48.6898627+07:00 80000020-0005-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:15:48.7021773+07:00 80000020-0005-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:15:48.7121800+07:00 80000020-0005-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:15:48.9217129+07:00 80000020-0005-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 210.7999ms. (f66409e9)
+2020-11-03T22:15:48.9275075+07:00 80000020-0005-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)" in 219.5794ms (afa2e885)
+2020-11-03T22:15:48.9322130+07:00 80000020-0005-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:15:48.9369645+07:00 80000020-0005-fd00-b63f-84710c7967bb [INF] Request finished in 255.4453ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:15:48.9531550+07:00 8000001e-0006-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/icon/simple-line-icons/css/simple-line-icons.css   (ca22a1cb)
+2020-11-03T22:15:48.9588545+07:00 80000015-0001-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/chartist/css/chartist.css   (ca22a1cb)
+2020-11-03T22:15:48.9626414+07:00 8000002a-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/charts/echarts/js/echarts-all.js   (ca22a1cb)
+2020-11-03T22:15:48.9645604+07:00 8000001e-0006-fd00-b63f-84710c7967bb [INF] The file "/admin-side/icon/simple-line-icons/css/simple-line-icons.css" was not modified (f1f8d725)
+2020-11-03T22:15:48.9679560+07:00 80000015-0001-fa00-b63f-84710c7967bb [INF] The file "/admin-side/bower_components/chartist/css/chartist.css" was not modified (f1f8d725)
+2020-11-03T22:15:48.9709709+07:00 8000002a-0006-fa00-b63f-84710c7967bb [INF] The file "/admin-side/plugins/charts/echarts/js/echarts-all.js" was not modified (f1f8d725)
+2020-11-03T22:15:48.9760586+07:00 80000015-0001-fa00-b63f-84710c7967bb [INF] Request finished in 18.8517ms 304 text/css (791a596a)
+2020-11-03T22:15:48.9804034+07:00 8000001e-0006-fd00-b63f-84710c7967bb [INF] Request finished in 15.5042ms 304 text/css (791a596a)
+2020-11-03T22:15:48.9833279+07:00 8000002a-0006-fa00-b63f-84710c7967bb [INF] Request finished in 22.8562ms 304 application/javascript (791a596a)
+2020-11-03T22:15:48.9858537+07:00 80000010-0003-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/jquery-slimscroll/js/jquery.slimscroll.js   (ca22a1cb)
+2020-11-03T22:15:49.0770785+07:00 8000002c-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/jquery.nicescroll/js/jquery.nicescroll.min.js   (ca22a1cb)
+2020-11-03T22:15:49.0804202+07:00 80000010-0005-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/images/logo.png   (ca22a1cb)
+2020-11-03T22:15:49.0838990+07:00 8000003f-0005-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/images/avatar-1.jpg   (ca22a1cb)
+2020-11-03T22:15:49.0857178+07:00 80000028-000b-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/images/avatar-1.png   (ca22a1cb)
+2020-11-03T22:15:49.0897649+07:00 80000062-0006-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/images/avatar-4.png   (ca22a1cb)
+2020-11-03T22:15:49.0952197+07:00 80000020-0006-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/images/avatar-2.png   (ca22a1cb)
+2020-11-03T22:15:49.0986357+07:00 8000003f-0005-ff00-b63f-84710c7967bb [INF] The file "/admin-side/images/avatar-1.jpg" was not modified (f1f8d725)
+2020-11-03T22:15:49.1033374+07:00 80000028-000b-fc00-b63f-84710c7967bb [INF] The file "/admin-side/images/avatar-1.png" was not modified (f1f8d725)
+2020-11-03T22:15:49.1095037+07:00 80000062-0006-fb00-b63f-84710c7967bb [INF] The file "/admin-side/images/avatar-4.png" was not modified (f1f8d725)
+2020-11-03T22:15:49.1126362+07:00 8000003f-0005-ff00-b63f-84710c7967bb [INF] Request finished in 27.6158ms 304 image/jpeg (791a596a)
+2020-11-03T22:15:49.1162769+07:00 80000028-000b-fc00-b63f-84710c7967bb [INF] Request finished in 32.3674ms 304 image/png (791a596a)
+2020-11-03T22:15:49.1178092+07:00 80000062-0006-fb00-b63f-84710c7967bb [INF] Request finished in 32.5008ms 304 image/png (791a596a)
+2020-11-03T22:15:49.1214199+07:00 8000004b-000a-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/countdown/js/jquery.counterup.js   (ca22a1cb)
+2020-11-03T22:15:49.1268774+07:00 80000017-0001-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/waypoints/js/jquery.waypoints.min.js   (ca22a1cb)
+2020-11-03T22:15:49.1325626+07:00 80000067-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/js/main.min.js   (ca22a1cb)
+2020-11-03T22:15:49.1345604+07:00 8000004b-000a-fc00-b63f-84710c7967bb [INF] The file "/admin-side/plugins/countdown/js/jquery.counterup.js" was not modified (f1f8d725)
+2020-11-03T22:15:49.1384168+07:00 80000017-0001-fa00-b63f-84710c7967bb [INF] The file "/admin-side/bower_components/waypoints/js/jquery.waypoints.min.js" was not modified (f1f8d725)
+2020-11-03T22:15:49.1450231+07:00 80000067-0004-fa00-b63f-84710c7967bb [INF] The file "/admin-side/js/main.min.js" was not modified (f1f8d725)
+2020-11-03T22:15:49.1501451+07:00 8000004b-000a-fc00-b63f-84710c7967bb [INF] Request finished in 19.9363ms 304 application/javascript (791a596a)
+2020-11-03T22:15:49.1532767+07:00 80000017-0001-fa00-b63f-84710c7967bb [INF] Request finished in 24.167ms 304 application/javascript (791a596a)
+2020-11-03T22:15:49.1560130+07:00 80000020-0006-fd00-b63f-84710c7967bb [INF] The file "/admin-side/images/avatar-2.png" was not modified (f1f8d725)
+2020-11-03T22:15:49.1605470+07:00 80000067-0004-fa00-b63f-84710c7967bb [INF] Request finished in 34.369ms 304 application/javascript (791a596a)
+2020-11-03T22:15:49.1673151+07:00 80000022-0005-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/pages/notification.js   (ca22a1cb)
+2020-11-03T22:15:49.1709047+07:00 80000022-0003-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/classie/js/classie.js   (ca22a1cb)
+2020-11-03T22:15:49.1855698+07:00 80000039-0007-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/icon/simple-line-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0   (ca22a1cb)
+2020-11-03T22:15:49.1897639+07:00 80000022-0005-fd00-b63f-84710c7967bb [INF] The file "/admin-side/pages/notification.js" was not modified (f1f8d725)
+2020-11-03T22:15:49.1956091+07:00 80000022-0003-fe00-b63f-84710c7967bb [INF] The file "/admin-side/bower_components/classie/js/classie.js" was not modified (f1f8d725)
+2020-11-03T22:15:49.2014493+07:00 80000039-0007-fe00-b63f-84710c7967bb [INF] The file "/admin-side/icon/simple-line-icons/fonts/Simple-Line-Icons.woff2" was not modified (f1f8d725)
+2020-11-03T22:15:49.2071714+07:00 80000022-0005-fd00-b63f-84710c7967bb [INF] Request finished in 38.9544ms 304 application/javascript (791a596a)
+2020-11-03T22:15:49.2158086+07:00 80000022-0003-fe00-b63f-84710c7967bb [INF] Request finished in 44.3863ms 304 application/javascript (791a596a)
+2020-11-03T22:15:49.2192735+07:00 80000039-0007-fe00-b63f-84710c7967bb [INF] Request finished in 39.8376ms 304 font/woff2 (791a596a)
+2020-11-03T22:15:49.2258353+07:00 80000020-0006-fd00-b63f-84710c7967bb [INF] Request finished in 82.8128ms 304 image/png (791a596a)
+2020-11-03T22:15:49.2311977+07:00 80000039-0005-f900-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/images/avatar-3.png   (ca22a1cb)
+2020-11-03T22:15:49.2401838+07:00 8000003c-0006-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/images/avatar-5.png   (ca22a1cb)
+2020-11-03T22:15:49.2446261+07:00 80000039-0005-f900-b63f-84710c7967bb [INF] The file "/admin-side/images/avatar-3.png" was not modified (f1f8d725)
+2020-11-03T22:15:49.2508579+07:00 8000003c-0006-ff00-b63f-84710c7967bb [INF] The file "/admin-side/images/avatar-5.png" was not modified (f1f8d725)
+2020-11-03T22:15:49.2572465+07:00 80000039-0005-f900-b63f-84710c7967bb [INF] Request finished in 171.942ms 304 image/png (791a596a)
+2020-11-03T22:15:49.2647787+07:00 8000003c-0006-ff00-b63f-84710c7967bb [INF] Request finished in 177.4182ms 304 image/png (791a596a)
+2020-11-03T22:15:49.2707781+07:00 8000003f-0004-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/search/img/magnifier.svg   (ca22a1cb)
+2020-11-03T22:15:49.2785527+07:00 80000018-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/images/extra-profile-bg.png   (ca22a1cb)
+2020-11-03T22:15:49.2840131+07:00 8000003f-0004-ff00-b63f-84710c7967bb [INF] The file "/admin-side/plugins/search/img/magnifier.svg" was not modified (f1f8d725)
+2020-11-03T22:15:49.2898123+07:00 80000018-0000-fd00-b63f-84710c7967bb [INF] The file "/admin-side/images/extra-profile-bg.png" was not modified (f1f8d725)
+2020-11-03T22:15:49.2973759+07:00 8000003f-0004-ff00-b63f-84710c7967bb [INF] Request finished in 209.0569ms 304 image/svg+xml (791a596a)
+2020-11-03T22:15:49.3029881+07:00 80000018-0000-fd00-b63f-84710c7967bb [INF] Request finished in 216.3713ms 304 image/png (791a596a)
+2020-11-03T22:15:49.3094123+07:00 80000037-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/jquery-sparkline/js/jquery.sparkline.js   (ca22a1cb)
+2020-11-03T22:15:49.3223938+07:00 80000010-0003-fb00-b63f-84710c7967bb [INF] The file "/admin-side/bower_components/jquery-slimscroll/js/jquery.slimscroll.js" was not modified (f1f8d725)
+2020-11-03T22:15:49.3302002+07:00 80000010-0005-fa00-b63f-84710c7967bb [INF] The file "/admin-side/images/logo.png" was not modified (f1f8d725)
+2020-11-03T22:15:49.3404752+07:00 80000037-0001-ff00-b63f-84710c7967bb [INF] The file "/admin-side/bower_components/jquery-sparkline/js/jquery.sparkline.js" was not modified (f1f8d725)
+2020-11-03T22:15:49.3469109+07:00 80000010-0003-fb00-b63f-84710c7967bb [INF] Request finished in 345.7175ms 304 application/javascript (791a596a)
+2020-11-03T22:15:49.3555572+07:00 80000037-0001-ff00-b63f-84710c7967bb [INF] Request finished in 260.5852ms 304 application/javascript (791a596a)
+2020-11-03T22:15:49.3603169+07:00 80000010-0005-fa00-b63f-84710c7967bb [INF] Request finished in 280.9111ms 304 image/png (791a596a)
+2020-11-03T22:15:49.3713051+07:00 80000042-0005-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/js/menu.js   (ca22a1cb)
+2020-11-03T22:15:49.3748408+07:00 8000002c-0006-fa00-b63f-84710c7967bb [INF] The file "/admin-side/plugins/jquery.nicescroll/js/jquery.nicescroll.min.js" was not modified (f1f8d725)
+2020-11-03T22:15:49.3817730+07:00 80000042-0005-fe00-b63f-84710c7967bb [INF] The file "/admin-side/js/menu.js" was not modified (f1f8d725)
+2020-11-03T22:15:49.3882554+07:00 8000002c-0006-fa00-b63f-84710c7967bb [INF] Request finished in 375.716ms 304 application/javascript (791a596a)
+2020-11-03T22:15:49.3951250+07:00 80000042-0005-fe00-b63f-84710c7967bb [INF] Request finished in 332.3292ms 304 application/javascript (791a596a)
+2020-11-03T22:15:49.4289713+07:00 8000002e-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:15:49.4372222+07:00 8000002e-0006-fa00-b63f-84710c7967bb [INF] Request finished in 8.4965ms 404  (791a596a)
+2020-11-03T22:15:55.3041872+07:00 80000030-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/waves/js/waves.min.js.map   (ca22a1cb)
+2020-11-03T22:15:55.3059002+07:00 8000004d-000a-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/popper.js/js/popper.min.js.map   (ca22a1cb)
+2020-11-03T22:15:55.3106248+07:00 80000030-0006-fa00-b63f-84710c7967bb [INF] Request finished in 7.6054ms 404  (791a596a)
+2020-11-03T22:15:55.3141491+07:00 8000004d-000a-fc00-b63f-84710c7967bb [INF] Request finished in 9.0545ms 404  (791a596a)
+2020-11-03T22:15:55.3308520+07:00 80000037-0002-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/css/generic-class.css.map   (ca22a1cb)
+2020-11-03T22:15:55.3369884+07:00 80000041-0004-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/css/main.css.map   (ca22a1cb)
+2020-11-03T22:15:55.3402969+07:00 80000069-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/css/menu.css.map   (ca22a1cb)
+2020-11-03T22:15:55.3445331+07:00 80000043-0002-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/bootstrap/css/bootstrap.min.css.map   (ca22a1cb)
+2020-11-03T22:15:55.3479209+07:00 80000037-0002-fe00-b63f-84710c7967bb [INF] The file "/admin-side/css/generic-class.css.map" was not modified (f1f8d725)
+2020-11-03T22:15:55.3515967+07:00 8000002d-0009-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/css/responsive.css.map   (ca22a1cb)
+2020-11-03T22:15:55.3552910+07:00 80000041-0004-ff00-b63f-84710c7967bb [INF] The file "/admin-side/css/main.css.map" was not modified (f1f8d725)
+2020-11-03T22:15:55.3578186+07:00 80000069-0004-fa00-b63f-84710c7967bb [INF] The file "/admin-side/css/menu.css.map" was not modified (f1f8d725)
+2020-11-03T22:15:55.3656486+07:00 80000037-0002-fe00-b63f-84710c7967bb [INF] Request finished in 22.9196ms 304 text/plain (791a596a)
+2020-11-03T22:15:55.3708309+07:00 8000002d-0009-fc00-b63f-84710c7967bb [INF] The file "/admin-side/css/responsive.css.map" was not modified (f1f8d725)
+2020-11-03T22:15:55.3775001+07:00 80000069-0004-fa00-b63f-84710c7967bb [INF] Request finished in 34.2009ms 304 text/plain (791a596a)
+2020-11-03T22:15:55.3819375+07:00 80000043-0002-ff00-b63f-84710c7967bb [INF] Request finished in 37.9552ms 404  (791a596a)
+2020-11-03T22:15:55.3867161+07:00 8000002d-0009-fc00-b63f-84710c7967bb [INF] Request finished in 41.4503ms 304 text/plain (791a596a)
+2020-11-03T22:15:55.3886155+07:00 80000041-0004-ff00-b63f-84710c7967bb [INF] Request finished in 29.6828ms 304 text/plain (791a596a)
+2020-11-03T22:15:55.3931892+07:00 80000055-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/chartist/css/chartist.css.map   (ca22a1cb)
+2020-11-03T22:15:55.3986724+07:00 80000055-0008-fd00-b63f-84710c7967bb [INF] Request finished in 63.299ms 404  (791a596a)
+2020-11-03T22:16:13.3366357+07:00 8000002a-000b-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin   (ca22a1cb)
+2020-11-03T22:16:13.3443335+07:00 8000002a-000b-fc00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:16:13.3504064+07:00 8000002a-000b-fc00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:16:13.3588397+07:00 8000002a-000b-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:16:24.6133709+07:00 8000002a-000b-fc00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 11259.3028ms. (f66409e9)
+2020-11-03T22:16:24.6160235+07:00 8000002a-000b-fc00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)" in 11263.031ms (afa2e885)
+2020-11-03T22:16:24.6186563+07:00 8000002a-000b-fc00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:16:24.6212601+07:00 8000002a-000b-fc00-b63f-84710c7967bb [INF] Request finished in 11287.0821ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:16:24.9566158+07:00 80000044-0005-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:16:24.9609197+07:00 80000044-0005-fe00-b63f-84710c7967bb [INF] Request finished in 4.5558ms 404  (791a596a)
+2020-11-03T22:16:25.0113227+07:00 8000006b-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/popper.js/js/popper.min.js.map   (ca22a1cb)
+2020-11-03T22:16:25.0143353+07:00 8000001a-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/waves/js/waves.min.js.map   (ca22a1cb)
+2020-11-03T22:16:25.0179402+07:00 8000006b-0004-fa00-b63f-84710c7967bb [INF] Request finished in 5.7122ms 404  (791a596a)
+2020-11-03T22:16:25.0215946+07:00 8000001a-0000-fd00-b63f-84710c7967bb [INF] Request finished in 6.4677ms 404  (791a596a)
+2020-11-03T22:16:25.0305930+07:00 80000039-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/bootstrap/css/bootstrap.min.css.map   (ca22a1cb)
+2020-11-03T22:16:25.0352952+07:00 80000039-0001-ff00-b63f-84710c7967bb [INF] Request finished in 4.1187ms 404  (791a596a)
+2020-11-03T22:16:25.7213529+07:00 80000057-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/images/favicon.ico   (ca22a1cb)
+2020-11-03T22:16:25.8353219+07:00 80000057-0008-fd00-b63f-84710c7967bb [INF] Sending file. Request path: '"/admin-side/images/favicon.ico"'. Physical path: '"D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp\wwwroot\admin-side\images\favicon.ico"' (27b0a520)
+2020-11-03T22:16:25.8413204+07:00 80000057-0008-fd00-b63f-84710c7967bb [INF] Request finished in 117.9959ms 200 image/x-icon (791a596a)
+2020-11-03T22:16:25.8522120+07:00 80000032-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/images/favicon.png   (ca22a1cb)
+2020-11-03T22:16:25.8590294+07:00 80000032-0006-fa00-b63f-84710c7967bb [INF] The file "/admin-side/images/favicon.png" was not modified (f1f8d725)
+2020-11-03T22:16:25.8648351+07:00 80000032-0006-fa00-b63f-84710c7967bb [INF] Request finished in 11.3378ms 304 image/png (791a596a)
+2020-11-03T22:16:26.6992129+07:00 80000059-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin   (ca22a1cb)
+2020-11-03T22:16:26.7028940+07:00 80000059-0008-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:16:26.7085932+07:00 80000059-0008-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:16:26.7128281+07:00 80000059-0008-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:16:38.2547636+07:00 80000059-0008-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 11541.9653ms. (f66409e9)
+2020-11-03T22:16:38.2591277+07:00 80000059-0008-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)" in 11546.1979ms (afa2e885)
+2020-11-03T22:16:38.2633787+07:00 80000059-0008-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:16:38.2669211+07:00 80000059-0008-fd00-b63f-84710c7967bb [INF] Request finished in 11567.4664ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:16:38.6386743+07:00 8000003b-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:16:38.6428681+07:00 8000003b-0001-ff00-b63f-84710c7967bb [INF] Request finished in 6.4896ms 404  (791a596a)
+2020-11-03T22:16:38.7227045+07:00 80000012-0003-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/popper.js/js/popper.min.js.map   (ca22a1cb)
+2020-11-03T22:16:38.7251588+07:00 80000024-0003-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/waves/js/waves.min.js.map   (ca22a1cb)
+2020-11-03T22:16:38.7289969+07:00 80000024-0003-fe00-b63f-84710c7967bb [INF] Request finished in 6.1893ms 404  (791a596a)
+2020-11-03T22:16:38.7314913+07:00 80000012-0003-fb00-b63f-84710c7967bb [INF] Request finished in 6.2212ms 404  (791a596a)
+2020-11-03T22:16:38.7418001+07:00 8000002f-0009-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/chartist/css/chartist.css.map   (ca22a1cb)
+2020-11-03T22:16:38.7451441+07:00 8000004f-000a-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/bootstrap/css/bootstrap.min.css.map   (ca22a1cb)
+2020-11-03T22:16:38.7486997+07:00 8000002f-0009-fc00-b63f-84710c7967bb [INF] Request finished in 7.3025ms 404  (791a596a)
+2020-11-03T22:16:38.7519949+07:00 8000004f-000a-fc00-b63f-84710c7967bb [INF] Request finished in 6.966ms 404  (791a596a)
+2020-11-03T22:16:39.4071742+07:00 8000006d-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/images/favicon.ico   (ca22a1cb)
+2020-11-03T22:16:39.4158182+07:00 8000006d-0004-fa00-b63f-84710c7967bb [INF] Sending file. Request path: '"/admin-side/images/favicon.ico"'. Physical path: '"D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp\wwwroot\admin-side\images\favicon.ico"' (27b0a520)
+2020-11-03T22:16:39.4200155+07:00 8000006d-0004-fa00-b63f-84710c7967bb [INF] Request finished in 13.8042ms 200 image/x-icon (791a596a)
+2020-11-03T22:16:44.3495175+07:00 8000003b-0007-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/login   (ca22a1cb)
+2020-11-03T22:16:44.3537306+07:00 8000003b-0007-fe00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:16:44.3562248+07:00 8000003b-0007-fe00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Login\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:16:44.3708773+07:00 8000003b-0007-fe00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:16:44.3748584+07:00 8000003b-0007-fe00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 4.7241ms. (f66409e9)
+2020-11-03T22:16:44.3787443+07:00 8000003b-0007-fe00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)" in 18.6825ms (afa2e885)
+2020-11-03T22:16:44.3816526+07:00 8000003b-0007-fe00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:16:44.3855614+07:00 8000003b-0007-fe00-b63f-84710c7967bb [INF] Request finished in 35.4058ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:16:44.5148453+07:00 8000001c-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/waves/js/waves.min.js.map   (ca22a1cb)
+2020-11-03T22:16:44.5177438+07:00 80000045-0002-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/popper.js/js/popper.min.js.map   (ca22a1cb)
+2020-11-03T22:16:44.5211312+07:00 8000001c-0000-fd00-b63f-84710c7967bb [INF] Request finished in 7.0113ms 404  (791a596a)
+2020-11-03T22:16:44.5241959+07:00 80000045-0002-ff00-b63f-84710c7967bb [INF] Request finished in 10.187ms 404  (791a596a)
+2020-11-03T22:16:44.5826114+07:00 8000005b-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/bootstrap/css/bootstrap.min.css.map   (ca22a1cb)
+2020-11-03T22:16:44.5870297+07:00 8000005b-0008-fd00-b63f-84710c7967bb [INF] Request finished in 4.4475ms 404  (791a596a)
+2020-11-03T22:16:44.6181767+07:00 80000014-0003-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:16:44.6231832+07:00 80000014-0003-fb00-b63f-84710c7967bb [INF] Request finished in 5.8762ms 404  (791a596a)
+2020-11-03T22:16:52.6134252+07:00 8000005d-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44301/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 49 (ca22a1cb)
+2020-11-03T22:16:52.6198887+07:00 8000005d-0008-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (500cc934)
+2020-11-03T22:16:52.6859936+07:00 8000005d-0008-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Authen\", controller = \"Login\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authen(TanoApp.Models.AccountViewModels.LoginViewModel)" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:16:53.0469631+07:00 8000005d-0008-fd00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:16:53.3877703+07:00 8000005d-0008-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("211"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Avatar], [a].[Balance], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[DateCreated], [a].[DateModified], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-11-03T22:16:53.7861854+07:00 8000005d-0008-fd00-b63f-84710c7967bb [WRN] Invalid password for user "3611d5c9-216b-464b-748c-08d87da76fe2". (c2dce6c7)
+2020-11-03T22:16:53.7926165+07:00 8000005d-0008-fd00-b63f-84710c7967bb [WRN] User "3611d5c9-216b-464b-748c-08d87da76fe2" failed to provide the correct password. (ec8d2479)
+2020-11-03T22:16:53.8199796+07:00 8000005d-0008-fd00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"TeduCoreApp.Utilities.Dtos.GenericResult"'. (8a1b66c8)
+2020-11-03T22:16:53.8617905+07:00 8000005d-0008-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)" in 1170.8946ms (afa2e885)
+2020-11-03T22:16:53.8686490+07:00 8000005d-0008-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (99874f2b)
+2020-11-03T22:16:53.8835371+07:00 8000005d-0008-fd00-b63f-84710c7967bb [INF] Request finished in 1270.044ms 200 application/json; charset=utf-8 (791a596a)
+2020-11-03T22:16:59.7279537+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44301/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 49 (ca22a1cb)
+2020-11-03T22:16:59.7372758+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (500cc934)
+2020-11-03T22:16:59.7415695+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Authen\", controller = \"Login\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authen(TanoApp.Models.AccountViewModels.LoginViewModel)" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:16:59.7700628+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:16:59.7917780+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Avatar], [a].[Balance], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[DateCreated], [a].[DateModified], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-11-03T22:16:59.9603588+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (0723d8ff)
+2020-11-03T22:17:00.2130415+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("147"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:17:00.2613300+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-11-03T22:17:00.3113817+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-11-03T22:17:00.3246882+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:17:00.3512179+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-11-03T22:17:00.3599832+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] User logged in. (fdce0db4)
+2020-11-03T22:17:00.3667511+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"TeduCoreApp.Utilities.Dtos.GenericResult"'. (8a1b66c8)
+2020-11-03T22:17:00.3750074+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)" in 627.5329ms (afa2e885)
+2020-11-03T22:17:00.3805718+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (99874f2b)
+2020-11-03T22:17:00.3872403+07:00 80000047-0002-ff00-b63f-84710c7967bb [INF] Request finished in 657.6542ms 200 application/json; charset=utf-8 (791a596a)
+2020-11-03T22:17:04.6123061+07:00 80000016-0003-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin   (ca22a1cb)
+2020-11-03T22:17:04.6336663+07:00 80000016-0003-fb00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:17:04.6399768+07:00 80000016-0003-fb00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:17:04.6459147+07:00 80000016-0003-fb00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:17:08.3108472+07:00 80000016-0003-fb00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:17:08.3977192+07:00 80000016-0003-fb00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[IconCss], [f].[Name], [f].[ParentId], [f].[SortOrder], [f].[Status], [f].[URL]
+FROM [Functions] AS [f]" (0723d8ff)
+2020-11-03T22:17:12.6466591+07:00 80000016-0003-fb00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 8001.3506ms. (f66409e9)
+2020-11-03T22:17:12.6533673+07:00 80000016-0003-fb00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)" in 8009.6627ms (afa2e885)
+2020-11-03T22:17:12.6572838+07:00 80000016-0003-fb00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:17:12.6616798+07:00 80000016-0003-fb00-b63f-84710c7967bb [INF] Request finished in 8049.3059ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:17:13.0290928+07:00 8000001e-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:17:13.0356439+07:00 8000001e-0000-fd00-b63f-84710c7967bb [INF] Request finished in 7.9554ms 404  (791a596a)
+2020-11-03T22:17:13.1066997+07:00 80000046-0005-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/popper.js/js/popper.min.js.map   (ca22a1cb)
+2020-11-03T22:17:13.1117961+07:00 8000006f-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/waves/js/waves.min.js.map   (ca22a1cb)
+2020-11-03T22:17:13.1201998+07:00 8000006f-0004-fa00-b63f-84710c7967bb [INF] Request finished in 14.7302ms 404  (791a596a)
+2020-11-03T22:17:13.1236128+07:00 80000046-0005-fe00-b63f-84710c7967bb [INF] Request finished in 14.8173ms 404  (791a596a)
+2020-11-03T22:17:13.1278364+07:00 80000031-0009-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/bootstrap/css/bootstrap.min.css.map   (ca22a1cb)
+2020-11-03T22:17:13.1318909+07:00 80000020-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/chartist/css/chartist.css.map   (ca22a1cb)
+2020-11-03T22:17:13.1359380+07:00 80000031-0009-fc00-b63f-84710c7967bb [INF] Request finished in 8.2629ms 404  (791a596a)
+2020-11-03T22:17:13.1383618+07:00 80000020-0000-fd00-b63f-84710c7967bb [INF] Request finished in 7.6804ms 404  (791a596a)
+2020-11-03T22:17:20.8297222+07:00 8000005f-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/role/index   (ca22a1cb)
+2020-11-03T22:17:20.8365155+07:00 8000005f-0008-fd00-b63f-84710c7967bb [INF] Request finished in 6.0709ms 404  (791a596a)
+2020-11-03T22:17:22.7380170+07:00 80000049-0008-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/bootstrap/css/bootstrap.min.css.map   (ca22a1cb)
+2020-11-03T22:17:22.7404221+07:00 80000061-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/chartist/css/chartist.css.map   (ca22a1cb)
+2020-11-03T22:17:22.7464521+07:00 80000049-0008-fe00-b63f-84710c7967bb [INF] Request finished in 10.2356ms 404  (791a596a)
+2020-11-03T22:17:22.7492889+07:00 80000061-0008-fd00-b63f-84710c7967bb [INF] Request finished in 8.275ms 404  (791a596a)
+2020-11-03T22:17:22.8026718+07:00 8000003d-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/waves/js/waves.min.js.map   (ca22a1cb)
+2020-11-03T22:17:22.8077303+07:00 8000002c-000b-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/popper.js/js/popper.min.js.map   (ca22a1cb)
+2020-11-03T22:17:22.8136712+07:00 8000002c-000b-fc00-b63f-84710c7967bb [INF] Request finished in 10.3721ms 404  (791a596a)
+2020-11-03T22:17:22.8167139+07:00 8000003d-0001-ff00-b63f-84710c7967bb [INF] Request finished in 10.3695ms 404  (791a596a)
+2020-11-03T22:17:24.0575516+07:00 80000071-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/report/visitor   (ca22a1cb)
+2020-11-03T22:17:24.0634535+07:00 80000071-0004-fa00-b63f-84710c7967bb [INF] Request finished in 5.7799ms 404  (791a596a)
+2020-11-03T22:17:25.8797466+07:00 80000022-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/chartist/css/chartist.css.map   (ca22a1cb)
+2020-11-03T22:17:25.8829499+07:00 80000073-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/bootstrap/css/bootstrap.min.css.map   (ca22a1cb)
+2020-11-03T22:17:25.8895189+07:00 80000022-0000-fd00-b63f-84710c7967bb [INF] Request finished in 9.1272ms 404  (791a596a)
+2020-11-03T22:17:25.8913911+07:00 80000073-0004-fa00-b63f-84710c7967bb [INF] Request finished in 4.6104ms 404  (791a596a)
+2020-11-03T22:17:25.9430513+07:00 80000075-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/popper.js/js/popper.min.js.map   (ca22a1cb)
+2020-11-03T22:17:25.9457887+07:00 80000033-0009-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/waves/js/waves.min.js.map   (ca22a1cb)
+2020-11-03T22:17:25.9518264+07:00 80000075-0004-fa00-b63f-84710c7967bb [INF] Request finished in 11.5559ms 404  (791a596a)
+2020-11-03T22:17:25.9549672+07:00 80000033-0009-fc00-b63f-84710c7967bb [INF] Request finished in 9.4695ms 404  (791a596a)
+2020-11-03T22:18:24.4813125+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-03T22:18:24.5141723+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-03T22:18:24.5189342+07:00  [INF] Content root path: "D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp" (b5d60022)
+2020-11-03T22:18:24.5744359+07:00 80000083-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/   (ca22a1cb)
+2020-11-03T22:18:24.7459404+07:00 80000083-0002-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:18:24.8230737+07:00 80000083-0002-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:18:24.8727795+07:00 80000083-0002-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:18:24.9789323+07:00 8000003d-0007-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/login   (ca22a1cb)
+2020-11-03T22:18:25.0085873+07:00 8000003d-0007-fe00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:18:25.0182046+07:00 8000003d-0007-fe00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Login\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:18:25.0256933+07:00 8000003d-0007-fe00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:18:25.2112232+07:00 80000083-0002-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 332.6017ms. (f66409e9)
+2020-11-03T22:18:25.2112279+07:00 8000003d-0007-fe00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 178.5056ms. (f66409e9)
+2020-11-03T22:18:25.2155449+07:00 80000083-0002-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Controllers.HomeController.Index (TanoApp)" in 388.455ms (afa2e885)
+2020-11-03T22:18:25.2192542+07:00 8000003d-0007-fe00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)" in 193.9369ms (afa2e885)
+2020-11-03T22:18:25.2252146+07:00 8000003d-0007-fe00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:18:25.2272458+07:00 80000083-0002-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:18:25.2404935+07:00 8000003d-0007-fe00-b63f-84710c7967bb [INF] Request finished in 258.3717ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:18:25.2404935+07:00 80000083-0002-fd00-b63f-84710c7967bb [INF] Request finished in 685.0566ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:18:25.4346660+07:00 80000085-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:18:25.4620007+07:00 80000085-0002-fd00-b63f-84710c7967bb [INF] Request finished in 26.5427ms 404  (791a596a)
+2020-11-03T22:18:32.8948803+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44301/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 49 (ca22a1cb)
+2020-11-03T22:18:32.9025062+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (500cc934)
+2020-11-03T22:18:32.9474351+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Authen\", controller = \"Login\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authen(TanoApp.Models.AccountViewModels.LoginViewModel)" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:18:33.1157956+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:18:33.3618115+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("101"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Avatar], [a].[Balance], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[DateCreated], [a].[DateModified], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-11-03T22:18:33.8424430+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (0723d8ff)
+2020-11-03T22:18:33.9639793+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:18:33.9910199+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-11-03T22:18:34.0485443+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-11-03T22:18:34.0673111+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:18:34.0884513+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-11-03T22:18:34.0967165+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] User logged in. (fdce0db4)
+2020-11-03T22:18:34.1182311+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"TeduCoreApp.Utilities.Dtos.GenericResult"'. (8a1b66c8)
+2020-11-03T22:18:34.1521751+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)" in 1199.4954ms (afa2e885)
+2020-11-03T22:18:34.1585226+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (99874f2b)
+2020-11-03T22:18:34.1692153+07:00 80000077-0004-fa00-b63f-84710c7967bb [INF] Request finished in 1278.6193ms 200 application/json; charset=utf-8 (791a596a)
+2020-11-03T22:18:45.1192407+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44301/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 49 (ca22a1cb)
+2020-11-03T22:18:45.1288296+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (500cc934)
+2020-11-03T22:18:45.1330387+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Authen\", controller = \"Login\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authen(TanoApp.Models.AccountViewModels.LoginViewModel)" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:18:45.1461678+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:18:45.1580316+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Avatar], [a].[Balance], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[DateCreated], [a].[DateModified], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-11-03T22:18:45.1755263+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (0723d8ff)
+2020-11-03T22:18:45.1834300+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:18:45.1888434+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-11-03T22:18:45.1946566+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-11-03T22:18:45.1988638+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("1"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:18:45.2026121+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-11-03T22:18:45.2055268+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] User logged in. (fdce0db4)
+2020-11-03T22:18:45.2095011+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"TeduCoreApp.Utilities.Dtos.GenericResult"'. (8a1b66c8)
+2020-11-03T22:18:45.2128688+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)" in 76.9258ms (afa2e885)
+2020-11-03T22:18:45.2154209+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (99874f2b)
+2020-11-03T22:18:45.2180188+07:00 8000003f-0001-ff00-b63f-84710c7967bb [INF] Request finished in 100.2378ms 200 application/json; charset=utf-8 (791a596a)
+2020-11-03T22:18:47.7532879+07:00 80000054-0008-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin   (ca22a1cb)
+2020-11-03T22:18:47.7636183+07:00 80000054-0008-fc00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:18:47.7714111+07:00 80000054-0008-fc00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:18:47.7801344+07:00 80000054-0008-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:18:52.5098701+07:00 80000054-0008-fc00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:18:52.5228269+07:00 80000054-0008-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[IconCss], [f].[Name], [f].[ParentId], [f].[SortOrder], [f].[Status], [f].[URL]
+FROM [Functions] AS [f]" (0723d8ff)
+2020-11-03T22:19:42.4697710+07:00 80000054-0008-fc00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 54691.8363ms. (f66409e9)
+2020-11-03T22:19:42.4758572+07:00 80000054-0008-fc00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)" in 54701.1944ms (afa2e885)
+2020-11-03T22:19:42.4789064+07:00 80000054-0008-fc00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:19:42.4824535+07:00 80000054-0008-fc00-b63f-84710c7967bb [INF] Request finished in 54730.7994ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:19:42.8707298+07:00 80000034-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:19:42.8751069+07:00 80000034-0006-fa00-b63f-84710c7967bb [INF] Request finished in 5.3033ms 404  (791a596a)
+2020-11-03T22:20:02.3626360+07:00 80000018-0003-fb00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/error/index   (ca22a1cb)
+2020-11-03T22:20:02.3710022+07:00 80000018-0003-fb00-b63f-84710c7967bb [INF] Request finished in 7.9353ms 404  (791a596a)
+2020-11-03T22:20:14.9705385+07:00 80000079-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/accordion.html   (ca22a1cb)
+2020-11-03T22:20:14.9794904+07:00 80000079-0004-fa00-b63f-84710c7967bb [INF] Request finished in 7.768ms 404  (791a596a)
+2020-11-03T22:24:38.0032995+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-03T22:24:38.0337161+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-03T22:24:38.0388524+07:00  [INF] Content root path: "D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp" (b5d60022)
+2020-11-03T22:24:38.1078911+07:00 8000002e-000b-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/   (ca22a1cb)
+2020-11-03T22:24:38.3203159+07:00 8000002e-000b-fc00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:24:38.4301478+07:00 8000002e-000b-fc00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:24:38.4871705+07:00 8000002e-000b-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:24:38.7850084+07:00 8000002e-000b-fc00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 292.2745ms. (f66409e9)
+2020-11-03T22:24:38.7897834+07:00 8000002e-000b-fc00-b63f-84710c7967bb [INF] Executed action "TanoApp.Controllers.HomeController.Index (TanoApp)" in 354.9426ms (afa2e885)
+2020-11-03T22:24:38.7969670+07:00 8000002e-000b-fc00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:24:38.8092979+07:00 8000002e-000b-fc00-b63f-84710c7967bb [INF] Request finished in 718.2426ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:24:52.1231484+07:00 80000087-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/login   (ca22a1cb)
+2020-11-03T22:24:52.1518547+07:00 80000087-0002-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:24:52.1613145+07:00 80000087-0002-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Login\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:24:52.1715080+07:00 80000087-0002-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:24:52.2670507+07:00 80000087-0002-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 97.272ms. (f66409e9)
+2020-11-03T22:24:52.2698877+07:00 80000087-0002-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)" in 105.7902ms (afa2e885)
+2020-11-03T22:24:52.2731412+07:00 80000087-0002-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:24:52.2759860+07:00 80000087-0002-fd00-b63f-84710c7967bb [INF] Request finished in 156.5165ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:24:52.5237882+07:00 80000056-0008-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:24:52.5579088+07:00 80000056-0008-fc00-b63f-84710c7967bb [INF] Request finished in 34.1175ms 404  (791a596a)
+2020-11-03T22:24:58.2732712+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44301/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 49 (ca22a1cb)
+2020-11-03T22:24:58.2834841+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (500cc934)
+2020-11-03T22:24:58.3258765+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Authen\", controller = \"Login\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authen(TanoApp.Models.AccountViewModels.LoginViewModel)" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:24:58.5461687+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:24:58.8718265+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("133"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Avatar], [a].[Balance], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[DateCreated], [a].[DateModified], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-11-03T22:24:59.4326855+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (0723d8ff)
+2020-11-03T22:24:59.5541036+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:24:59.5855368+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-11-03T22:24:59.6411317+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-11-03T22:24:59.6626389+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:24:59.6871393+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-11-03T22:24:59.6943438+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] User logged in. (fdce0db4)
+2020-11-03T22:24:59.7078587+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"TeduCoreApp.Utilities.Dtos.GenericResult"'. (8a1b66c8)
+2020-11-03T22:24:59.7283849+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)" in 1399.659ms (afa2e885)
+2020-11-03T22:24:59.7323180+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (99874f2b)
+2020-11-03T22:24:59.7409210+07:00 80000058-0008-fc00-b63f-84710c7967bb [INF] Request finished in 1473.8807ms 200 application/json; charset=utf-8 (791a596a)
+2020-11-03T22:25:02.7977679+07:00 80000022-0006-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin   (ca22a1cb)
+2020-11-03T22:25:02.8103343+07:00 80000022-0006-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:25:02.8258875+07:00 80000022-0006-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:25:02.8384623+07:00 80000022-0006-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:25:09.8262404+07:00 80000022-0006-fd00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:25:09.8368753+07:00 80000022-0006-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[IconCss], [f].[Name], [f].[ParentId], [f].[SortOrder], [f].[Status], [f].[URL]
+FROM [Functions] AS [f]" (0723d8ff)
+2020-11-03T22:25:09.9162134+07:00 80000022-0006-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 7083.886ms. (f66409e9)
+2020-11-03T22:25:09.9214896+07:00 80000022-0006-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)" in 7091.9536ms (afa2e885)
+2020-11-03T22:25:09.9240268+07:00 80000022-0006-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:25:09.9276801+07:00 80000022-0006-fd00-b63f-84710c7967bb [INF] Request finished in 7131.477ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:25:10.2981043+07:00 80000024-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:25:10.3065029+07:00 80000024-0000-fd00-b63f-84710c7967bb [INF] Request finished in 9.6203ms 404  (791a596a)
+2020-11-03T22:25:18.8469330+07:00 80000035-0009-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/popper.js/js/popper.min.js.map   (ca22a1cb)
+2020-11-03T22:25:18.8505827+07:00 8000007b-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/waves/js/waves.min.js.map   (ca22a1cb)
+2020-11-03T22:25:18.8597489+07:00 8000007b-0004-fa00-b63f-84710c7967bb [INF] Request finished in 7.324ms 404  (791a596a)
+2020-11-03T22:25:18.8695482+07:00 80000035-0009-fc00-b63f-84710c7967bb [INF] Request finished in 15.4754ms 404  (791a596a)
+2020-11-03T22:25:18.9183261+07:00 80000037-0009-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/bootstrap/css/bootstrap.min.css.map   (ca22a1cb)
+2020-11-03T22:25:18.9201193+07:00 80000038-0009-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/chartist/css/chartist.css.map   (ca22a1cb)
+2020-11-03T22:25:18.9310039+07:00 80000038-0009-fd00-b63f-84710c7967bb [INF] Request finished in 10.0319ms 404  (791a596a)
+2020-11-03T22:25:18.9327271+07:00 80000037-0009-fc00-b63f-84710c7967bb [INF] Request finished in 13.5811ms 404  (791a596a)
+2020-11-03T22:26:51.7453496+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-03T22:26:51.7608016+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-03T22:26:51.7646787+07:00  [INF] Content root path: "D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp" (b5d60022)
+2020-11-03T22:26:51.8123512+07:00 8000007d-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/   (ca22a1cb)
+2020-11-03T22:26:51.9192776+07:00 8000007d-0004-fa00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:26:52.0086472+07:00 8000007d-0004-fa00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:26:52.0635773+07:00 8000007d-0004-fa00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:26:52.2381437+07:00 8000007d-0004-fa00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 178.0833ms. (f66409e9)
+2020-11-03T22:26:52.2416101+07:00 8000007d-0004-fa00-b63f-84710c7967bb [INF] Executed action "TanoApp.Controllers.HomeController.Index (TanoApp)" in 227.7254ms (afa2e885)
+2020-11-03T22:26:52.2473482+07:00 8000007d-0004-fa00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:26:52.2561715+07:00 8000007d-0004-fa00-b63f-84710c7967bb [INF] Request finished in 456.6958ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:26:52.6327117+07:00 80000026-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/login   (ca22a1cb)
+2020-11-03T22:26:52.6479514+07:00 80000026-0000-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:26:52.6536422+07:00 80000026-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Login\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:26:52.6601458+07:00 80000026-0000-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:26:52.7014309+07:00 80000026-0000-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 43.7557ms. (f66409e9)
+2020-11-03T22:26:52.7040499+07:00 80000026-0000-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)" in 47.8672ms (afa2e885)
+2020-11-03T22:26:52.7065832+07:00 80000026-0000-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:26:52.7102565+07:00 80000026-0000-fd00-b63f-84710c7967bb [INF] Request finished in 79.3233ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:26:52.9300735+07:00 8000007f-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:26:52.9651855+07:00 8000007f-0004-fa00-b63f-84710c7967bb [INF] Request finished in 38.0617ms 404  (791a596a)
+2020-11-03T22:26:59.5008818+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44301/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 49 (ca22a1cb)
+2020-11-03T22:26:59.5111848+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (500cc934)
+2020-11-03T22:26:59.5645921+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Authen\", controller = \"Login\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authen(TanoApp.Models.AccountViewModels.LoginViewModel)" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:26:59.7203208+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:27:00.0469199+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("143"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Avatar], [a].[Balance], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[DateCreated], [a].[DateModified], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-11-03T22:27:00.5560847+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (0723d8ff)
+2020-11-03T22:27:00.6603870+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:27:00.6863555+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-11-03T22:27:00.7329232+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-11-03T22:27:00.7529676+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:27:00.7810716+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-11-03T22:27:00.7909879+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] User logged in. (fdce0db4)
+2020-11-03T22:27:00.8134836+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"TeduCoreApp.Utilities.Dtos.GenericResult"'. (8a1b66c8)
+2020-11-03T22:27:00.8497849+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)" in 1279.9442ms (afa2e885)
+2020-11-03T22:27:00.8556677+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (99874f2b)
+2020-11-03T22:27:00.8676781+07:00 80000037-0006-fa00-b63f-84710c7967bb [INF] Request finished in 1369.1316ms 200 application/json; charset=utf-8 (791a596a)
+2020-11-03T22:27:03.4899500+07:00 80000089-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin   (ca22a1cb)
+2020-11-03T22:27:03.5002973+07:00 80000089-0002-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:27:03.5145844+07:00 80000089-0002-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:27:03.5236913+07:00 80000089-0002-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:27:03.6695944+07:00 80000089-0002-fd00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:27:03.7000006+07:00 80000089-0002-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[IconCss], [f].[Name], [f].[ParentId], [f].[SortOrder], [f].[Status], [f].[URL]
+FROM [Functions] AS [f]" (0723d8ff)
+2020-11-03T22:27:03.8993970+07:00 80000089-0002-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 376.586ms. (f66409e9)
+2020-11-03T22:27:03.9077485+07:00 80000089-0002-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)" in 388.6446ms (afa2e885)
+2020-11-03T22:27:03.9119255+07:00 80000089-0002-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:27:03.9175208+07:00 80000089-0002-fd00-b63f-84710c7967bb [INF] Request finished in 428.3489ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:27:04.1905296+07:00 80000039-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:27:04.1975157+07:00 80000039-0006-fa00-b63f-84710c7967bb [INF] Request finished in 6.209ms 404  (791a596a)
+2020-11-03T22:27:08.2392149+07:00 8000001f-0007-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/plugins/waves/js/waves.min.js.map   (ca22a1cb)
+2020-11-03T22:27:08.2409065+07:00 80000013-0007-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/popper.js/js/popper.min.js.map   (ca22a1cb)
+2020-11-03T22:27:08.2509755+07:00 8000001f-0007-fc00-b63f-84710c7967bb [INF] Request finished in 10.0124ms 404  (791a596a)
+2020-11-03T22:27:08.2512556+07:00 80000013-0007-fa00-b63f-84710c7967bb [INF] Request finished in 9.9873ms 404  (791a596a)
+2020-11-03T22:27:08.3053491+07:00 80000021-0007-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/bootstrap/css/bootstrap.min.css.map   (ca22a1cb)
+2020-11-03T22:27:08.3071803+07:00 80000015-0007-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/bower_components/chartist/css/chartist.css.map   (ca22a1cb)
+2020-11-03T22:27:08.3194026+07:00 80000021-0007-fc00-b63f-84710c7967bb [INF] Request finished in 9.7425ms 404  (791a596a)
+2020-11-03T22:27:08.3231266+07:00 80000015-0007-fa00-b63f-84710c7967bb [INF] Request finished in 9.7419ms 404  (791a596a)
+2020-11-03T22:28:34.3795304+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-03T22:28:34.4073098+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-03T22:28:34.4122018+07:00  [INF] Content root path: "D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp" (b5d60022)
+2020-11-03T22:28:34.4760072+07:00 80000040-0007-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/   (ca22a1cb)
+2020-11-03T22:28:34.7073463+07:00 80000040-0007-fe00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:28:34.7984313+07:00 80000040-0007-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:28:34.8548246+07:00 80000040-0007-fe00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:28:35.1714759+07:00 80000040-0007-fe00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 318.7598ms. (f66409e9)
+2020-11-03T22:28:35.1759659+07:00 80000040-0007-fe00-b63f-84710c7967bb [INF] Executed action "TanoApp.Controllers.HomeController.Index (TanoApp)" in 372.9145ms (afa2e885)
+2020-11-03T22:28:35.1834834+07:00 80000040-0007-fe00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:28:35.1979135+07:00 80000040-0007-fe00-b63f-84710c7967bb [INF] Request finished in 752.2706ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:28:38.9285153+07:00 8000008b-0002-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/login   (ca22a1cb)
+2020-11-03T22:28:38.9530499+07:00 8000008b-0002-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:28:38.9623746+07:00 8000008b-0002-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Login\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:28:38.9711120+07:00 8000008b-0002-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:28:39.0718495+07:00 8000008b-0002-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 103.409ms. (f66409e9)
+2020-11-03T22:28:39.0767422+07:00 8000008b-0002-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)" in 109.4292ms (afa2e885)
+2020-11-03T22:28:39.0802144+07:00 8000008b-0002-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:28:39.0839287+07:00 8000008b-0002-fd00-b63f-84710c7967bb [INF] Request finished in 156.302ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:28:39.2649921+07:00 80000076-0004-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:28:39.2958256+07:00 80000076-0004-fe00-b63f-84710c7967bb [INF] Request finished in 31.7995ms 404  (791a596a)
+2020-11-03T22:28:45.4111211+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44301/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 49 (ca22a1cb)
+2020-11-03T22:28:45.4200932+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (500cc934)
+2020-11-03T22:28:45.4757891+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Authen\", controller = \"Login\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authen(TanoApp.Models.AccountViewModels.LoginViewModel)" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:28:45.7052146+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:28:46.0124254+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("121"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Avatar], [a].[Balance], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[DateCreated], [a].[DateModified], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-11-03T22:28:46.4932339+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (0723d8ff)
+2020-11-03T22:28:46.6097915+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:28:46.6412050+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-11-03T22:28:46.6901916+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-11-03T22:28:46.7076641+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:28:46.7306262+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-11-03T22:28:46.7400794+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] User logged in. (fdce0db4)
+2020-11-03T22:28:46.7688500+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"TeduCoreApp.Utilities.Dtos.GenericResult"'. (8a1b66c8)
+2020-11-03T22:28:46.8026677+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)" in 1322.628ms (afa2e885)
+2020-11-03T22:28:46.8092651+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (99874f2b)
+2020-11-03T22:28:46.8216033+07:00 80000078-0004-fe00-b63f-84710c7967bb [INF] Request finished in 1411.5291ms 200 application/json; charset=utf-8 (791a596a)
+2020-11-03T22:28:49.9662357+07:00 8000007a-0004-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin   (ca22a1cb)
+2020-11-03T22:28:49.9779271+07:00 8000007a-0004-fe00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:28:49.9891065+07:00 8000007a-0004-fe00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:28:49.9999310+07:00 8000007a-0004-fe00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:28:50.1659348+07:00 8000007a-0004-fe00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:28:50.1862775+07:00 8000007a-0004-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[IconCss], [f].[Name], [f].[ParentId], [f].[SortOrder], [f].[Status], [f].[URL]
+FROM [Functions] AS [f]" (0723d8ff)
+2020-11-03T22:28:50.3933262+07:00 8000007a-0004-fe00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 396.1896ms. (f66409e9)
+2020-11-03T22:28:50.4002745+07:00 8000007a-0004-fe00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)" in 407.679ms (afa2e885)
+2020-11-03T22:28:50.4049899+07:00 8000007a-0004-fe00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:28:50.4098634+07:00 8000007a-0004-fe00-b63f-84710c7967bb [INF] Request finished in 444.8514ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:28:50.6438747+07:00 8000003b-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:28:50.6530654+07:00 8000003b-0006-fa00-b63f-84710c7967bb [INF] Request finished in 7.6996ms 404  (791a596a)
+2020-11-03T22:30:48.8390374+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-03T22:30:48.8680649+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-03T22:30:48.8720827+07:00  [INF] Content root path: "D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp" (b5d60022)
+2020-11-03T22:30:48.9344241+07:00 8000004a-0005-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/   (ca22a1cb)
+2020-11-03T22:30:49.1280048+07:00 8000004a-0005-fe00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:30:49.2329451+07:00 8000004a-0005-fe00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:30:49.3034803+07:00 8000004a-0005-fe00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:30:49.6240150+07:00 8000004a-0005-fe00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 318.0192ms. (f66409e9)
+2020-11-03T22:30:49.6329629+07:00 8000004a-0005-fe00-b63f-84710c7967bb [INF] Executed action "TanoApp.Controllers.HomeController.Index (TanoApp)" in 391.4194ms (afa2e885)
+2020-11-03T22:30:49.6429561+07:00 8000004a-0005-fe00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:30:49.6658676+07:00 8000004a-0005-fe00-b63f-84710c7967bb [INF] Request finished in 756.9308ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:30:52.8462759+07:00 80000082-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/lo   (ca22a1cb)
+2020-11-03T22:30:52.8691923+07:00 80000082-0004-fa00-b63f-84710c7967bb [INF] Request finished in 25.7644ms 404  (791a596a)
+2020-11-03T22:30:59.7610587+07:00 80000063-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/login   (ca22a1cb)
+2020-11-03T22:30:59.8136062+07:00 80000063-0008-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:30:59.8237855+07:00 80000063-0008-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Login\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:30:59.8328864+07:00 80000063-0008-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:30:59.9174884+07:00 80000063-0008-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 87.3138ms. (f66409e9)
+2020-11-03T22:30:59.9209969+07:00 80000063-0008-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)" in 93.7167ms (afa2e885)
+2020-11-03T22:30:59.9244285+07:00 80000063-0008-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:30:59.9269531+07:00 80000063-0008-fd00-b63f-84710c7967bb [INF] Request finished in 168.8345ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:31:00.1307752+07:00 80000030-000b-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:31:00.1451405+07:00 80000030-000b-fc00-b63f-84710c7967bb [INF] Request finished in 14.8969ms 404  (791a596a)
+2020-11-03T22:31:04.9319462+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44301/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 49 (ca22a1cb)
+2020-11-03T22:31:04.9407026+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (500cc934)
+2020-11-03T22:31:04.9920280+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Authen\", controller = \"Login\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authen(TanoApp.Models.AccountViewModels.LoginViewModel)" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:31:05.2030902+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:31:05.5193540+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("128"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Avatar], [a].[Balance], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[DateCreated], [a].[DateModified], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-11-03T22:31:06.1171449+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (0723d8ff)
+2020-11-03T22:31:06.2375303+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:31:06.2674764+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-11-03T22:31:06.3313439+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-11-03T22:31:06.3550830+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:31:06.3794432+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-11-03T22:31:06.3879156+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] User logged in. (fdce0db4)
+2020-11-03T22:31:06.4155411+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"TeduCoreApp.Utilities.Dtos.GenericResult"'. (8a1b66c8)
+2020-11-03T22:31:06.4473061+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)" in 1450.2917ms (afa2e885)
+2020-11-03T22:31:06.4535712+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (99874f2b)
+2020-11-03T22:31:06.4667282+07:00 80000065-0008-fd00-b63f-84710c7967bb [INF] Request finished in 1535.5525ms 200 application/json; charset=utf-8 (791a596a)
+2020-11-03T22:31:10.0805645+07:00 80000052-000a-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin   (ca22a1cb)
+2020-11-03T22:31:10.0908786+07:00 80000052-000a-fc00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:31:10.1013179+07:00 80000052-000a-fc00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:31:10.1099039+07:00 80000052-000a-fc00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:31:10.3271928+07:00 80000052-000a-fc00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:31:10.3579732+07:00 80000052-000a-fc00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[IconCss], [f].[Name], [f].[ParentId], [f].[SortOrder], [f].[Status], [f].[URL]
+FROM [Functions] AS [f]" (0723d8ff)
+2020-11-03T22:31:10.5804536+07:00 80000052-000a-fc00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 470.4297ms. (f66409e9)
+2020-11-03T22:31:10.5940570+07:00 80000052-000a-fc00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)" in 487.7541ms (afa2e885)
+2020-11-03T22:31:10.5995465+07:00 80000052-000a-fc00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:31:10.6069917+07:00 80000052-000a-fc00-b63f-84710c7967bb [INF] Request finished in 524.8821ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:31:10.8377761+07:00 80000084-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:31:10.8451418+07:00 80000084-0004-fa00-b63f-84710c7967bb [INF] Request finished in 6.7753ms 404  (791a596a)
+2020-11-03T22:31:50.6536680+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-03T22:31:50.6662156+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-03T22:31:50.6688648+07:00  [INF] Content root path: "D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp" (b5d60022)
+2020-11-03T22:31:50.6975576+07:00 80000028-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/   (ca22a1cb)
+2020-11-03T22:31:50.7443671+07:00 80000028-0000-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:31:50.7818072+07:00 80000028-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:31:50.8026268+07:00 80000028-0000-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:31:50.9470460+07:00 80000028-0000-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 142.7222ms. (f66409e9)
+2020-11-03T22:31:50.9497109+07:00 80000028-0000-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Controllers.HomeController.Index (TanoApp)" in 165.3605ms (afa2e885)
+2020-11-03T22:31:50.9533226+07:00 80000028-0000-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:31:50.9613306+07:00 80000028-0000-fd00-b63f-84710c7967bb [INF] Request finished in 278.6879ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:31:56.0336347+07:00 80000044-0004-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/login   (ca22a1cb)
+2020-11-03T22:31:56.0485423+07:00 80000044-0004-ff00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:31:56.0591518+07:00 80000044-0004-ff00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Login\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:31:56.0714237+07:00 80000044-0004-ff00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:31:56.1397145+07:00 80000044-0004-ff00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 73.082ms. (f66409e9)
+2020-11-03T22:31:56.1421049+07:00 80000044-0004-ff00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)" in 80.2991ms (afa2e885)
+2020-11-03T22:31:56.1442796+07:00 80000044-0004-ff00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:31:56.1477957+07:00 80000044-0004-ff00-b63f-84710c7967bb [INF] Request finished in 118.5114ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:31:56.3350372+07:00 80000054-000a-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:31:56.3481134+07:00 80000054-000a-fc00-b63f-84710c7967bb [INF] Request finished in 13.0186ms 404  (791a596a)
+2020-11-03T22:32:03.5645223+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44301/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 49 (ca22a1cb)
+2020-11-03T22:32:03.5725931+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (500cc934)
+2020-11-03T22:32:03.6139489+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Authen\", controller = \"Login\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authen(TanoApp.Models.AccountViewModels.LoginViewModel)" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:32:03.7952975+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:32:03.8063043+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44301/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 49 (ca22a1cb)
+2020-11-03T22:32:03.8122290+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (500cc934)
+2020-11-03T22:32:03.8162517+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Authen\", controller = \"Login\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authen(TanoApp.Models.AccountViewModels.LoginViewModel)" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:32:03.8675314+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:32:04.2431724+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("231"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Avatar], [a].[Balance], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[DateCreated], [a].[DateModified], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-11-03T22:32:04.2431622+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("265"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Avatar], [a].[Balance], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[DateCreated], [a].[DateModified], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-11-03T22:32:04.7252819+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (0723d8ff)
+2020-11-03T22:32:04.7280713+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("9"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (0723d8ff)
+2020-11-03T22:32:04.8491687+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:32:04.8517786+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("8"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:32:04.9116051+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("36"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-11-03T22:32:04.9141292+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("37"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-11-03T22:32:04.9769644+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-11-03T22:32:04.9796214+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-11-03T22:32:04.9999862+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:32:05.0137083+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("18"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:32:05.0226885+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-11-03T22:32:05.0271748+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-11-03T22:32:05.0349093+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] User logged in. (fdce0db4)
+2020-11-03T22:32:05.0392326+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] User logged in. (fdce0db4)
+2020-11-03T22:32:05.0626598+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"TeduCoreApp.Utilities.Dtos.GenericResult"'. (8a1b66c8)
+2020-11-03T22:32:05.0670441+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"TeduCoreApp.Utilities.Dtos.GenericResult"'. (8a1b66c8)
+2020-11-03T22:32:05.1041123+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)" in 1483.4708ms (afa2e885)
+2020-11-03T22:32:05.1072800+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)" in 1281.2279ms (afa2e885)
+2020-11-03T22:32:05.1124688+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (99874f2b)
+2020-11-03T22:32:05.1160524+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (99874f2b)
+2020-11-03T22:32:05.1287941+07:00 8000003d-0006-fa00-b63f-84710c7967bb [INF] Request finished in 1565.1658ms 200 application/json; charset=utf-8 (791a596a)
+2020-11-03T22:32:05.1315230+07:00 8000003b-0009-fd00-b63f-84710c7967bb [INF] Request finished in 1320.8933ms 200 application/json; charset=utf-8 (791a596a)
+2020-11-03T22:32:09.2683018+07:00 8000002a-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin   (ca22a1cb)
+2020-11-03T22:32:09.2844317+07:00 8000002a-0000-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:32:09.2932300+07:00 8000002a-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:32:09.3061857+07:00 8000002a-0000-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:32:09.4483388+07:00 8000002a-0000-fd00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:32:09.4727691+07:00 8000002a-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[IconCss], [f].[Name], [f].[ParentId], [f].[SortOrder], [f].[Status], [f].[URL]
+FROM [Functions] AS [f]" (0723d8ff)
+2020-11-03T22:32:09.6591114+07:00 8000002a-0000-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 355.2968ms. (f66409e9)
+2020-11-03T22:32:09.6685241+07:00 8000002a-0000-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)" in 371.2143ms (afa2e885)
+2020-11-03T22:32:09.6722177+07:00 8000002a-0000-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:32:09.6767857+07:00 8000002a-0000-fd00-b63f-84710c7967bb [INF] Request finished in 409.2253ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:32:09.8637986+07:00 80000067-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:32:09.8743271+07:00 80000067-0008-fd00-b63f-84710c7967bb [INF] Request finished in 10.8586ms 404  (791a596a)
+2020-11-03T22:33:15.4235231+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-03T22:33:15.4738305+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-03T22:33:15.4788366+07:00  [INF] Content root path: "D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp" (b5d60022)
+2020-11-03T22:33:15.5188656+07:00 8000003f-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/   (ca22a1cb)
+2020-11-03T22:33:15.5698083+07:00 8000003f-0006-fa00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:33:15.6054648+07:00 8000003f-0006-fa00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:33:15.6249767+07:00 8000003f-0006-fa00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:33:15.7679041+07:00 8000003f-0006-fa00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 141.7845ms. (f66409e9)
+2020-11-03T22:33:15.7707671+07:00 8000003f-0006-fa00-b63f-84710c7967bb [INF] Executed action "TanoApp.Controllers.HomeController.Index (TanoApp)" in 162.1718ms (afa2e885)
+2020-11-03T22:33:15.7756606+07:00 8000003f-0006-fa00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:33:15.7840762+07:00 8000003f-0006-fa00-b63f-84710c7967bb [INF] Request finished in 275.6717ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:33:15.9932161+07:00 80000049-0002-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/login   (ca22a1cb)
+2020-11-03T22:33:15.9989697+07:00 80000049-0002-ff00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:33:16.0027751+07:00 80000049-0002-ff00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Login\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:33:16.0188641+07:00 80000049-0002-ff00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:33:16.0628625+07:00 80000049-0002-ff00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 52.6428ms. (f66409e9)
+2020-11-03T22:33:16.0655023+07:00 80000049-0002-ff00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)" in 60.1936ms (afa2e885)
+2020-11-03T22:33:16.0683401+07:00 80000049-0002-ff00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:33:16.0720695+07:00 80000049-0002-ff00-b63f-84710c7967bb [INF] Request finished in 79.8506ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:33:16.2525634+07:00 80000042-0007-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:33:16.2679237+07:00 80000042-0007-fe00-b63f-84710c7967bb [INF] Request finished in 12.0819ms 404  (791a596a)
+2020-11-03T22:33:23.6213484+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44301/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 49 (ca22a1cb)
+2020-11-03T22:33:23.6289363+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (500cc934)
+2020-11-03T22:33:23.6790058+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Authen\", controller = \"Login\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authen(TanoApp.Models.AccountViewModels.LoginViewModel)" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:33:23.8485368+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:33:24.1318611+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("110"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Avatar], [a].[Balance], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[DateCreated], [a].[DateModified], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-11-03T22:33:24.6158064+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (0723d8ff)
+2020-11-03T22:33:24.7306441+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:33:24.7569786+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-11-03T22:33:24.8090818+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("3"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-11-03T22:33:24.8276947+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:33:24.8474026+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-11-03T22:33:24.8564396+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] User logged in. (fdce0db4)
+2020-11-03T22:33:24.8764960+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"TeduCoreApp.Utilities.Dtos.GenericResult"'. (8a1b66c8)
+2020-11-03T22:33:24.9086803+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)" in 1224.7834ms (afa2e885)
+2020-11-03T22:33:24.9150373+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (99874f2b)
+2020-11-03T22:33:24.9279170+07:00 80000041-0001-ff00-b63f-84710c7967bb [INF] Request finished in 1308.3692ms 200 application/json; charset=utf-8 (791a596a)
+2020-11-03T22:33:27.5781689+07:00 80000087-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin   (ca22a1cb)
+2020-11-03T22:33:27.5956229+07:00 80000087-0004-fa00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:33:27.6040083+07:00 80000087-0004-fa00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:33:27.6134748+07:00 80000087-0004-fa00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:33:27.7617718+07:00 80000087-0004-fa00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:33:27.7856839+07:00 80000087-0004-fa00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[IconCss], [f].[Name], [f].[ParentId], [f].[SortOrder], [f].[Status], [f].[URL]
+FROM [Functions] AS [f]" (0723d8ff)
+2020-11-03T22:33:27.9720699+07:00 80000087-0004-fa00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 360.3934ms. (f66409e9)
+2020-11-03T22:33:27.9802032+07:00 80000087-0004-fa00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)" in 372.0205ms (afa2e885)
+2020-11-03T22:33:27.9835727+07:00 80000087-0004-fa00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:33:27.9882057+07:00 80000087-0004-fa00-b63f-84710c7967bb [INF] Request finished in 411.6807ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:33:28.1679405+07:00 80000089-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:33:28.1745796+07:00 80000089-0004-fa00-b63f-84710c7967bb [INF] Request finished in 6.5843ms 404  (791a596a)
+2020-11-03T22:37:50.0822157+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-03T22:37:50.0945554+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-03T22:37:50.0985458+07:00  [INF] Content root path: "D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp" (b5d60022)
+2020-11-03T22:37:50.1632896+07:00 80000041-0006-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/   (ca22a1cb)
+2020-11-03T22:37:50.2310981+07:00 80000041-0006-fa00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:37:50.2747991+07:00 80000041-0006-fa00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:37:50.3001379+07:00 80000041-0006-fa00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:37:50.4814736+07:00 80000041-0006-fa00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 180.1286ms. (f66409e9)
+2020-11-03T22:37:50.4862067+07:00 80000041-0006-fa00-b63f-84710c7967bb [INF] Executed action "TanoApp.Controllers.HomeController.Index (TanoApp)" in 207.214ms (afa2e885)
+2020-11-03T22:37:50.4908860+07:00 80000041-0006-fa00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:37:50.5045968+07:00 80000041-0006-fa00-b63f-84710c7967bb [INF] Request finished in 388.1239ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:38:15.6141910+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-03T22:38:15.6253072+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-03T22:38:15.6275351+07:00  [INF] Content root path: "D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp" (b5d60022)
+2020-11-03T22:38:15.6558024+07:00 80000043-0001-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/   (ca22a1cb)
+2020-11-03T22:38:15.7064689+07:00 80000043-0001-ff00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:38:15.7435128+07:00 80000043-0001-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:38:15.7675749+07:00 80000043-0001-ff00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:38:15.9193892+07:00 80000043-0001-ff00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 152.0772ms. (f66409e9)
+2020-11-03T22:38:15.9222439+07:00 80000043-0001-ff00-b63f-84710c7967bb [INF] Executed action "TanoApp.Controllers.HomeController.Index (TanoApp)" in 175.7408ms (afa2e885)
+2020-11-03T22:38:15.9275544+07:00 80000043-0001-ff00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:38:15.9367680+07:00 80000043-0001-ff00-b63f-84710c7967bb [INF] Request finished in 295.3483ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:38:48.0702130+07:00 80000069-0008-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin   (ca22a1cb)
+2020-11-03T22:38:48.0980202+07:00 80000069-0008-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:38:48.1159033+07:00 80000069-0008-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:38:48.1333032+07:00 80000069-0008-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:38:48.3434123+07:00 80000069-0008-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 219.5589ms. (f66409e9)
+2020-11-03T22:38:48.3475235+07:00 80000069-0008-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)" in 227.2303ms (afa2e885)
+2020-11-03T22:38:48.3509273+07:00 80000069-0008-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:38:48.3553054+07:00 80000069-0008-fd00-b63f-84710c7967bb [INF] Request finished in 288.6568ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:38:48.4537748+07:00 80000032-000b-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/pages/font-awesome.js   (ca22a1cb)
+2020-11-03T22:38:48.4954668+07:00 80000032-000b-fc00-b63f-84710c7967bb [INF] Sending file. Request path: '"/admin-side/pages/font-awesome.js"'. Physical path: '"D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp\wwwroot\admin-side\pages\font-awesome.js"' (27b0a520)
+2020-11-03T22:38:48.4979862+07:00 80000032-000b-fc00-b63f-84710c7967bb [INF] Request finished in 47.5504ms 200 application/javascript (791a596a)
+2020-11-03T22:38:48.5973460+07:00 8000008b-0004-fa00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin-side/fonts/fontawesome-webfont.woff2?v=4.6.3   (ca22a1cb)
+2020-11-03T22:38:48.9214267+07:00 80000021-000a-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:38:48.9390097+07:00 80000021-000a-fd00-b63f-84710c7967bb [INF] Request finished in 293.6435ms 404  (791a596a)
+2020-11-03T22:38:48.9807498+07:00 8000008b-0004-fa00-b63f-84710c7967bb [INF] Sending file. Request path: '"/admin-side/fonts/fontawesome-webfont.woff2"'. Physical path: '"D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp\wwwroot\admin-side\fonts\fontawesome-webfont.woff2"' (27b0a520)
+2020-11-03T22:38:48.9863067+07:00 8000008b-0004-fa00-b63f-84710c7967bb [INF] Request finished in 386.4569ms 200 font/woff2 (791a596a)
+2020-11-03T22:39:17.6532940+07:00  [INF] Application started. Press Ctrl+C to shut down. (dcaefe54)
+2020-11-03T22:39:17.6675734+07:00  [INF] Hosting environment: "Development" (c3307c92)
+2020-11-03T22:39:17.6696718+07:00  [INF] Content root path: "D:\ProjectHocTap\Net Core\NetCore3_TanoApp\TanoApp\TanoApp" (b5d60022)
+2020-11-03T22:39:17.7064665+07:00 80000019-0003-ff00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/   (ca22a1cb)
+2020-11-03T22:39:17.7568018+07:00 8000002d-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/login   (ca22a1cb)
+2020-11-03T22:39:17.7996002+07:00 8000002d-0000-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:39:17.7996292+07:00 80000019-0003-ff00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:39:17.8572291+07:00 8000002d-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Login\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:39:17.8572682+07:00 80000019-0003-ff00-b63f-84710c7967bb [INF] Route matched with "{action = \"Index\", controller = \"Home\", area = \"\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:39:17.9109602+07:00 8000002d-0000-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:39:17.9154233+07:00 80000019-0003-ff00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:39:18.1527353+07:00 80000019-0003-ff00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 244.8089ms. (f66409e9)
+2020-11-03T22:39:18.1527717+07:00 8000002d-0000-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 252.0216ms. (f66409e9)
+2020-11-03T22:39:18.1565657+07:00 80000019-0003-ff00-b63f-84710c7967bb [INF] Executed action "TanoApp.Controllers.HomeController.Index (TanoApp)" in 295.3413ms (afa2e885)
+2020-11-03T22:39:18.1579346+07:00 8000002d-0000-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)" in 295.3779ms (afa2e885)
+2020-11-03T22:39:18.1639647+07:00 8000002d-0000-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:39:18.1664458+07:00 80000019-0003-ff00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:39:18.1790046+07:00 8000002d-0000-fd00-b63f-84710c7967bb [INF] Request finished in 418.3546ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:39:18.1790047+07:00 80000019-0003-ff00-b63f-84710c7967bb [INF] Request finished in 478.2775ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:39:18.4181818+07:00 8000004c-0005-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:39:18.4349568+07:00 8000004c-0005-fe00-b63f-84710c7967bb [INF] Request finished in 18.0658ms 404  (791a596a)
+2020-11-03T22:39:24.0147280+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 POST https://localhost:44301/admin/login/authen application/x-www-form-urlencoded; charset=UTF-8 49 (ca22a1cb)
+2020-11-03T22:39:24.0194073+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (500cc934)
+2020-11-03T22:39:24.0578349+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Authen\", controller = \"Login\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Authen(TanoApp.Models.AccountViewModels.LoginViewModel)" on controller "TanoApp.Areas.Admin.Controllers.LoginController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:39:24.2613000+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:39:24.5434843+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("103"ms) [Parameters=["@__normalizedUserName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[Avatar], [a].[Balance], [a].[BirthDate], [a].[ConcurrencyStamp], [a].[DateCreated], [a].[DateModified], [a].[Email], [a].[EmailConfirmed], [a].[FullName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[Status], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0" (0723d8ff)
+2020-11-03T22:39:24.9847231+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("7"ms) [Parameters=["@__user_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @__user_Id_0" (0723d8ff)
+2020-11-03T22:39:25.0840724+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:39:25.1120971+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("4"ms) [Parameters=["@__normalizedName_0='?' (Size = 256)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Description], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @__normalizedName_0" (0723d8ff)
+2020-11-03T22:39:25.1633335+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("5"ms) [Parameters=["@__role_Id_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @__role_Id_0" (0723d8ff)
+2020-11-03T22:39:25.1856565+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] Executed DbCommand ("2"ms) [Parameters=["@__userId_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @__userId_0" (0723d8ff)
+2020-11-03T22:39:25.2053526+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] AuthenticationScheme: "Identity.Application" signed in. (c66dd7e7)
+2020-11-03T22:39:25.2132091+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] User logged in. (fdce0db4)
+2020-11-03T22:39:25.2380180+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] Executing ObjectResult, writing value of type '"TeduCoreApp.Utilities.Dtos.GenericResult"'. (8a1b66c8)
+2020-11-03T22:39:25.2679401+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)" in 1206.1129ms (afa2e885)
+2020-11-03T22:39:25.2746258+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.LoginController.Authen (TanoApp)"' (99874f2b)
+2020-11-03T22:39:25.2879305+07:00 8000004e-0005-fe00-b63f-84710c7967bb [INF] Request finished in 1273.3388ms 200 application/json; charset=utf-8 (791a596a)
+2020-11-03T22:39:28.2595165+07:00 8000002f-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin   (ca22a1cb)
+2020-11-03T22:39:28.2767262+07:00 8000002f-0000-fd00-b63f-84710c7967bb [INF] Executing endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (500cc934)
+2020-11-03T22:39:28.2839169+07:00 8000002f-0000-fd00-b63f-84710c7967bb [INF] Route matched with "{area = \"Admin\", action = \"Index\", controller = \"Home\"}". Executing controller action with signature "Microsoft.AspNetCore.Mvc.IActionResult Index()" on controller "TanoApp.Areas.Admin.Controllers.HomeController" ("TanoApp"). (122b2fdf)
+2020-11-03T22:39:28.2927174+07:00 8000002f-0000-fd00-b63f-84710c7967bb [INF] Executing ViewResult, running view "Index". (c83d0e25)
+2020-11-03T22:39:28.4622730+07:00 8000002f-0000-fd00-b63f-84710c7967bb [INF] Entity Framework Core "3.1.9" initialized '"AppDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "MigrationsAssembly=TanoApp.Data.EntityFramework " (9958f5bb)
+2020-11-03T22:39:28.4905881+07:00 8000002f-0000-fd00-b63f-84710c7967bb [INF] Executed DbCommand ("6"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [f].[Id], [f].[IconCss], [f].[Name], [f].[ParentId], [f].[SortOrder], [f].[Status], [f].[URL]
+FROM [Functions] AS [f]" (0723d8ff)
+2020-11-03T22:39:28.6763281+07:00 8000002f-0000-fd00-b63f-84710c7967bb [INF] Executed ViewResult - view "Index" executed in 384.9661ms. (f66409e9)
+2020-11-03T22:39:28.6854891+07:00 8000002f-0000-fd00-b63f-84710c7967bb [INF] Executed action "TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)" in 397.1577ms (afa2e885)
+2020-11-03T22:39:28.6894569+07:00 8000002f-0000-fd00-b63f-84710c7967bb [INF] Executed endpoint '"TanoApp.Areas.Admin.Controllers.HomeController.Index (TanoApp)"' (99874f2b)
+2020-11-03T22:39:28.6941489+07:00 8000002f-0000-fd00-b63f-84710c7967bb [INF] Request finished in 435.5296ms 200 text/html; charset=utf-8 (791a596a)
+2020-11-03T22:39:28.8996697+07:00 80000031-0000-fd00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/assets/images/inverse-layout.jpg   (ca22a1cb)
+2020-11-03T22:39:28.9058713+07:00 80000031-0000-fd00-b63f-84710c7967bb [INF] Request finished in 7.5062ms 404  (791a596a)
+2020-11-03T22:39:40.8075396+07:00 80000057-000a-fc00-b63f-84710c7967bb [INF] Request starting HTTP/2.0 GET https://localhost:44301/admin/advertistment/index   (ca22a1cb)
+2020-11-03T22:39:40.8501994+07:00 80000057-000a-fc00-b63f-84710c7967bb [INF] Request finished in 44.0336ms 404  (791a596a)

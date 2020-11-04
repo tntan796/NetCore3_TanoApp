@@ -1,0 +1,37 @@
+﻿@using TanoApp.Application.ViewModels.Products; 
+@model List<ProductViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card" id="resp-table">
+    <div class="card-header"><h5 class="card-header-text">Responsive Table</h5></div>
+    <div class="card-block">
+        <div class="table-responsive" data-pattern="priority-columns">
+            <table cellspacing="0" id="tech-companies-1" class="table table-small-font table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th data-priority="1">Name</th>
+                        <th data-priority="1">Price</th>
+                        <th data-priority="3">Created Date</th>
+                        <th data-priority="4">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Repeat -->
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Name</td>
+                            <td>@item.Price</td>
+                            <td>@item.DateCreated</td>
+                            <td>@item.Status</td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

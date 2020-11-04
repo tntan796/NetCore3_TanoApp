@@ -59,10 +59,12 @@ namespace TanoApp
             // Repositories
             services.AddTransient<IFunctionRepository, FunctionRepository>();
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IProductRepository, ProductRepository>();
 
             // Services
             services.AddTransient<IFunctionService, FunctionService>();
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
+            services.AddTransient<IProductService, ProductService>();
 
             // Unit of work
             services.AddTransient<IUnitOfWork, EFUnitOfWork>();

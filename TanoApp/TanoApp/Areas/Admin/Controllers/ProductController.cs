@@ -17,10 +17,16 @@ namespace TanoApp.Areas.Admin.Controllers
         {
             _productService = productService;
         }
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            List<ProductViewModel> productViewModels = await _productService.GetListProduct();
-            return View(productViewModels);
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            List<ProductViewModel> productViewModels = _productService.GetListProduct();
+            return Ok(productViewModels);
         }
     }
 }

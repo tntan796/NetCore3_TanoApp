@@ -8,6 +8,6 @@ namespace TanoApp.Application.Interfaces
 {
     public interface IProductService: IDisposable
     {
-        Task<List<ProductViewModel>> GetListProduct();
+        List<ProductViewModel> GetListProduct();
     }
 }

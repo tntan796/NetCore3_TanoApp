@@ -38,6 +38,7 @@
     <link href="~/admin-side/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!--color css-->
     <link rel="stylesheet" type="text/css" href="~/admin-side/css/color/color-1.min.css" id="color" />
+    @RenderSection("Styles", required: false);
 </head>
 <body class="sidebar-mini fixed">
     <div class="loader-bg">
@@ -368,11 +369,16 @@
         <script src="~/admin-side/pages/font-awesome.js"></script>
         <!-- custom js -->
         <script type="text/javascript" src="~/admin-side/js/main.min.js"></script>
-        <script src="~/admin-side/pages/notification.js"></script>
+        @*<script src="~/admin-side/pages/notification.js"></script>*@
         @*<script type="text/javascript" src="~/admin-side/pages/dashboard.js"></script>*@
         <script type="text/javascript" src="~/admin-side/pages/elements.js"></script>
+        <!-- Notification -->
+        <script src="~/admin-side/plugins/notification/js/bootstrap-growl.min.js"></script>
+        <script src="~/app/shared/custom-notification.js"></script>
+
         <script src="~/admin-side/js/menu.js"></script>
         <script src="~/app/shared/tano.js"></script>
+        <script src="~/admin-side/js/mustache.min.js"></script>
         @RenderSection("Scripts", required: false)
 </body>
 </html>

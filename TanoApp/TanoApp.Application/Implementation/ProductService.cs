@@ -25,9 +25,9 @@ namespace TanoApp.Application.Implementation
             GC.SuppressFinalize(this);
         }
 
-        public async Task<List<ProductViewModel>> GetListProduct()
+        public List<ProductViewModel> GetListProduct()
         {
-            List<Product> products = await _productRepository.FindAll().ToListAsync();
+            List<Product> products = _productRepository.FindAll(x => x.ProductCategory).ToList();
             return _mapper.Map<List<Product>, List<ProductViewModel>>(products);
         }
     }

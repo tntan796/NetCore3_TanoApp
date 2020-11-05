@@ -42,11 +42,14 @@ namespace TanoApp
             services.AddControllersWithViews();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
              o => o.MigrationsAssembly("TanoApp.Data.EntityFramework")));
-       
 
-            services.AddIdentity<AppUser, AppRole>()
+
+            services
+                .AddIdentity<AppUser, AppRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.ConfigureApplicationCookie(o => o.LoginPath = "/Admin/Login");
 
             // Add application services.
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();

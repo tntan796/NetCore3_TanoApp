@@ -53,6 +53,7 @@
             success: function (res) {
                 if (res.success) {
                     customNotify("Đăng nhập thành công", types.success);
+                    window.location.href = "/admin";
                 } else {
                     customNotify("Đăng nhập không đúng", types.danger);
                 }

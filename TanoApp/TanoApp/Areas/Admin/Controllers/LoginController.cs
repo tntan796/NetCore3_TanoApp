@@ -9,8 +9,7 @@ using TeduCoreApp.Utilities.Dtos;
 
 namespace TanoApp.Areas.Admin.Controllers
 {
-    [Area("Admin")]
-    public class LoginController : Controller
+    public class LoginController : BaseController
     {
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
@@ -22,6 +21,8 @@ namespace TanoApp.Areas.Admin.Controllers
             _signInManager = signInManager;
             _logger = logger;
         }
+
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View();

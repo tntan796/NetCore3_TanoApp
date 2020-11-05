@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 namespace TanoApp.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    [Authorize]
     public class BaseController : Controller
     {
     }

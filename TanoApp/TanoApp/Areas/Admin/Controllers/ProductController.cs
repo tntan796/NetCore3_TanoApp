@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TanoApp.Application.Interfaces;
 using TanoApp.Application.ViewModels.Products;
 
 namespace TanoApp.Areas.Admin.Controllers
 {
+    [Authorize]
     public class ProductController : BaseController
     {
         IProductService _productService;

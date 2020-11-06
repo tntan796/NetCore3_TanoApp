@@ -1,16 +1,20 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using TanoApp.Application.AutoMapper;
 using TanoApp.Application.Implementation;
 using TanoApp.Application.Interfaces;
@@ -18,6 +22,7 @@ using TanoApp.Data.EF.EF;
 using TanoApp.Data.EF.Repositories;
 using TanoApp.Data.Entities;
 using TanoApp.Data.IRepositories;
+using TanoApp.Helpers;
 using TanoApp.Infrastructure.Interfaces;
 
 namespace TanoApp
@@ -37,31 +42,59 @@ namespace TanoApp
             services.AddControllersWithViews();
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
              o => o.MigrationsAssembly("TanoApp.Data.EntityFramework")));
-       
 
-            services.AddIdentity<AppUser, AppRole>()
+
+            services
+                .AddIdentity<AppUser, AppRole>()
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
+
+            services.ConfigureApplicationCookie(o => o.LoginPath = "/Admin/Login");
 
             // Add application services.
             services.AddScoped<UserManager<AppUser>, UserManager<AppUser>>();
             services.AddScoped<RoleManager<AppRole>, RoleManager<AppRole>>();
 
             services.AddTransient<DbInitializer>();
+
+            services.AddScoped<IUserClaimsPrincipalFactory<AppUser>, CustomClaimsPrincipalFactory>();
+
+            // Repositories
+            services.AddTransient<IFunctionRepository, FunctionRepository>();
             services.AddTransient<IProductCategoryRepository, ProductCategoryRepository>();
+            services.AddTransient<IProductRepository, ProductRepository>();
+
+            // Services
+            services.AddTransient<IFunctionService, FunctionService>();
             services.AddTransient<IProductCategoryService, ProductCategoryService>();
+            services.AddTransient<IProductService, ProductService>();
+
+            // Unit of work
             services.AddTransient<IUnitOfWork, EFUnitOfWork>();
 
-
+            // Auto mapper
             IMapper mapper = AutoMapperConfig.RegisterMappings().CreateMapper();
             services.AddSingleton(mapper);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory)
         {
+            loggerFactory.AddFile("Logs/Tano{Date}");
+            app.UseStaticFiles();
+
             if (env.IsDevelopment())
             {
+                try
+                {
+                    app.UseStaticFiles(new StaticFileOptions()
+                    {
+                        FileProvider = new PhysicalFileProvider(
+                        Path.Combine(Directory.GetCurrentDirectory(), @"node_modules")),
+                        RequestPath = new PathString("/vendor")
+                    });
+                }
+                catch (Exception) {}
                 app.UseDeveloperExceptionPage();
             }
             else
@@ -71,17 +104,25 @@ namespace TanoApp
                 app.UseHsts();
             }
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
 
             app.UseRouting();
-            
+
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
+              
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+                endpoints.MapAreaControllerRoute(
+                  name: "areaRoute",
+                  areaName: "Admin",
+                  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                 );
             });
         }
     }

@@ -1,0 +1,192 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tano Shop</title>
+    <!-- HTML5 Shim and Respond.js IE9 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Phoenixcoded">
+    <meta name="keywords"
+          content=", Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="Phoenixcoded">
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="~/admin-side/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="~/admin-side/images/favicon.ico" type="image/x-icon">
+    <!-- Google font-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="~/admin-side/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!--ico Fonts-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/icon/icofont/css/icofont.css">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/bower_components/bootstrap/css/bootstrap.min.css">
+    <!-- waves css -->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/plugins/waves/css/waves.min.css">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/css/main.css">
+    <!-- Responsive.css-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/css/responsive.css">
+    <!--color css-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/css/color/color-1.min.css" id="color" />
+    <link href="~/app/controllers/login/index.css" rel="stylesheet" />
+</head>
+<body>
+    <section class="login p-fixed d-flex text-center bg-primary common-img-bg">
+        <!-- Container-fluid starts -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="login-card card-block">
+                        <form class="md-float-material" id="loginForm">
+                            @Html.AntiForgeryToken();
+                            <div class="text-center">
+                                <img src="~/admin-side/images/logo-tano-app.png">
+                            </div>
+                            <h3 class="text-center txt-primary">
+                                Sign In to your account
+                            </h3>
+                            <div class="md-input-wrapper position-relative">
+                                <input type="text" class="md-form-control" name="username" id="txtUserName" placeholder="User Name" />
+                                <label>User Name</label>
+                            </div>
+                            <div class="md-input-wrapper position-relative">
+                                <input type="password" name="password" class="md-form-control" id="txtPassword" placeholder="Password" />
+                                <label>Password</label>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6 ">
+                                    <div class="rkmd-checkbox checkbox-rotate checkbox-ripple m-b-25">
+                                        <label class="input-checkbox checkbox-primary">
+                                            <input type="checkbox" id="rememberMe" name="rememberMe">
+                                            <span class="checkbox"></span>
+                                        </label>
+                                        <div class="captions">Remember Me</div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6  text-right forgot-phone">
+                                    <a href="#" class="f-w-600"> Forget Password?</a>
+                                </div>
+                            </div>
+                            <button type="submit" id="btnLogin" class="btn btn-primary btn-md btn-block waves-effect text-center">LOGIN</button>.
+
+                            <div class=" sign-in-with"><h6 class="text">Sign in With</h6></div>
+                            <div class="">
+                                <div class="social-login text-center">
+                                    <button type="button" class="btn btn-facebook waves-effect waves-light">
+                                        <span><i class="icofont icofont-social-facebook  txt-white f-18"></i></span><span>facebook</span>
+                                    </button>
+
+                                    <button type="button" class="btn btn-twitter waves-effect waves-light">
+                                        <span><i class="icofont icofont-social-twitter  txt-white f-18"></i></span><span>twitter</span>
+                                    </button>
+
+                                    <button type="button" class="btn btn-google-plus waves-effect waves-light">
+                                        <i class="icofont icofont-social-google-plus txt-white f-18"></i><span>google+</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- <div class="card-footer"> -->
+                            <div class="row">
+                                <div class="col-sm-12  text-center">
+                                    <span class="text-muted">Don't have an account?</span>
+                                    <a href="#" class="f-w-600 p-l-5">Sign up Now</a>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                        </form>
+                        <!-- end of form -->
+                    </div>
+                    <!-- end of login-card -->
+                </div>
+                <!-- end of col-sm-12 -->
+            </div>
+            <!-- end of row -->
+        </div>
+        <!-- end of container-fluid -->
+    </section>
+    <!-- Warning Section Starts -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 9]>
+    <div class="ie-warning">
+        <h1>Warning!!</h1>
+        <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>
+        <div class="iew-container">
+            <ul class="iew-download">
+                <li>
+                    <a href="http://www.google.com/chrome/">
+                        <img src="assets/images/browser/chrome.png" alt="Chrome">
+                        <div>Chrome</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.mozilla.org/en-US/firefox/new/">
+                        <img src="assets/images/browser/firefox.png" alt="Firefox">
+                        <div>Firefox</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.opera.com">
+                        <img src="assets/images/browser/opera.png" alt="Opera">
+                        <div>Opera</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.apple.com/safari/">
+                        <img src="assets/images/browser/safari.png" alt="Safari">
+                        <div>Safari</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                        <img src="assets/images/browser/ie.png" alt="">
+                        <div>IE (9 & above)</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p>Sorry for the inconvenience!</p>
+    </div>
+    <![endif]-->
+    <!-- Warning Section Ends -->
+    <!-- Required Jqurey -->
+    <script type="text/javascript" src="~/admin-side/bower_components/jquery/js/jquery.min.js"></script>
+    <script type="text/javascript" src="~/admin-side/bower_components/jquery-ui/js/jquery-ui.min.js"></script>
+    <!-- tether.js -->
+    <script type="text/javascript" src="~/admin-side/bower_components/popper.js/js/popper.min.js"></script>
+    <!-- waves effects.js -->
+    <script src="~/admin-side/plugins/waves/js/waves.min.js"></script>
+    <!-- Required Framework -->
+    <script type="text/javascript" src="~/admin-side/bower_components/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Custom js -->
+    <script type="text/javascript" src="~/admin-side/pages/elements.js"></script>
+    <script type="text/javascript" src="~/admin-side/js/common-pages.min.js"></script>
+
+    <!-- Notification -->
+    <script src="~/admin-side/plugins/notification/js/bootstrap-growl.min.js"></script>
+    <script src="~/app/shared/custom-notification.js"></script>
+
+    <!-- Validation -->
+    <script src="~/admin-side/js/jquery.validate.js"></script>
+    <script src="~/admin-side/js/jquery.validate.unobtrusive.js"></script>
+
+
+    <script src="~/app/controllers/login/index.js"></script>
+    <script src="~/app/shared/tano.js"></script>
+    <script>
+        var login = new loginControllerJS();
+        login.initialize();
+    </script>
+</body>

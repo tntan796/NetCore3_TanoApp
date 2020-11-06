@@ -3,15 +3,30 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 @section Scripts{
+    <script src="~/admin-side/js/jquery.twbsPagination.js"></script>
     <script src="~/app/controllers/product/index.js"></script>
     <script>
         var product = new productController();
         product.initializer();
     </script>
 }
+
+@section Styles {
+    <link href="~/app/controllers/product/index.css" rel="stylesheet" />
+}
 <div class="card" id="resp-table">
-    <div class="card-header"><h5 class="card-header-text">Responsive Table</h5></div>
+    <div class="card-header"><h5 class="card-header-text">Danh sách sản phẩm</h5></div>
     <div class="card-block">
+        <div class="form-group row">
+            <div class="col-md-4">
+                <div class="input-group">
+                    <input id="txtKeyword" type="text" class="form-control" placeholder="Nhập nội dung tìm kiếm...">
+                    <span class="input-group-btn" id="btn-addon2">
+                        <button type="button" id="btnSearch" class="btn btn-primary shadow-none addon-btn waves-effect waves-light">Tìm kiếm!</button>
+                    </span>
+                </div>
+            </div>
+        </div>
         <div class="table-responsive" data-pattern="priority-columns">
             <table cellspacing="0" id="tech-companies-1" class="table table-small-font table-bordered table-striped">
                 <thead>
@@ -20,12 +35,35 @@
                         <th data-priority="1">Price</th>
                         <th data-priority="3">Created Date</th>
                         <th data-priority="4">Status</th>
+                        <th data-priority="5">Method</th>
                     </tr>
                 </thead>
                 <tbody id="tbl-body">
                 </tbody>
             </table>
         </div>
+        @*Paging*@
+    <div class="row align-items-center">
+        <div class="col-12 col-sm-6">
+            <div class="dataTables_info" id="database-checkbox_info" role="status" aria-live="polite">
+                <select id="ddlShowPage" class="custom-dropbox">
+                    <option value="10" selected="selected">10</option>
+                    <option value="20">20</option>
+                    <option value="20">30</option>
+                    <option value="20">50</option>
+                </select>
+                <span classs="item-per-page">
+                    bản ghi/trang:
+                </span>
+                Tổng số bản ghi: <strong id="lblTotalRecords"></strong>
+            </div>
+        </div>
+        <div class="col-12 col-sm-6">
+            <div class="dataTables_paginate paging_simple_numbers" id="datatabl3e-checkbox_paginate">
+                <ul id="paginationUL" class="justify-content-end"></ul>
+            </div>
+        </div>
+    </div>
     </div>
 </div>
 

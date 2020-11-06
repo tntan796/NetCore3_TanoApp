@@ -1,0 +1,7 @@
+﻿.pagination li a{
+    color: gray !important;
+}
+
+.pagination li.active a {
+    color: white !important;
+}

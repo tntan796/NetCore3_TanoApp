@@ -53,6 +53,21 @@
     },
     formatNumber: function (number, precision) {
 
+    },
+    unflattern: function (arr) {
+        var map = {};
+        var roots = [];
+        for (var i = 0; i < arr.length; i += 1) {
+            var node = arr[i];
+            node.children = [];
+            map[node.id] = i; // use map to look-up the parents
+            if (node.parentId !== null) {
+                arr[map[node.parentId]].children.push(node);
+            } else {
+                roots.push(node);
+            }
+        }
+        return roots;
     }
 }
 

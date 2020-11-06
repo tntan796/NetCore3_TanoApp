@@ -51,7 +51,7 @@ namespace TanoApp.Data.EF.EF
                 await _userManager.CreateAsync(new AppUser()
                 {
                     UserName = "tano",
-                    FullName = "Administrator",
+                    FullName = "Trần Ngọc Tân",
                     Email = "tano@gmail.com",
                     Balance = 0,
                     DateCreated = DateTime.Now,

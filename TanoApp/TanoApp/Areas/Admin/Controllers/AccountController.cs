@@ -8,7 +8,7 @@ using TanoApp.Data.Entities;
 
 namespace TanoApp.Areas.Admin.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController : BaseController
     {
         private readonly SignInManager<AppUser> _signInManager;
         public AccountController(SignInManager<AppUser> signInManager)
@@ -23,7 +23,7 @@ namespace TanoApp.Areas.Admin.Controllers
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction(nameof(LoginController.Index), "Login");
+            return RedirectToAction("Login", "Admin");
         }
     }
 }

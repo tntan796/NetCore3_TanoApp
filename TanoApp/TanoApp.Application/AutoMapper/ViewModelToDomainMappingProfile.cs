@@ -14,6 +14,7 @@ namespace TanoApp.Application.AutoMapper
                 c.SortOrder, c.Status, c.SeoPageTitle, c.SeoAlias, c.SeoKeywords, c.SeoDescription));
 
             CreateMap<FunctionViewModel, Function>();
+            CreateMap<ProductViewModel, Product>();
         }
     }
 }

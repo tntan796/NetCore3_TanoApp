@@ -1,15 +1,15 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Options;
-using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using TanoApp.Data.Entities;
+using TanoApp.Data.Enums;
 
 namespace TanoApp.Helpers
 {
     public class CustomClaimsPrincipalFactory : UserClaimsPrincipalFactory<AppUser, AppRole>
     {
-        UserManager<AppUser> _userManger;
+        private UserManager<AppUser> _userManger;
 
         public CustomClaimsPrincipalFactory(UserManager<AppUser> userManager,
             RoleManager<AppRole> roleManager, IOptions<IdentityOptions> options)
@@ -25,7 +25,11 @@ namespace TanoApp.Helpers
             ((ClaimsIdentity)principal.Identity).AddClaims(new[]
             {
                 new Claim("UserName",user.UserName),
-                new Claim("Avatar",user.Avatar??string.Empty),
+                new Claim("Avatar",user.Avatar ?? string.Empty),
+                new Claim("FullName",user.FullName ?? string.Empty),
+                new Claim("Email",user.Email ?? string.Empty),
+                new Claim("PhoneNumber",user.PhoneNumber ?? string.Empty),
+                new Claim("Status", user.Status.ToString()),
                 new Claim("Roles",string.Join(";",roles))
             });
             return principal;

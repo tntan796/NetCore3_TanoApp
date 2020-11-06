@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+@section Scripts{
+    <script src="~/app/controllers/product/index.js"></script>
+    <script>
+        var product = new productController();
+        product.initializer();
+    </script>
+}
+<div class="card" id="resp-table">
+    <div class="card-header"><h5 class="card-header-text">Responsive Table</h5></div>
+    <div class="card-block">
+        <div class="table-responsive" data-pattern="priority-columns">
+            <table cellspacing="0" id="tech-companies-1" class="table table-small-font table-bordered table-striped">
+                <thead>
+                    <tr>
+                        <th data-priority="1">Name</th>
+                        <th data-priority="1">Price</th>
+                        <th data-priority="3">Created Date</th>
+                        <th data-priority="4">Status</th>
+                    </tr>
+                </thead>
+                <tbody id="tbl-body">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script id="table-template" type="x-tmpl-mustache">
+    <tr>
+        <td>{{name}}</td>
+        <td>{{price}}</td>
+        <td>{{dateCreated}}</td>
+        <td>{{status}}</td>
+        <td>
+            <button class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+            <button class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+        </td>
+    </tr>
+</script>

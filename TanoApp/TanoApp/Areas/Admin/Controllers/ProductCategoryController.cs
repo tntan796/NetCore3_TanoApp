@@ -33,7 +33,7 @@ namespace TanoApp.Areas.Admin.Controllers
                 return new BadRequestObjectResult(ModelState);
             } else
             {
-                if (sourceId != targetId)
+                if (sourceId == targetId)
                 {
                     return new BadRequestResult();
                 } else

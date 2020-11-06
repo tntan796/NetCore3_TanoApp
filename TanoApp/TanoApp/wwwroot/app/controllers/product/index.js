@@ -1,5 +1,6 @@
 ﻿var productController = function () {
     this.initializer = function () {
+        loadCategories();
         loadData();
         registerEvent();
     }
@@ -10,6 +11,38 @@
             tano.configs.pageIndex = 1;
             loadData(true);
         });
+
+        $("#ddlCategorySearch").on('change', function () {
+            loadData(true);
+        });
+
+        $("#btnSearch").on('click', function () {
+            loadData(true);
+        });
+        $("#txtKeyword").on('keypress', function (e) {
+            if (e.which == 13) {
+                loadData(true);
+            }
+        });
+    }
+
+    function loadCategories() {
+        $.ajax({
+            type: "get",
+            url: "/admin/product/getallcategories",
+            datatype: "json",
+            success: function (result) {
+                var render = "<option value=''>--Chọn danh mục --</option>";
+                result.forEach(item => {
+                    render += "<option value='" + item.id + "'>" + item.name + "</option>";
+                });
+                $("#ddlCategorySearch").html(render);
+            },
+            error: function (error) {
+                customNotify("Get data fail categories", types.danger);
+                console.log(error);
+            }
+        });
     }
 
     function loadData(isPageChanged = false) {
@@ -17,7 +50,7 @@
         $.ajax({
             type: "get",
             data: {
-                categoryId: null,
+                categoryId: $('#ddlCategorySearch').val(),
                 keyword: $('#txtKeyword').val(),
                 page: tano.configs.pageIndex,
                 pageSize: tano.configs.pageSize
@@ -28,6 +61,8 @@
                 $("#tbl-body").html('');
                 Mustache.parse(template);
                 result.results.forEach((item) => {
+                    item.isActive = item.status == 1;
+                    item.status = item.status == 1 ? 'Hoạt động' : 'Không hoạt động';
                     let rendered = Mustache.render(template, item);
                     $("#tbl-body").append(rendered);
                 });

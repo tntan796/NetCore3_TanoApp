@@ -17,8 +17,9 @@
 <div class="card" id="resp-table">
     <div class="card-header"><h5 class="card-header-text">Danh sách sản phẩm</h5></div>
     <div class="card-block">
-        <div class="form-group row">
-            <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-4 form-group ">
+                <label>Tìm kiếm</label>
                 <div class="input-group">
                     <input id="txtKeyword" type="text" class="form-control" placeholder="Nhập nội dung tìm kiếm...">
                     <span class="input-group-btn" id="btn-addon2">
@@ -26,56 +27,68 @@
                     </span>
                 </div>
             </div>
-        </div>
-        <div class="table-responsive" data-pattern="priority-columns">
-            <table cellspacing="0" id="tech-companies-1" class="table table-small-font table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th data-priority="1">Name</th>
-                        <th data-priority="1">Price</th>
-                        <th data-priority="3">Created Date</th>
-                        <th data-priority="4">Status</th>
-                        <th data-priority="5">Method</th>
-                    </tr>
-                </thead>
-                <tbody id="tbl-body">
-                </tbody>
-            </table>
-        </div>
-        @*Paging*@
-    <div class="row align-items-center">
-        <div class="col-12 col-sm-6">
-            <div class="dataTables_info" id="database-checkbox_info" role="status" aria-live="polite">
-                <select id="ddlShowPage" class="custom-dropbox">
-                    <option value="10" selected="selected">10</option>
-                    <option value="20">20</option>
-                    <option value="20">30</option>
-                    <option value="20">50</option>
+            <div class="col-md-4 form-group">
+                <label>Danh mục</label>
+                <select class="form-control " id="ddlCategorySearch">
+                    <option>-- Chọn danh mục --</option>
                 </select>
-                <span classs="item-per-page">
-                    bản ghi/trang:
-                </span>
-                Tổng số bản ghi: <strong id="lblTotalRecords"></strong>
+            </div>
+            <div class="table-responsive" data-pattern="priority-columns">
+                <table cellspacing="0" id="tech-companies-1" class="table table-small-font table-bordered">
+                    <thead>
+                        <tr>
+                            <th data-priority="1">Tên sản phẩm</th>
+                            <th data-priority="1">Giá sản phẩm</th>
+                            <th data-priority="3">Ngày tạo</th>
+                            <th data-priority="4">Trạng thái</th>
+                            <th data-priority="5">Xử lí</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbl-body">
+                    </tbody>
+                </table>
             </div>
         </div>
-        <div class="col-12 col-sm-6">
-            <div class="dataTables_paginate paging_simple_numbers" id="datatabl3e-checkbox_paginate">
-                <ul id="paginationUL" class="justify-content-end"></ul>
-            </div>
-        </div>
-    </div>
-    </div>
-</div>
 
-<script id="table-template" type="x-tmpl-mustache">
-    <tr>
-        <td>{{name}}</td>
-        <td>{{price}}</td>
-        <td>{{dateCreated}}</td>
-        <td>{{status}}</td>
-        <td>
-            <button class="btn btn-primary"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
-            <button class="btn btn-danger"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
-        </td>
-    </tr>
-</script>
+        @*Paging*@
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-6">
+                <div class="dataTables_info" id="database-checkbox_info" role="status" aria-live="polite">
+                    <span class="item-per-page">Hiển thị: </span>
+                    <select id="ddlShowPage" class="custom-dropbox">
+                        <option value="10" selected="selected">10</option>
+                        <option value="20">20</option>
+                        <option value="20">30</option>
+                        <option value="20">50</option>
+                    </select> / số bản ghi: <strong id="lblTotalRecords"></strong>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="dataTables_paginate paging_simple_numbers" id="datatabl3e-checkbox_paginate">
+                    <ul id="paginationUL" class="justify-content-end"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script id="table-template" type="x-tmpl-mustache">
+        <tr>
+            <td>{{name}}</td>
+            <td>{{price}}</td>
+            <td>{{dateCreated}}</td>
+            {{#isActive}}
+            <td><label class="label bg-primary">{{status}}</label></td>
+            {{/isActive}}
+            {{ ^isActive}}
+            <td><label class="label bg-danger">{{status}}</label></td>
+            {{/isActive}}
+            <td>
+                <button class="btn btn-primary btn-edit" title="Sửa" data-id={{id}}>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-danger btn-delete" title="Xóa" data-id={{id}}>
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+            </td>
+        </tr>
+    </script>

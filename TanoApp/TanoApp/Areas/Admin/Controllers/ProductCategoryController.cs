@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using TanoApp.Application.Interfaces;
+using TanoApp.Application.ViewModels.Products;
+using TanoApp.Utilities.Helpers;
 
 namespace TanoApp.Areas.Admin.Controllers
 {
@@ -61,6 +64,49 @@ namespace TanoApp.Areas.Admin.Controllers
                     _productCategoryService.Save();
                     return Ok();
                 }
+            }
+        }
+
+        [HttpGet]
+        public IActionResult GetById(int id)
+        {
+            var productCategory = _productCategoryService.GetById(id);
+            return Ok(productCategory);
+        }
+
+        [HttpPost]
+        public IActionResult SaveEntity(ProductCategoryViewModel productCategory)
+        {
+            if (!ModelState.IsValid)
+            {
+                IEnumerable<ModelError> modelErrors = ModelState.Values.SelectMany(x => x.Errors);
+                return new BadRequestObjectResult(modelErrors);
+            } else
+            {
+                productCategory.SeoAlias = TextHelper.ToUnsignString(productCategory.Name);
+                if (productCategory.Id == 0)
+                {
+                    _productCategoryService.Add(productCategory);
+                } else
+                {
+                    _productCategoryService.Update(productCategory);
+                }
+                _productCategoryService.Save();
+                return new ObjectResult(productCategory);
+            }
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            if (id == 0)
+            {
+                return new BadRequestResult();
+            } else
+            {
+                _productCategoryService.Delete(id);
+                _productCategoryService.Save();
+                return new OkResult();
             }
         }
         #endregion

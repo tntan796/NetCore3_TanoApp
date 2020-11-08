@@ -21,11 +21,18 @@
     <div class="card-header"><h5 class="card-header-text">Danh sách danh mục sản phẩm</h5></div>
     <div class="card-block">
         <div class="row">
-            <div class="col-md-4 form-group ">
+            <div class="col-md-12 form-group text-right">
+                   <button class="btn btn-primary" id="btnCreate" type="button">Thêm mới</button>
             </div>
         </div>
         <div class="row">
             <ul id="treeProductCategory"></ul>
+            <div id="contextMenu" class="easyui-menu" style="width: 200px">
+                <div id="btnEdit" data-options="iconCls:'icon-edit'">Sửa</div>
+                <div id="btnDelete" data-options="iconCls:'icon-remove'">Xóa</div>
+            </div>
         </div>
     </div>
 </div>
+
+@Html.Partial("_AddEditModel.cshtml")

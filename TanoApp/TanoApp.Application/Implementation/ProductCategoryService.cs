@@ -115,7 +115,7 @@ namespace TanoApp.Application.Implementation
             _productCategoryRepository.Update(sourceCategory);
 
             //Get all sibling
-            var sibling = _productCategoryRepository.FindAll(x => items.ContainsKey(x.Id));
+            var sibling = _productCategoryRepository.FindAll().ToList().Where(x => items.ContainsKey(x.Id));
             foreach (var child in sibling)
             {
                 child.SortOrder = items[child.Id];

@@ -1,0 +1,131 @@
+﻿<div class="modal fade" id="modalAddEdit" tabindex="-1" role="dialog">
+    <div class="modal-dialog  modal-lg" style="max-width: 85%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="bootbox-close-button close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Add edit product</h4>
+            </div>
+            <div class="modal-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal row" role="form" id="frmMaintainance">
+                        <div class="form-group col-12 col-sm-6">
+                            <input type="hidden" id="hidIdM" value="0" />
+                            <label for="txtNameM">Name</label>
+                            <input type="text" name="txtNameM" class="form-control" id="txtNameM">
+                        </div>
+                        <div class="form-group  col-12 col-sm-6">
+                            <label>Category <span class="text-danger">*</span></label>
+                            <input id="ddlCategoryIdM" required class="form-control" name="ddlCategoryIdM" value="">
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="txtDescM">Description</label>
+                            <textarea rows="4" name="txtDescM" class="form-control" id="txtDescM"></textarea>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label for="txtUnitM">Unit</label>
+                            <input type="text" name="txtUnitM" class="form-control" id="txtUnitM">
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Sell price</label>
+                            <input type="text" name="txtPriceM" class="form-control" id="txtPriceM">
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Original price</label>
+                            <input type="text" name="txtOriginalPriceM" class="form-control" id="txtOriginalPriceM">
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Promotion</label>
+                            <input type="text" name="txtPromotionPriceM" class="form-control" id="txtPromotionPriceM">
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label for="txtImageM">Image</label>
+                            <div class="input-group">
+                                <input type="text" name="txtImage" class="form-control" id="txtImage" />
+                                <input type="file" id="fileInputImage" style="display:none" />
+                                <span class="input-group-btn">
+                                    <input type="button" id="btnSelectImg" class="btn btn-outline-primary" value="Browser" />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label for="txtMetakeywordM">SEO title</label>
+                            <input type="text" name="txtSeoPageTitleM" class="form-control" id="txtSeoPageTitleM">
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="txtContentM">Content</label>
+                            <textarea id="txtContent" rows="6" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label for="txtSeoAliasM">SEO Url</label>
+                            <input type="text" name="txtSeoAliasM" class="form-control" id="txtSeoAliasM">
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label for="txtMetakeywordM">SEO Keywords</label>
+                            <input type="text" name="txtMetakeywordM" class="form-control" id="txtMetakeywordM">
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="txtMetaDescriptionM">SEO Description</label>
+                            <textarea rows="3" name="txtMetaDescriptionM" class="form-control" id="txtMetaDescriptionM"></textarea>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label for="txtTagM">Tag (separated by comma)</label>
+                            <input type="text" name="txtTagM" class="form-control" id="txtTagM">
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label></label><br />
+                            <div class="checkbox form-group w-100">
+                                <label>
+                                    <input type="checkbox" checked="checked" id="ckStatusM">
+                                    <span class="text">Active.</span>
+                                </label>
+                                <label>
+                                    <input type="checkbox" id="ckHotM">
+                                    <span class="text">Hot product</span>
+                                </label>
+
+                                <label>
+                                    <input type="checkbox" checked="checked" id="ckShowHomeM">
+                                    <span class="text">Show on home</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group col-12 text-right">
+                            <button type="button" id="btnSave" class="btn btn-primary">
+                                <i class="fa fa-floppy-o" aria-hidden="true"></i> Save changes
+                            </button>
+                            <button type="button" id="btnCancel" data-dismiss="modal" class="btn btn-danger">
+                                <i class="fa fa-times" aria-hidden="true"></i> Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Model animation js -->
+    <script type="text/javascript" src="~/admin-side/bower_components/classie/js/classie.js"></script>
+    <script src="~/admin-side/plugins/ModalWindowEffects/js/modalEffects.js"></script>
+    <!-- custom js -->
+    <script src="~/admin-side/pages/modal.js"></script>
+}
+
+@section Styles {
+    <!-- Modal animation CSS -->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/plugins/modal/css/component.css">
+    <!-- Responsive.css-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/css/responsive.css">
+    <style>
+        .modal-content {
+            border: none !important;
+        }
+        .modal-header {
+            background: dodgerblue !important;
+            color: white !important;
+            border-top-left-radius: 5px !important;
+            border-top-right-radius: 5px !important;
+        }
+    </style>
+}

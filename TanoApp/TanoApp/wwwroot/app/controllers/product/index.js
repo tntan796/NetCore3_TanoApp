@@ -24,6 +24,126 @@
                 loadData(true);
             }
         });
+        $("#btnCreate").on("click", function () {
+            resetFormMaintainance();
+            initTreeDropCategory();
+            $("#modalAddEdit").modal("show");
+        })
+
+        $("body").on("click", ".btn-edit", function (e) {
+            e.preventDefault();
+            var that = $(this).data('id');
+            $.ajax({
+                type: "GET",
+                url: "/admin/product/getById",
+                data: { id: that },
+                dataType: "json",
+                beforeSend: function () {
+                    tano.startLoading();
+                },
+                success: function (response) {
+                    var data = response;
+                    $("#hidIdM").val(data.id);
+                    $("#txtNameM").val(data.name);
+                    initTreeDropCategory(data.categoryId);
+                    $("#txtDescM").val(data.description);
+                    $("#txtUnitM").val(data.unit);
+                    $("#txtPriceM").val(data.price);
+                    $("#txtOriginalPriceM").val(data.originalPrice);
+                    $("#txtPromotionPriceM").val(data.promotionPrice);
+                    //$("#txtImageM").val(data.thumbailImage);
+                    $("#txtTagM").val(data.tags);
+                    $("#txtMetakeywordM").val(data.seoKeywords);
+                    $("#txtMetaDescriptionM").val(data.seoDescription);
+                    $("#txtSeoPageTitleM").val(data.seoPageTitle);
+                    $("#txtSeoAliasM").val(data.seoAlias);
+                    //CKEDITOR.instances.txtContentM.setData('');
+                    $("#ckStatusM").prop("checked", data.status == 0);
+                    $("#ckHotM").prop("checked", data.hotFlag);
+                    $("#ckShowHomeM").prop("checked", data.homeFlag);
+                    $("#modalAddEdit").modal("show");
+                    tano.stopLoading();
+                },
+                error(error) {
+                    tano.stopLoading();
+                    console.log("Get product id faild:", error);
+                }
+            })
+        })
+
+        $("body").on("click", ".btn-edit", function (e) {
+            e.preventDefault();
+            var that = $(this).data("id");
+            if (confirm("Ban co chac chan muon xoa")) {
+                $.ajax({
+                    type: "post",
+                    url: "/admin/product/delete",
+                    data: { id: that },
+                    dataType: "json",
+                    beforeSend: function () {
+                        tano.startLoading();
+                    },
+                    success: function (response) {
+                        alert("Xoa thanh cong");
+                        tano.stopLoading();
+                        loadData();
+                    },
+                    error: function (error) {
+                        alert("Xoa that bai");
+                        tano.stopLoading();
+                    }
+                })
+            }
+        })
+    }
+
+    function resetFormMaintainance() {
+        $("#hidIdM").val(0);
+        $("#txtNameM").val('');
+        initTreeDropCategory('');
+        $("#txtDescM").val('');
+        $("#txtUnitM").val('');
+        $("#txtPriceM").val(0);
+        $("#txtOriginalPriceM").val('');
+        $("#txtPromotionPriceM").val('');
+        //$("#txtImageM").val('');
+        $("#txtTagM").val('');
+        $("#txtMetakeywordM").val('');
+        $("#txtMetaDescriptionM").val('');
+        $("#txtSeoPageTitleM").val('');
+        $("#txtSeoAliasM").val('');
+        //CKEDITOR.instances.txtContentM.setData('');
+        $("#ckStatusM").prop("checked", true);
+        $("#ckHotM").prop("checked", false);
+        $("#ckShowHomeM").prop("checked", false);
+    }
+
+    function initTreeDropCategory(selectedId) {
+        $.ajax({
+            url: "/admin/productcategory/getall",
+            type: "get",
+            dataType: "json",
+            async: false,
+            success: function (response) {
+                var data = [];
+                $.each(response, function (i, item) {
+                    data.push({
+                        id: item.id,
+                        text: item.name,
+                        parentId: item.parentId,
+                        sortOrder: item.sortOrder
+                    });
+                });
+                var arr = tano.unflattern(data);
+                $("#ddlCategoryIdM").combotree({
+                    data: arr
+                });
+                if (selectedId != undefined) {
+                    $("#ddlCategoryIdM").combotree('setValue', selectedId);
+                }
+                $(".textbox.combo").css('width', '100%');
+            }
+        })
     }
 
     function loadCategories() {

@@ -33,6 +33,10 @@
                     <option>-- Chọn danh mục --</option>
                 </select>
             </div>
+            <div class="col-md-4 form-group text-right">
+                <label></label><br/>
+                <button class="btn btn-primary" id="btnCreate"><i class="fa fa-plus" aria-hidden="true"></i> Thêm mới</button>
+            </div>
             <div class="table-responsive" data-pattern="priority-columns">
                 <table cellspacing="0" id="tech-companies-1" class="table table-small-font table-bordered">
                     <thead>
@@ -92,3 +96,5 @@
             </td>
         </tr>
     </script>
+
+    @Html.Partial("_AddEditProduct.cshtml")

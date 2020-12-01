@@ -23,6 +23,17 @@ namespace TanoApp.Application.Implementation
             _productRepository = productRepository;
             _mapper = mapper;
         }
+
+        public ProductViewModel Add(ProductViewModel product)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Delete(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Dispose()
         {
             GC.SuppressFinalize(this);
@@ -53,10 +64,25 @@ namespace TanoApp.Application.Implementation
             return paginationSet;
         }
 
+        public ProductViewModel GetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<ProductViewModel> GetListProduct()
         {
             List<Product> products = _productRepository.FindAll(x => x.ProductCategory).ToList();
             return _mapper.Map<List<Product>, List<ProductViewModel>>(products);
+        }
+
+        public void Save()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update(ProductViewModel product)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -4,7 +4,9 @@
 }
 @section Scripts{
     <script src="~/admin-side/js/jquery.twbsPagination.js"></script>
+    <script src="~/admin-side/plugins/jquery-easyui-1.9.9/jquery.easyui.min.js"></script>
     <script src="~/app/controllers/product/index.js"></script>
+
     <script>
         var product = new productController();
         product.initializer();
@@ -12,6 +14,8 @@
 }
 
 @section Styles {
+    <link href="~/admin-side/plugins/jquery-easyui-1.9.9/themes/material-blue/easyui.css" rel="stylesheet" />
+    <link href="~/admin-side/plugins/jquery-easyui-1.9.9/themes/icon.css" rel="stylesheet" />
     <link href="~/app/controllers/product/index.css" rel="stylesheet" />
 }
 <div class="card" id="resp-table">
@@ -34,7 +38,7 @@
                 </select>
             </div>
             <div class="col-md-4 form-group text-right">
-                <label></label><br/>
+                <label></label><br />
                 <button class="btn btn-primary" id="btnCreate"><i class="fa fa-plus" aria-hidden="true"></i> Thêm mới</button>
             </div>
             <div class="table-responsive" data-pattern="priority-columns">
@@ -87,10 +91,10 @@
             <td><label class="label bg-danger">{{status}}</label></td>
             {{/isActive}}
             <td>
-                <button class="btn btn-primary btn-edit" title="Sửa" data-id={{id}}>
+                <button class="btn btn-primary waves-effect btn-edit" title="Sửa" data-id={{id}}>
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </button>
-                <button class="btn btn-danger btn-delete" title="Xóa" data-id={{id}}>
+                <button class="btn btn-danger waves-effect btn-delete" title="Xóa" data-id={{id}}>
                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                 </button>
             </td>

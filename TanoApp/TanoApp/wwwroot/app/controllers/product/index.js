@@ -6,6 +6,37 @@
     }
 
     function registerEvent() {
+        $("#frmMaintainance").validate({
+            rules: {
+                // The key name on the left side is the name attribute
+                // of an input field. Validation rules are defined
+                // on the right side
+                txtNameM: "required",
+                ddlCategoryIdM: {
+                    required: true,
+                },
+                txtPriceM: {
+                    required: true,
+                    number: true
+                }
+            },
+            messages: {
+                txtNameM: "Vui lòng nhập tên",
+                ddlCategoryIdM: {
+                    required: "Vui lòng chọn Danh mục",
+                },
+                txtPriceM: {
+                    required: "Vui lòng nhập giá",
+                    number: "Vui lòng nhập giá là số"
+                }
+            },
+            // Make sure the form is submitted to the destination defined
+            // in the "action" attribute of the form when valid
+            submitHandler: function (form) {
+                form.submit();
+            }
+        });
+
         $("#ddlShowPage").on('change', function () {
             tano.configs.pageSize = $(this).val();
             tano.configs.pageIndex = 1;
@@ -58,7 +89,7 @@
                     $("#txtSeoPageTitleM").val(data.seoPageTitle);
                     $("#txtSeoAliasM").val(data.seoAlias);
                     //CKEDITOR.instances.txtContentM.setData('');
-                    $("#ckStatusM").prop("checked", data.status == 0);
+                    $("#ckStatusM").prop("checked", data.status == 1);
                     $("#ckHotM").prop("checked", data.hotFlag);
                     $("#ckShowHomeM").prop("checked", data.homeFlag);
                     $("#modalAddEdit").modal("show");
@@ -71,10 +102,10 @@
             })
         })
 
-        $("body").on("click", ".btn-edit", function (e) {
+        $("body").on("click", ".btn-delete", function (e) {
             e.preventDefault();
             var that = $(this).data("id");
-            if (confirm("Ban co chac chan muon xoa")) {
+            if (confirm("Bạn có chắc chắn muốn xóa không?")) {
                 $.ajax({
                     type: "post",
                     url: "/admin/product/delete",
@@ -84,12 +115,76 @@
                         tano.startLoading();
                     },
                     success: function (response) {
-                        alert("Xoa thanh cong");
+                        alert("Xóa thành công!");
                         tano.stopLoading();
                         loadData();
                     },
                     error: function (error) {
-                        alert("Xoa that bai");
+                        alert("Xóa thất bại");
+                        tano.stopLoading();
+                    }
+                })
+            }
+        })
+
+        $("#btnSave").on("click", function (e) {
+            if ($("#frmMaintainance").valid()) {
+                e.preventDefault();
+                var id = $("#hidIdM").val();
+                var name = $("#txtNameM").val();
+                var categoryId = $("#ddlCategoryIdM").combotree('getValue');
+                var description = $("#txtDescM").val();
+                var unit = $("#txtUnitM").val();
+                var price = $("#txtPriceM").val();
+                var originalPrice = $("#txtOriginalPriceM").val();
+                var promotionPrice = $("#txtPromotionPriceM").val();
+                var image = $("#txtImageM").val();
+                var tags = $("#txtTagM").val();
+                var seoKeyword = $("#txtMetakeywordM").val();
+                var seoMetaDescription = $("#txtMetaDescriptionM").val();
+                var seoPageTitle = $("#txtSeoPageTitleM").val();
+                var seoAlias =  $("#txtSeoAliasM").val();
+                //CKEDITOR.instances.txtContentM.setData('');
+                var status = $("#ckStatusM").prop("checked") == true ? 1 : 0;
+                var hot = $("#ckHotM").prop("checked");
+                var showHome = $("#ckShowHomeM").prop("checked");
+                $.ajax({
+                    type: "POST",
+                    url: "/admin/product/saveEntity",
+                    data: {
+                        Id: id,
+                        CategoryId: categoryId,
+                        Name: name,
+                        Image: '',
+                        Price: price,
+                        OriginalPrice: originalPrice,
+                        PromotionPrice: promotionPrice,
+                        Description: description,
+                        Content: '',
+                        HomeFlag: showHome,
+                        HotFlag: hot,
+                        Tags: tags,
+                        Unit: unit,
+                        Status: status,
+                        SeoPageTitle: seoPageTitle,
+                        SeoAlias: seoAlias,
+                        SeoKeywords: seoKeyword,
+                        SeoDescription: seoMetaDescription
+                    },
+                    dataType: "JSON",
+                    beforeSend: function () {
+                        tano.startLoading();
+                    },
+                    success: function (response) {
+                        alert('Cập nhật thành công');
+                        $('#modal-add-edit').modal('hide');
+                        resetFormMaintainance();
+                        tano.stopLoading();
+                        loadData(true);
+                    },
+                    error: function (e) {
+                        console.log('Cập nhật thất bại: ', e);
+                        alert("Cập nhật thất bại");
                         tano.stopLoading();
                     }
                 })

@@ -1,6 +1,6 @@
 bin/
 obj/
-/build/
+build/
 *.suo
 *.user
 _ReSharper.*/
@@ -16,3 +16,4 @@ Version.cs
 Version.h
 Version.cpp
 node_modules/
+**/lib/libman/

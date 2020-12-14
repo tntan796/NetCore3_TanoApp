@@ -3,7 +3,6 @@
   "defaultProvider": "cdnjs",
   "libraries": [
     {
-
       "library": "twitter-bootstrap@4.5.3",
       "destination": "wwwroot/lib/libman/bootstrap"
     },
@@ -135,10 +134,10 @@
       "library": "summernote@0.8.18",
       "destination": "wwwroot/lib/libman/summernote"
     },
-    {
-      "library": "spectrum@1.8.1",
-      "destination": "wwwroot/lib/libman/spectrum"
-    },
+    //{
+    //  "library": "spectrum@1.8.1",
+    //  "destination": "wwwroot/lib/libman/spectrum"
+    //},
     {
       "library": "jscolor@2.4.0",
       "destination": "wwwroot/lib/libman/jscolor"
@@ -253,6 +252,10 @@
     {
       "library": "popper.js@2.5.4",
       "destination": "wwwroot/lib/libman/popper"
+    },
+    {
+      "library": "ckeditor@4.15.1",
+      "destination": "wwwroot/lib/libman/ckeditor"
     }
   ]
 }

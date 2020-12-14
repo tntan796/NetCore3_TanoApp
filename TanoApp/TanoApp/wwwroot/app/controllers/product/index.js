@@ -3,6 +3,23 @@
         loadCategories();
         loadData();
         registerEvent();
+        registerControls();
+    }
+
+    function registerControls() {
+        CKEDITOR.replace('txtContent', {});
+        $.fn.modal.Constructor.prototype.enforceFocus = function () {
+            $(document)
+                .off('focusin.bs.modal')// Guard agains infinity focus loop 
+                .on('focusin.bs.modal', $.proxy(function (e) {
+                    if (this.$element[0] !== e.target && !this.$element.has(e.target).length
+                        // CKEditor compatibility fix start
+                        && !$(e.target).closest('.cke_dialog, .cke').length
+                    ) {
+                        this.$element.trigger('focus');
+                    }
+                }, this));
+        };
     }
 
     function registerEvent() {
@@ -88,7 +105,7 @@
                     $("#txtMetaDescriptionM").val(data.seoDescription);
                     $("#txtSeoPageTitleM").val(data.seoPageTitle);
                     $("#txtSeoAliasM").val(data.seoAlias);
-                    //CKEDITOR.instances.txtContentM.setData('');
+                    CKEDITOR.instances.txtContent.setData('');
                     $("#ckStatusM").prop("checked", data.status == 1);
                     $("#ckHotM").prop("checked", data.hotFlag);
                     $("#ckShowHomeM").prop("checked", data.homeFlag);
@@ -143,8 +160,8 @@
                 var seoKeyword = $("#txtMetakeywordM").val();
                 var seoMetaDescription = $("#txtMetaDescriptionM").val();
                 var seoPageTitle = $("#txtSeoPageTitleM").val();
-                var seoAlias =  $("#txtSeoAliasM").val();
-                //CKEDITOR.instances.txtContentM.setData('');
+                var seoAlias = $("#txtSeoAliasM").val();
+                var content = CKEDITOR.instances.txtContent.getData();
                 var status = $("#ckStatusM").prop("checked") == true ? 1 : 0;
                 var hot = $("#ckHotM").prop("checked");
                 var showHome = $("#ckShowHomeM").prop("checked");
@@ -160,7 +177,7 @@
                         OriginalPrice: originalPrice,
                         PromotionPrice: promotionPrice,
                         Description: description,
-                        Content: '',
+                        Content: content,
                         HomeFlag: showHome,
                         HotFlag: hot,
                         Tags: tags,
@@ -207,7 +224,7 @@
         $("#txtMetaDescriptionM").val('');
         $("#txtSeoPageTitleM").val('');
         $("#txtSeoAliasM").val('');
-        //CKEDITOR.instances.txtContentM.setData('');
+        CKEDITOR.instances.txtContent.setData('');
         $("#ckStatusM").prop("checked", true);
         $("#ckHotM").prop("checked", false);
         $("#ckShowHomeM").prop("checked", false);

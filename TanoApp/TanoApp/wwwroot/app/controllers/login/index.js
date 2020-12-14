@@ -1,6 +1,18 @@
 ﻿var loginControllerJS = function () {
     this.initialize = function () {
         registerEvents();
+        initialValidForm();
+    }
+
+    var initialValidForm = function () {
+        const userName = document.querySelector("#txtUserName");
+        const password = document.querySelector("#txtPassword");
+        if (userName.value) {
+            userName.classList.add("md-valid");
+        }
+        if (password.value) {
+            password.classList.add("md-valid");
+        }
     }
 
     var registerEvents = function () {

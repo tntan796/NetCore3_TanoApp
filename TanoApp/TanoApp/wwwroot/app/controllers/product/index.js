@@ -107,7 +107,7 @@
             var that = $(this).data("id");
             if (confirm("Bạn có chắc chắn muốn xóa không?")) {
                 $.ajax({
-                    type: "post",
+                    type: "delete",
                     url: "/admin/product/delete",
                     data: { id: that },
                     dataType: "json",
@@ -177,10 +177,10 @@
                     },
                     success: function (response) {
                         alert('Cập nhật thành công');
-                        $('#modal-add-edit').modal('hide');
                         resetFormMaintainance();
                         tano.stopLoading();
                         loadData(true);
+                        $('#modal-add-edit').modal('hide');
                     },
                     error: function (e) {
                         console.log('Cập nhật thất bại: ', e);

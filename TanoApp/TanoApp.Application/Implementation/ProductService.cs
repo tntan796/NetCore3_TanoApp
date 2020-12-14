@@ -70,7 +70,7 @@ namespace TanoApp.Application.Implementation
 
         public void Delete(int id)
         {
-            //_productRepository.Remove(id);
+            _productRepository.Remove(id);
         }
 
         public void Dispose()

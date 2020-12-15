@@ -13,6 +13,7 @@ namespace TanoApp.Application.AutoMapper
 
             CreateMap<Function, FunctionViewModel>();
             CreateMap<Product, ProductViewModel>();
+            CreateMap<AppUser, AppUserViewModel>();
         }
     }
 }

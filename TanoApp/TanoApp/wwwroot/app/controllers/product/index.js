@@ -23,6 +23,11 @@
     }
 
     function registerEvent() {
+        CKEDITOR.replace('txtContent', {
+            filebrowserImageUploadUrl: '/admin/upload/UploadImageForCkEditor',
+            filebrowserUploadMethod : 'form'
+        });
+
         $("#frmMaintainance").validate({
             rules: {
                 // The key name on the left side is the name attribute
@@ -215,6 +220,33 @@
                     }
                 })
             }
+        })
+
+        $("#btnSelectImg").on("click", function () {
+            $("#fileInputImage").click();
+        })
+
+        $("#fileInputImage").on("change", function () {
+            var fileUpload = $(this).get(0);
+            var files = fileUpload.files;
+            var data = new FormData();
+            for (var i = 0; i < files.length; i++) {
+                data.append(files[i].name, files[i]);
+            }
+            $.ajax({
+                type: "POST",
+                url: "/admin/upload/uploadimage",
+                contentType: false,
+                processData: false,
+                data: data,
+                success: function (path) {
+                    $("#txtImage").val(path);
+                    customNotify("Upload image successful!", types.sucess);
+                },
+                error: function () {
+                    customNotify("Upload image fail!", types.danger);
+                }
+            })
         })
     }
 

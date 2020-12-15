@@ -1,7 +1,101 @@
-﻿
-@{
-    ViewData["Title"] = "Index";
+﻿@{
+    ViewData["Title"] = "User List";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h1>Index</h1>
+@section Scripts {
+    <script src="~/admin-side/js/jquery.twbsPagination.js"></script>
+    <script src="~/admin-side/plugins/jquery-easyui-1.9.9/jquery.easyui.min.js"></script>
+    <script src="~/app/controllers/user/index.js" asp-append-version="true"></script>
+    <script>
+        var userObject = new UserController();
+        userObject.initialize();
+    </script>
+}
+@section Styles {
+    <link href="~/admin-side/plugins/jquery-easyui-1.9.9/themes/material-blue/easyui.css" rel="stylesheet" />
+    <link href="~/admin-side/plugins/jquery-easyui-1.9.9/themes/icon.css" rel="stylesheet" />
+    <link href="~/app/controllers/user/index.css" rel="stylesheet" />
+}
 
+<div class="card" id="resp-table">
+    <ul id="breadcrumb-triangle">
+        <li><a href="#"><span class="icofont icofont-home"> </span></a></li>
+        <li><a href="#"><span class="icofont icofont-flask"> </span> Home</a></li>
+        <li><a href="#"><span class="icofont icofont-double-right"></span> System</a></li>
+        <li><a href="#"><span class="icofont icofont-rocket-alt-2"> </span> User List</a></li>
+    </ul>
+    <div class="card-header"><h5 class="card-header-text">Danh sách sản phẩm</h5></div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-md-4 form-group ">
+                <label>Search</label>
+                <div class="input-group">
+                    <input id="txtKeyword" type="text" class="form-control" placeholder="Typing to search...">
+                    <span class="input-group-btn" id="btn-addon2">
+                        <button type="button" id="btnSearch" class="btn btn-primary shadow-none addon-btn waves-effect waves-light">Search!</button>
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4 form-group text-right">
+                <label></label><br />
+                <button class="btn btn-primary" id="btnCreate"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+            </div>
+            <div class="table-responsive" data-pattern="priority-columns">
+                <table cellspacing="0" id="tech-companies-1" class="table table-small-font table-bordered">
+                    <thead>
+                        <tr>
+                            <th data-priority="1">Account</th>
+                            <th data-priority="2">Name</th>
+                            <th data-priority="3">Avatar</th>
+                            <th data-priority="4">Created Date</th>
+                            <th data-priority="5">Status</th>
+                            <th data-priority="6">Method</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbl-body">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        @*Paging*@
+        <div class="row align-items-center">
+            <div class="col-12 col-sm-6">
+                <div class="dataTables_info" id="database-checkbox_info" role="status" aria-live="polite">
+                    <span class="item-per-page">Hiển thị: </span>
+                    <select id="ddlShowPage" class="custom-dropbox">
+                        <option value="10" selected="selected">10</option>
+                        <option value="20">20</option>
+                        <option value="20">30</option>
+                        <option value="20">50</option>
+                    </select> / số bản ghi: <strong id="lblTotalRecords"></strong>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6">
+                <div class="dataTables_paginate paging_simple_numbers" id="datatabl3e-checkbox_paginate">
+                    <ul id="paginationUL" class="justify-content-end"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script id="table-template" type="x-tmpl-mustache">
+        <tr>
+            <td>{{FullName}}</td>
+            <td>{{UserName}}</td>
+            <td>{{{Avatar}}}</td>
+            <td>{{{DateCreated}}}</td>
+            <td>{{{Status}}}</td>
+            <td>
+                <button class="btn btn-primary waves-effect btn-edit" title="Sửa" data-id={{Id}}>
+                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-danger waves-effect btn-delete" title="Xóa" data-id={{Id}}>
+                    <i class="fa fa-trash-o" aria-hidden="true"></i>
+                </button>
+            </td>
+        </tr>
+    </script>
+
+    @Html.Partial("_AddEditUser.cshtml")

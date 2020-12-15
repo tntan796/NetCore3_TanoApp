@@ -8,18 +8,18 @@
 
     function registerControls() {
         CKEDITOR.replace('txtContent', {});
-        $.fn.modal.Constructor.prototype.enforceFocus = function () {
-            $(document)
-                .off('focusin.bs.modal')// Guard agains infinity focus loop 
-                .on('focusin.bs.modal', $.proxy(function (e) {
-                    if (this.$element[0] !== e.target && !this.$element.has(e.target).length
-                        // CKEditor compatibility fix start
-                        && !$(e.target).closest('.cke_dialog, .cke').length
-                    ) {
-                        this.$element.trigger('focus');
-                    }
-                }, this));
-        };
+        //$.fn.modal.Constructor.prototype.enforceFocus = function () {
+        //    $(document)
+        //        .off('focusin.bs.modal')// Guard agains infinity focus loop 
+        //        .on('focusin.bs.modal', $.proxy(function (e) {
+        //            if (this.$element[0] !== e.target && !this.$element.has(e.target).length
+        //                // CKEditor compatibility fix start
+        //                && !$(e.target).closest('.cke_dialog, .cke').length
+        //            ) {
+        //                this.$element.trigger('focus');
+        //            }
+        //        }, this));
+        //};
     }
 
     function registerEvent() {
@@ -105,7 +105,7 @@
                     $("#txtMetaDescriptionM").val(data.seoDescription);
                     $("#txtSeoPageTitleM").val(data.seoPageTitle);
                     $("#txtSeoAliasM").val(data.seoAlias);
-                    CKEDITOR.instances.txtContent.setData('');
+                    CKEDITOR.instances.txtContent.setData(data.content);
                     $("#ckStatusM").prop("checked", data.status == 1);
                     $("#ckHotM").prop("checked", data.hotFlag);
                     $("#ckShowHomeM").prop("checked", data.homeFlag);
@@ -132,12 +132,13 @@
                         tano.startLoading();
                     },
                     success: function (response) {
-                        alert("Xóa thành công!");
+                        customNotify("DELETE SUCCESS", types.success);
                         tano.stopLoading();
                         loadData();
                     },
                     error: function (error) {
-                        alert("Xóa thất bại");
+                        customNotify("Delete Fail!", types.danger);
+                        console.log('Delete error:', error);
                         tano.stopLoading();
                     }
                 })
@@ -193,15 +194,23 @@
                         tano.startLoading();
                     },
                     success: function (response) {
-                        alert('Cập nhật thành công');
                         resetFormMaintainance();
                         tano.stopLoading();
                         loadData(true);
-                        $('#modal-add-edit').modal('hide');
+                        if (id) {
+                            customNotify("Cập nhật thành công", types.success);
+                        } else {
+                            customNotify("Thêm mới thành công", types.success);
+                        }
+                        $('#modalAddEdit').modal('hide');
                     },
                     error: function (e) {
                         console.log('Cập nhật thất bại: ', e);
-                        alert("Cập nhật thất bại");
+                        if (id) {
+                            customNotify("Cập nhật thất bại", types.danger);
+                        } else {
+                            customNotify("Thêm mới thất bại", types.danger);
+                        }
                         tano.stopLoading();
                     }
                 })

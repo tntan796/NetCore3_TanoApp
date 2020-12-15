@@ -148,13 +148,13 @@ namespace TanoApp.Application.Implementation
                     };
                     productTags.Add(productTag);
                 }
-                var product = _mapper.Map<ProductViewModel, Product>(productVm);
-                foreach (var tag in productTags)
-                {
-                    product.ProductTags.Add(tag);
-                }
-                _productRepository.Update(product);
             }
+            var product = _mapper.Map<ProductViewModel, Product>(productVm);
+            foreach (var tag in productTags)
+            {
+                product.ProductTags.Add(tag);
+            }
+            _productRepository.Update(product);
         }
     }
 }

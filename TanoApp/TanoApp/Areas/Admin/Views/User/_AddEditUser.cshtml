@@ -1,4 +1,76 @@
-﻿
-@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿<div class="modal fade" id="modalAddEdit" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close waves-effect text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Add/Edit User</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal row" role="form" id="frmMaintainance">
+                    <div class="form-group col-sm-12 col-md-6">
+                        <input type="hidden" id="hideId" value="0" />
+                        <label for="txtFullName">Full Name <span class="text-danger">*</span></label>
+                        <input type="text" name="txtFullName" class="form-control" id="txtFullName" placeholder="Full Name" />
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="txtUserName">User Name <span class="text-danger">*</span></label>
+                        <input type="text" name="txtUserName" class="form-control" id="txtUserName" placeholder="User Name" />
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="txtPassword">Password <span class="text-danger">*</span></label>
+                        <input type="password" name="txtPassword" class="form-control" id="txtPassword" placeholder="Password" />
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="txtConfirmPassword">Confirm Password <span class="text-danger">*</span></label>
+                        <input type="password" name="txtConfirmPassword" class="form-control" id="txtConfirmPassword" placeholder="Confirm Password" />
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="txtEmail">Email <span class="text-danger">*</span></label>
+                        <input type="email" name="txtEmail" class="form-control" id="txtEmail" placeholder="Email" />
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="txtPhoneNumber">Phone</label>
+                        <input type="number" name="txtPhoneNumber" class="form-control" id="txtPhoneNumber" placeholder="Phone Number" />
+                    </div>
+                    <div class="form-group col-sm-12">
+                        <label for="">Roles</label>
+                        <div class="col-sm-12" id="list-roles"></div>
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6">
+                        <div >
+                            <label>
+                                <input type="checkbox" checked="checked" id="ckStatus">
+                                <span class="text">Active.</span>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="btnCancel" type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">
+                    <i class="fa fa-times" aria-hidden="true"></i> Đóng
+                </button>
+                <button id="btnSave" type="button" class="btn btn-primary waves-effect">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Lưu lại
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Model animation js -->
+    <script type="text/javascript" src="~/admin-side/bower_components/classie/js/classie.js"></script>
+    <script src="~/admin-side/plugins/ModalWindowEffects/js/modalEffects.js"></script>
+    <!-- custom js -->
+    <script src="~/admin-side/pages/modal.js"></script>
+}
+
+@section Styles {
+    <!-- Modal animation CSS -->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/plugins/modal/css/component.css">
+    <!-- Responsive.css-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/css/responsive.css">
+}

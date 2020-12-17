@@ -71,7 +71,8 @@ namespace TanoApp.Application.Implementation
         public async Task<List<AppRoleViewModel>> GetAllAsync()
         {
             var roles = await _roleManager.Roles.ToListAsync();
-            return _mapper.Map<List<AppRole>, List<AppRoleViewModel>>(roles);
+            var result = _mapper.Map<List<AppRole>, List<AppRoleViewModel>>(roles);
+            return result;
         }
 
         public PagedResult<AppRoleViewModel> GetAllPagingAsync(string keyword, int page, int pageSize)

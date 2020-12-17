@@ -1,21 +1,21 @@
-﻿@{
-    ViewData["Title"] = "User List";
+﻿
+@{
+    ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-
 @section Scripts {
     <script src="~/admin-side/js/jquery.twbsPagination.js"></script>
     <script src="~/admin-side/plugins/jquery-easyui-1.9.9/jquery.easyui.min.js"></script>
-    <script src="~/app/controllers/user/index.js" asp-append-version="true"></script>
+    <script src="~/app/controllers/role/index.js" asp-append-version="true"></script>
     <script>
-        var userObject = new UserController();
-        userObject.initialize();
+        var roleObject = new RoleController();
+        roleObject.initialize();
     </script>
 }
 @section Styles {
     <link href="~/admin-side/plugins/jquery-easyui-1.9.9/themes/material-blue/easyui.css" rel="stylesheet" />
     <link href="~/admin-side/plugins/jquery-easyui-1.9.9/themes/icon.css" rel="stylesheet" />
-    <link href="~/app/controllers/user/index.css" rel="stylesheet" />
+    <link href="~/app/controllers/role/index.css" rel="stylesheet" />
 }
 
 <div class="card" id="resp-table">
@@ -23,9 +23,9 @@
         <li><a href="#"><span class="icofont icofont-home"> </span></a></li>
         <li><a href="#"><span class="icofont icofont-flask"> </span> Home</a></li>
         <li><a href="#"><span class="icofont icofont-double-right"></span> System</a></li>
-        <li><a href="#"><span class="icofont icofont-rocket-alt-2"> </span> User List</a></li>
+        <li><a href="#"><span class="icofont icofont-rocket-alt-2"> </span> Role List</a></li>
     </ul>
-    <div class="card-header"><h5 class="card-header-text">User List</h5></div>
+    <div class="card-header"><h5 class="card-header-text">Role List</h5></div>
     <div class="card-block">
         <div class="row">
             <div class="col-md-4 form-group ">
@@ -45,12 +45,9 @@
                 <table cellspacing="0" id="tech-companies-1" class="table table-small-font table-bordered">
                     <thead>
                         <tr>
-                            <th data-priority="1">Account</th>
-                            <th data-priority="2">Name</th>
-                            <th data-priority="3">Avatar</th>
-                            <th data-priority="4">Created Date</th>
-                            <th data-priority="5">Status</th>
-                            <th data-priority="6">Method</th>
+                            <th data-priority="1">Name</th>
+                            <th data-priority="2">Description</th>
+                            <th data-priority="3">Method</th>
                         </tr>
                     </thead>
                     <tbody id="tbl-body">
@@ -82,11 +79,8 @@
 
     <script id="table-template" type="x-tmpl-mustache">
         <tr>
-            <td>{{FullName}}</td>
-            <td>{{UserName}}</td>
-            <td>{{{Avatar}}}</td>
-            <td>{{{DateCreated}}}</td>
-            <td>{{{Status}}}</td>
+            <td>{{Name}}</td>
+            <td>{{Description}}</td>
             <td>
                 <button class="btn btn-primary waves-effect btn-edit" title="Sửa" data-id={{Id}}>
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
@@ -97,13 +91,4 @@
             </td>
         </tr>
     </script>
-
-    <script id="role-template" type="x-tmpl-mustache">
-        <div>
-            <label>
-                <input type="checkbox" {{Checked}} value="{{Name}}" name="ckRoles" data-id={{ID}}>
-                <span class="text">{{Description}}</span>
-            </label>
-        </div>
-    </script>
-    @Html.Partial("_AddEditUser.cshtml")
+    @Html.Partial("_AddEditRole.cshtml")

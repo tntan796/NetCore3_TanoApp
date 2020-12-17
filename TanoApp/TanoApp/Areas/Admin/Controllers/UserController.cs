@@ -39,7 +39,7 @@ namespace TanoApp.Areas.Admin.Controllers
             return Ok(model);
         }
 
-        [HttpPut]
+        [HttpPost]
         public async Task<IActionResult> SaveEntity(AppUserViewModel userVm)
         {
             if (!ModelState.IsValid)
@@ -49,7 +49,7 @@ namespace TanoApp.Areas.Admin.Controllers
             }
             else
             {
-                if (userVm.Id == Guid.Empty)
+                if (userVm.Id == null)
                 {
                     await _userService.AddAsync(userVm);
                 } else
@@ -57,6 +57,19 @@ namespace TanoApp.Areas.Admin.Controllers
                     await _userService.UpdateAsync(userVm);
                 }
                 return Ok(userVm);
+            }
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(string id)
+        {
+            if (!ModelState.IsValid)
+            {
+                return new BadRequestObjectResult(ModelState.Values.SelectMany(x => x.Errors));
+            } else
+            {
+                await _userService.DeleteAsync(id);
+                return Ok(id);
             }
         }
     }

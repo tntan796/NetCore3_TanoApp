@@ -1,4 +1,4 @@
-﻿var UserController = function () {
+﻿var RoleController = function () {
     this.initialize = function () {
         loadData();
         registerEvents();
@@ -7,9 +7,8 @@
     function loadData(isPageChanged) {
         $.ajax({
             type: 'GET',
-            url: '/admin/user/getallpaging',
+            url: '/admin/role/getallpaging',
             data: {
-                categoryId: $("#ddl-category-serach").val(),
                 keyword: $('#txt-search-keyword').val(),
                 page: tano.configs.pageIndex,
                 pageSize: tano.configs.pageSize
@@ -24,13 +23,9 @@
                 if (response.rowCount > 0) {
                     $.each(response.results, function (i, item) {
                         render += Mustache.render(template, {
-                            Account: item.account,
-                            FullName: item.fullName,
                             Id: item.id,
-                            UserName: item.userName,
-                            Avatar: item.avatar === null ? '<img src="https://lh3.googleusercontent.com/proxy/xgail7fMYaoDLNjH4HWCq1c21sbtCqZ6J23JHwmdP5DdQUaxF460pEz5y3h-WQqhm6vb_bH2eWli2QtAs-wLrBbvcIVTXqbo0DCpGpb9Uqf6PWc3s2Y" width=25 />' : '<img src="' + item.avatar + '" width=25 />',
-                            DateCreated: tano.dateTimeFormatJson(item.dateCreated),
-                            Status: tano.getStatus(item.status)
+                            Name: item.name,
+                            Description: item.description
                         });
                     });
                     $("#lbl-total-records").text(response.rowCount);
@@ -83,34 +78,12 @@
             ignore: [],
             lang: 'vi',
             rules: {
-                txtFullName: { required: true },
-                txtUserName: { required: true },
-                txtPassword: {
-                    required: true,
-                    minlength: 6
-                },
-                txtConfirmPassword: {
-                    equalTo: "#txtPassword"
-                },
-                txtEmail: {
-                    required: true,
-                    email: true
-                }
+                txtName: { required: true },
+                txtDescription: { required: true}
             },
             messages: {
-                txtFullName: { required: "Full Name is required!"},
-                txtUserName: { required: "User Name is required!"},
-                txtPassword: {
-                    required: "Password is required!",
-                    minlength: "Min length is 6 character!"
-                },
-                txtConfirmPassword: {
-                    equalTo: "Confirm Password must same the password!"
-                },
-                txtEmail: {
-                    required: "Email is required!",
-                    email: "Not type of Email!"
-                }
+                txtName: { required: "Name is required!" },
+                txtDescription: { required: "Description is required!" }
             }
         });
 
@@ -134,7 +107,6 @@
 
         $("#btnCreate").on("click", function () {
             resetFormMaintainance();
-            initRoleList();
             $("#modalAddEdit").modal("show");
         })
 
@@ -143,7 +115,7 @@
             var that = $(this).data('id');
             $.ajax({
                 type: "GET",
-                url: "/admin/user/getbyid",
+                url: "/admin/role/getbyid",
                 data: { id: that },
                 dataType: "json",
                 beforeSend: function () {
@@ -152,13 +124,8 @@
                 success: function (response) {
                     var data = response;
                     $("#hideId").val(data.id);
-                    $("#txtFullName").val(data.fullName);
-                    $("#txtUserName").val(data.userName);
-                    $("#txtEmail").val(data.email);
-                    $("#txtPhoneNumber").val(data.phoneNumber);
-                    $("#ckStatus").prop("checked", data.status === 1);
-                    initRoleList(data.Roles);
-                    disableFieldEdit(true);
+                    $("#txtName").val(data.name);
+                    $("#txtDescription").val(data.description);
                     $("#modalAddEdit").modal("show");
                     tano.stopLoading();
                 },
@@ -172,30 +139,15 @@
             if ($("#frmMaintainance").valid()) {
                 e.preventDefault();
                 var id = $("#hideId").val();
-                var fullName = $("#txtFullName").val();
-                var userName = $("#txtUserName").val();
-                var password = $("#txtPassword").val();
-                var phoneNumber = $("#txtPhoneNumber").val();
-                var email = $("#txtEmail").val();
-                var roles = [];
-                $.each($('input[name="ckRoles"]'), function (i, item) {
-                    if ($(item).prop('checked') === true) {
-                        roles.push($(item).prop('value'));
-                    }
-                });
-                var status = $("#ckStatus").prop("checked") == true ? 1 : 0;
+                var name = $("#txtName").val();
+                var description = $("#txtDescription").val();
                 $.ajax({
                     type: "post",
-                    url: "/admin/user/SaveEntity",
+                    url: "/admin/role/saveentity",
                     data: {
                         Id: id,
-                        FullName: fullName,
-                        UserName: userName,
-                        Password: password,
-                        Email: email,
-                        PhoneNumber: phoneNumber,
-                        Status: status,
-                        Roles: roles
+                        Name: name,
+                        Description: description
                     },
                     dataType: "json",
                     beforeSend: function () {
@@ -230,7 +182,7 @@
             if (confirm("Are you want to delete?")) {
                 $.ajax({
                     type: "delete",
-                    url: "/admin/user/delete",
+                    url: "/admin/role/delete",
                     data: { id: that },
                     beforeSend: function () {
                         tano.startLoading();
@@ -248,49 +200,10 @@
             }
         })
 
-        function disableFieldEdit(disabled) {
-            $("#txtUserName").prop("disabled", disabled);
-            $("#txtPassword").prop("disabled", disabled);
-            $("#txtConfirmPassword").prop("disabled", disabled);
-        }
-
         function resetFormMaintainance() {
-            disableFieldEdit(false);
             $("#hideId").val("");
-            $("#txtFullName").val("");
-            $("#txtUserName").val("");
-            $("#txtPassword").val("");
-            $("#txtConfirmPassword").val("");
-            $("#input[name='ckRoles']").removeAttr('checked');
-            $("#txtPhoneNumber").val("");
-            $("#ckStatus").prop("checked", true);
-        }
-
-        function initRoleList(selectedRoles) {
-            $.ajax({
-                url: '/admin/role/getall',
-                type: 'get',
-                dataType: 'json',
-                async: false,
-                success: function (reponse) {
-                    var template = $("#role-template").html();
-                    var data = reponse;
-                    var render = '';
-                    $.each(data, function (i, item) {
-                        var checked = '';
-                        if (selectedRoles !== undefined && selectedRoles.indexOf(item.Name) !== -1) {
-                            checked = 'checked';
-                        }
-                        render += Mustache.render(template, {
-                            ID: item.id,
-                            Name: item.name,
-                            Description: item.description,
-                            Checked: checked
-                        });
-                    });
-                    $("#list-roles").html(render);
-                }
-            })
+            $("#txtName").val("");
+            $("#txtDescription").val("");
         }
     }
 }

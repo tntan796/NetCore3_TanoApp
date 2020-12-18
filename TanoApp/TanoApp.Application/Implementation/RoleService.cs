@@ -104,16 +104,16 @@ namespace TanoApp.Application.Implementation
 
         public List<PermissionViewModel> GetListFunctionWithRole(Guid roleId)
         {
-            var functions = _functionRepository.FindAll();
-            var permissions = _permissionRepository.FindAll();
+            var functions = _functionRepository.FindAll().ToList();
+            var permissions = _permissionRepository.FindAll().ToList();
             var query = from f in functions
-                        join p in permissions on f.Id equals p.FunctionId into fp
-                        from p in fp.DefaultIfEmpty()
+                        join p in permissions on f.Id equals p.FunctionId
                         where p != null && p.RoleId == roleId
                         select new PermissionViewModel()
                         {
                             RoleId = roleId,
                             FunctionId = f.Id,
+                            CanRead = p != null ? p.CanRead : false,
                             CanCreate = p != null ? p.CanCreate : false,
                             CanDelete = p != null ? p.CanDelete : false,
                             CanUpdate = p != null ? p.CanUpdate : false

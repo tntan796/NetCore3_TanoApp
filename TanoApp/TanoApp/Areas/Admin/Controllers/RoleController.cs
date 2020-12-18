@@ -76,5 +76,19 @@ namespace TanoApp.Areas.Admin.Controllers
                 return Ok(id);
             }
         }
+
+        [HttpPost]
+        public IActionResult ListAllFunction(Guid roleId)
+        {
+            var functions = _roleService.GetListFunctionWithRole(roleId);
+            return Ok(functions);
+        }
+
+        [HttpPost]
+        public IActionResult SavePermission(List<PermissionViewModel> listPermission, Guid roleId)
+        {
+            _roleService.SavePermission(listPermission, roleId);
+            return Ok();
+        }
     }
 }

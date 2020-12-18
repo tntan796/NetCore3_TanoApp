@@ -8,7 +8,15 @@ namespace TanoApp.Application.Interfaces
 {
     public interface IFunctionService: IDisposable
     {
-        Task<List<FunctionViewModel>> GetAll();
-        Task<List<FunctionViewModel>> GetAllByPermission(Guid userId);
+        Task<List<FunctionViewModel>> GetAll(string filter);
+        void Add(FunctionViewModel functionVm);
+        List<FunctionViewModel> GetAllWithParentId(string parentId);
+        FunctionViewModel GetById(string id);
+        void Update(FunctionViewModel functionVm);
+        void Delete(string id);
+        void Save();
+        bool CheckExistedId(string id);
+        void UpdateParentId(string sourceId, string targetID, Dictionary<string, int> items);
+        void ReOrder(string sourceId, string targetId);
     }
 }

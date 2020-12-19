@@ -112,8 +112,8 @@
 
         $("body").on("click", ".btn-assign-permission", function (e) {
             $("#hideId").val($(this).data('id'));
-            loadFunctionList(fillPermission);
             $("#modalAssignPermission").modal("show");
+            loadFunctionList(fillPermission);
         });
 
         $("body").on("click", ".btn-edit", function (e) {
@@ -222,8 +222,8 @@
                 },
                 success: function (response) {
                     var template = '';
-                    $.each(response, function (i, item) {
-                        template += '< tr data-id="'+ item.id +'">';
+                    response.forEach((item, i) => {
+                        template += '<tr data-id="'+ item.id +'">';
                         template += '<td>'+ item.name +'</td>';
                         template += '<td>';
                         template += '<label>';
@@ -282,6 +282,60 @@
                     fillPermission($("#hideId").val());
                 }
             })
+        }
+
+        function buildTree(functions) {
+            var result = [];
+            const parentIds = functions.filter(t => t.parentId == null);
+            parentIds.forEach(item => {
+                item.childs = [];
+                result.push(item);
+                buildNestedTree(functions, item);
+            })
+            return result;
+        }
+
+        function buildNestedTree(functions, parent) {
+            functions.forEach(item => {
+                if (item.parentId == parent.id) {
+                    item.childs = [];
+                    parent.childs.push(item);
+                    const nestedNode = functions.filter(t => t.parentId == item.id);
+                    if (nestedNode.length > 0) {
+                        buildNestedTree(functions, item);
+                    }
+                }
+            })
+        }
+
+        function buildTreeTemplate(datas) {
+            var template = '';
+            template += '<div class="panel-group" id="accordion">';
+            template += '<div class="panel panel-default" id="panel1">';
+            template += '<div class="panel-heading">';
+            template += '<h4 class="panel-title">';
+            template += '<div class="row">';
+            template += '<div class="col-sm-6">' + datas.name + '</div>';
+            template += '<div class="col-sm-6 text-right">';
+            template += '<a data-toggle="collapse" data-target="#collapse' + datas.id + '" href="#collapse' + datas.id + '"><i class="fa fa-minus" aria-hidden="true"></i></a>';
+            template += '<i class="fa fa-minus" aria-hidden="true"></i>';
+            template += '</div>';
+            template += '</div>';
+            template += '</h4>';
+            template += '</div>';
+            template += '<div id="collapse' + datas.id +'" class="panel-collapse collapse in">';
+            if (datas.childs.length > 0) {
+            template += '<div class="panel-body">';
+            datas.childs.forEach(item => {
+            template += buildTreeTemplate(item);
+            });
+            template += '</div>';
+            }
+            template += '</div>';
+            template += '</div>';
+            template += '</div>';
+            template += '</div>';
+            return template;
         }
 
         function fillPermission(roleId) {

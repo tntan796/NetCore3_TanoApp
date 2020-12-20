@@ -24,16 +24,16 @@ namespace TanoApp.Areas.Admin.Controllers
         public async Task<IActionResult> GetAll()
         {
             var model = await _functionService.GetAll(string.Empty);
-            //var root = model.Where(c => c.ParentId == null);
-            //var items = new List<FunctionViewModel>();
-            //foreach(var function in root)
-            //{
-                // Add the parent category to the item list
-                //items.Add(function);
-                // The item will order with parent in fist and follow is item in parent
-                //GetByParentId(model.ToList(), function, items);
-            //}
-            return Ok(model);
+            var root = model.Where(c => c.ParentId == null);
+            var items = new List<FunctionViewModel>();
+            foreach (var function in root)
+            {
+                //Add the parent category to the item list
+                items.Add(function);
+                //The item will order with parent in fist and follow is item in parent
+                GetByParentId(model.ToList(), function, items);
+            }
+            return Ok(items);
         }
 
         private void GetByParentId(IEnumerable<FunctionViewModel> allFunctions,

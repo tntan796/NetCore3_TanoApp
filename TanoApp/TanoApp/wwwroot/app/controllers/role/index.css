@@ -7,7 +7,7 @@
     padding: 5px 1em;
 }
 
-#modalAddEdit .modal-header {
+#modalAssignPermission .modal-header {
     background: dodgerblue;
     color: white;
     border-top-left-radius: 1em;
@@ -15,7 +15,7 @@
 }
 
 
-#modalAddEdit .modal-content {
+#modalAssignPermission .modal-content {
     border-radius: 1em;
 }
 

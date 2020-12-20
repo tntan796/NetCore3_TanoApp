@@ -1,4 +1,7 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Authorization
+@using TanoApp.Authorization
+@inject IAuthorizationService AuthorizationService;
+@{
     ViewData["Title"] = "User List";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
@@ -38,8 +41,16 @@
                 </div>
             </div>
             <div class="col-md-8 form-group text-right">
+                @{
+                    var result = await AuthorizationService.AuthorizeAsync(User, "USER", Operations.Create);
+                }
                 <label></label><br />
-                <button class="btn btn-primary" id="btnCreate"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
+                @if (result.Succeeded)
+                {
+                    <button class="btn btn-primary" id="btnCreate">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Add
+                    </button>
+                }
             </div>
             <div class="table-responsive" data-pattern="priority-columns">
                 <table cellspacing="0" id="tech-companies-1" class="table table-small-font table-bordered">
@@ -88,12 +99,18 @@
             <td>{{{DateCreated}}}</td>
             <td>{{{Status}}}</td>
             <td>
-                <button class="btn btn-primary waves-effect btn-edit" title="Sửa" data-id={{Id}}>
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-danger waves-effect btn-delete" title="Xóa" data-id={{Id}}>
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                </button>
+                @if ((await AuthorizationService.AuthorizeAsync(User, "USER", Operations.Update)).Succeeded)
+                {
+                    <button class="btn btn-primary waves-effect btn-edit" title="Sửa" data-id={{Id}}>
+                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    </button>
+                }
+                @if ((await AuthorizationService.AuthorizeAsync(User, "USER", Operations.Delete)).Succeeded)
+                {
+                    <button class="btn btn-danger waves-effect btn-delete" title="Xóa" data-id={{Id}}>
+                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </button>
+                }
             </td>
         </tr>
     </script>

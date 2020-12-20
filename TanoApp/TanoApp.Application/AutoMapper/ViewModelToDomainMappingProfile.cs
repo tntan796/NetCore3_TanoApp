@@ -17,6 +17,7 @@ namespace TanoApp.Application.AutoMapper
             CreateMap<ProductViewModel, Product>();
             CreateMap<AppUserViewModel, AppUser>();
             CreateMap<AppRoleViewModel, AppRole>();
+            CreateMap<PermissionViewModel, Permission>();
         }
     }
 }

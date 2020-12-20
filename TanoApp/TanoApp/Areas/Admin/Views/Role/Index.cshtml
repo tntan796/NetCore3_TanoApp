@@ -1,61 +1,53 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-@section Scripts{
+@section Scripts {
     <script src="~/admin-side/js/jquery.twbsPagination.js"></script>
     <script src="~/admin-side/plugins/jquery-easyui-1.9.9/jquery.easyui.min.js"></script>
-    <script src="~/app/controllers/product/index.js"></script>
-
+    <script src="~/app/controllers/role/index.js" asp-append-version="true"></script>
     <script>
-        var product = new productController();
-        product.initializer();
+        var roleObject = new RoleController();
+        roleObject.initialize();
     </script>
 }
-
 @section Styles {
     <link href="~/admin-side/plugins/jquery-easyui-1.9.9/themes/material-blue/easyui.css" rel="stylesheet" />
     <link href="~/admin-side/plugins/jquery-easyui-1.9.9/themes/icon.css" rel="stylesheet" />
-    <link href="~/app/controllers/product/index.css" rel="stylesheet" />
+    <link href="~/app/controllers/role/index.css" rel="stylesheet" />
 }
+
 <div class="card" id="resp-table">
     <ul id="breadcrumb-triangle">
         <li><a href="#"><span class="icofont icofont-home"> </span></a></li>
-        <li><a href="#"><span class="icofont icofont-flask"> </span> Trang chủ</a></li>
-        <li><a href="#"><span class="icofont icofont-double-right"></span> Sản phẩm</a></li>
-        <li><a href="#"><span class="icofont icofont-rocket-alt-2"> </span> Danh sách sản phẩm</a></li>
+        <li><a href="#"><span class="icofont icofont-flask"> </span> Home</a></li>
+        <li><a href="#"><span class="icofont icofont-double-right"></span> System</a></li>
+        <li><a href="#"><span class="icofont icofont-rocket-alt-2"> </span> Role List</a></li>
     </ul>
-    <div class="card-header"><h5 class="card-header-text">Danh sách sản phẩm</h5></div>
+    <div class="card-header"><h5 class="card-header-text">Role List</h5></div>
     <div class="card-block">
         <div class="row">
             <div class="col-md-4 form-group ">
-                <label>Tìm kiếm</label>
+                <label>Search</label>
                 <div class="input-group">
-                    <input id="txtKeyword" type="text" class="form-control" placeholder="Nhập nội dung tìm kiếm...">
+                    <input id="txtKeyword" type="text" class="form-control" placeholder="Typing to search...">
                     <span class="input-group-btn" id="btn-addon2">
-                        <button type="button" id="btnSearch" class="btn btn-primary shadow-none addon-btn waves-effect waves-light">Tìm kiếm!</button>
+                        <button type="button" id="btnSearch" class="btn btn-primary shadow-none addon-btn waves-effect waves-light">Search!</button>
                     </span>
                 </div>
             </div>
-            <div class="col-md-4 form-group">
-                <label>Danh mục</label>
-                <select class="form-control " id="ddlCategorySearch">
-                    <option>-- Chọn danh mục --</option>
-                </select>
-            </div>
-            <div class="col-md-4 form-group text-right">
+            <div class="col-md-8 form-group text-right">
                 <label></label><br />
-                <button class="btn btn-primary" id="btnCreate"><i class="fa fa-plus" aria-hidden="true"></i> Thêm mới</button>
+                <button class="btn btn-primary" id="btnCreate"><i class="fa fa-plus" aria-hidden="true"></i> Add</button>
             </div>
             <div class="table-responsive" data-pattern="priority-columns">
                 <table cellspacing="0" id="tech-companies-1" class="table table-small-font table-bordered">
                     <thead>
                         <tr>
-                            <th data-priority="1">Tên sản phẩm</th>
-                            <th data-priority="1">Giá sản phẩm</th>
-                            <th data-priority="3">Ngày tạo</th>
-                            <th data-priority="4">Trạng thái</th>
-                            <th data-priority="5">Xử lí</th>
+                            <th data-priority="1">Name</th>
+                            <th data-priority="2">Description</th>
+                            <th data-priority="3" width="15%" class="text-center">Method</th>
                         </tr>
                     </thead>
                     <tbody id="tbl-body">
@@ -87,24 +79,20 @@
 
     <script id="table-template" type="x-tmpl-mustache">
         <tr>
-            <td>{{name}}</td>
-            <td>{{price}}</td>
-            <td>{{dateCreated}}</td>
-            {{#isActive}}
-            <td><label class="label bg-primary">{{status}}</label></td>
-            {{/isActive}}
-            {{ ^isActive}}
-            <td><label class="label bg-danger">{{status}}</label></td>
-            {{/isActive}}
-            <td>
-                <button class="btn btn-primary waves-effect btn-edit" title="Sửa" data-id={{id}}>
+            <td>{{Name}}</td>
+            <td>{{Description}}</td>
+            <td width="15%" class="text-center">
+                <button class="btn btn-primary waves-effect btn-assign-permission" title="Assign Permission" data-id={{Id}}>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-primary waves-effect btn-edit" title="Edit" data-id={{Id}}>
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </button>
-                <button class="btn btn-danger waves-effect btn-delete" title="Xóa" data-id={{id}}>
+                <button class="btn btn-danger waves-effect btn-delete" title="Delete" data-id={{Id}}>
                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                 </button>
             </td>
         </tr>
     </script>
-
-    @Html.Partial("_AddEditProduct.cshtml")
+    @Html.Partial("_AddEditRole.cshtml")
+    @Html.Partial("_AssignPermission.cshtml")

@@ -7,12 +7,10 @@ using TanoApp.Data.IRepositories;
 
 namespace TanoApp.Data.EF.Repositories
 {
-    public class ProductRepository: EFRepository<Product, int>, IProductRepository
+    public class PermissionRepository : EFRepository<Permission, int>, IPermissionRepository
     {
-        private AppDbContext _context;
-        public ProductRepository(AppDbContext context) : base(context)
+        public PermissionRepository(AppDbContext dbContext) : base(dbContext)
         {
-            _context = context;
         }
     }
 }

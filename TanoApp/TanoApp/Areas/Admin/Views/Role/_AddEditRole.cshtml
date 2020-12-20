@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div class="modal fade" id="modalAddEdit" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close waves-effect text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Add/Edit Role</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal row" role="form" id="frmMaintainance">
+                    <div class="form-group col-sm-12 col-md-6">
+                        <input type="hidden" id="hideId" value="0" />
+                        <label for="txtName">Name <span class="text-danger">*</span></label>
+                        <input type="text" name="txtName" class="form-control" id="txtName" placeholder="Name" />
+                    </div>
+                    <div class="form-group col-sm-12 col-md-6">
+                        <label for="txtDescription">Description <span class="text-danger">*</span></label>
+                        <input type="text" name="txtDescription" class="form-control" id="txtDescription" placeholder="Description" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button id="btnCancel" type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">
+                    <i class="fa fa-times" aria-hidden="true"></i> Đóng
+                </button>
+                <button id="btnSave" type="button" class="btn btn-primary waves-effect">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Lưu lại
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Model animation js -->
+    <script type="text/javascript" src="~/admin-side/bower_components/classie/js/classie.js"></script>
+    <script src="~/admin-side/plugins/ModalWindowEffects/js/modalEffects.js"></script>
+    <!-- custom js -->
+    <script src="~/admin-side/pages/modal.js"></script>
+}
+
+@section Styles {
+    <!-- Modal animation CSS -->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/plugins/modal/css/component.css">
+    <!-- Responsive.css-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/css/responsive.css">
+}

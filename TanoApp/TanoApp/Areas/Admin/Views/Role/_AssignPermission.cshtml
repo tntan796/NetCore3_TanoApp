@@ -1,0 +1,76 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div class="modal fade" id="modalAssignPermission" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close waves-effect text-white" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title">Assign Permission</h4>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="hideId"/>
+                <table class="table table-hover" id="tblFunction">
+                    <thead class="border-primary">
+                        <tr>
+                            <th>
+                                <label>Function Name</label>
+                            </th>
+                            <th>
+                                <label>
+                                    <input type="checkbox" id="ckCheckAllView" />
+                                    <span> View</span>
+                                </label>
+                            </th>
+                            <th>
+                                <label>
+                                    <input type="checkbox" id="ckCheckAllCreate" />
+                                    <span> Create</span>
+                                </label>
+                            </th>
+                            <th>
+                                <label>
+                                    <input type="checkbox" id="ckCheckAllEdit" />
+                                    <span> Update</span>
+                                </label>
+                            </th>
+                            <th>
+                                <label>
+                                    <input type="checkbox" id="ckCheckAllDelete" />
+                                    <span> Delete</span>
+                                </label>
+                            </th>
+                        </tr>
+                        <tbody id="lst-data-function">
+                        </tbody>
+                    </thead>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button id="btnCancel" type="button" class="btn btn-secondary waves-effect" data-dismiss="modal">
+                    <i class="fa fa-times" aria-hidden="true"></i> Đóng
+                </button>
+                <button id="btnSavePermission" type="button" class="btn btn-primary waves-effect">
+                    <i class="fa fa-floppy-o" aria-hidden="true"></i> Lưu lại
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Model animation js -->
+    <script type="text/javascript" src="~/admin-side/bower_components/classie/js/classie.js"></script>
+    <script src="~/admin-side/plugins/ModalWindowEffects/js/modalEffects.js"></script>
+    <!-- custom js -->
+    <script src="~/admin-side/pages/modal.js"></script>
+}
+
+@section Styles {
+    <!-- Modal animation CSS -->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/plugins/modal/css/component.css">
+    <!-- Responsive.css-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/css/responsive.css">
+}

@@ -47,7 +47,7 @@
                         <tr>
                             <th data-priority="1">Name</th>
                             <th data-priority="2">Description</th>
-                            <th data-priority="3">Method</th>
+                            <th data-priority="3" width="15%" class="text-center">Method</th>
                         </tr>
                     </thead>
                     <tbody id="tbl-body">
@@ -81,14 +81,18 @@
         <tr>
             <td>{{Name}}</td>
             <td>{{Description}}</td>
-            <td>
-                <button class="btn btn-primary waves-effect btn-edit" title="Sửa" data-id={{Id}}>
+            <td width="15%" class="text-center">
+                <button class="btn btn-primary waves-effect btn-assign-permission" title="Assign Permission" data-id={{Id}}>
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </button>
+                <button class="btn btn-primary waves-effect btn-edit" title="Edit" data-id={{Id}}>
                     <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                 </button>
-                <button class="btn btn-danger waves-effect btn-delete" title="Xóa" data-id={{Id}}>
+                <button class="btn btn-danger waves-effect btn-delete" title="Delete" data-id={{Id}}>
                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                 </button>
             </td>
         </tr>
     </script>
     @Html.Partial("_AddEditRole.cshtml")
+    @Html.Partial("_AssignPermission.cshtml")

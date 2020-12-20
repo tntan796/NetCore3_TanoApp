@@ -23,7 +23,7 @@ namespace TanoApp.Areas.Admin.Components
             List<FunctionViewModel> functionViewModels;
             if (roles.Split(";").Contains("Admin"))
             {
-                functionViewModels = await _functionService.GetAll();
+                functionViewModels = await _functionService.GetAll(string.Empty);
             } else
             {
                 functionViewModels = new List<FunctionViewModel>();

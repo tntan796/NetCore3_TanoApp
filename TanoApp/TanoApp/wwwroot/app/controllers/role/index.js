@@ -110,6 +110,12 @@
             $("#modalAddEdit").modal("show");
         })
 
+        $("body").on("click", ".btn-assign-permission", function (e) {
+            $("#hideId").val($(this).data('id'));
+            $("#modalAssignPermission").modal("show");
+            loadFunctionList(fillPermission);
+        });
+
         $("body").on("click", ".btn-edit", function (e) {
             e.preventDefault();
             var that = $(this).data('id');
@@ -204,6 +210,169 @@
             $("#hideId").val("");
             $("#txtName").val("");
             $("#txtDescription").val("");
+        }
+
+        function loadFunctionList(fillPermission) {
+            return $.ajax({
+                type: "GET",
+                url: '/admin/function/getall',
+                dataType: 'json',
+                beforeSend: function () {
+                    tano.startLoading();
+                },
+                success: function (response) {
+                    var template = '';
+                    response.forEach((item, i) => {
+                        template += '<tr data-id="'+ item.id +'">';
+                        template += '<td>'+ item.name +'</td>';
+                        template += '<td>';
+                        template += '<label>';
+                        template += '<input type="checkbox" value="'+ item.id +'" class="ckView">';
+                        template += '<span class="text">Allow</span>';
+                        template += '</label>';
+                        template += '</td>';
+                        template += '<td>';
+                        template += '<label>';
+                        template += '<input type="checkbox" value="' + item.id +'" class="ckAdd">';
+                        template += '<span class="text">Allow</span>';
+                        template += '</label>';
+                        template += '</td>';
+                        template += '<td>';
+                        template += '<label>';
+                        template += '<input type="checkbox" value="' + item.id +'" class="ckEdit">';
+                        template += '<span class="text">Allow</span>';
+                        template += '</label>';
+                        template += '</td>';
+                        template += '<td>';
+                        template += '<label>';
+                        template += '<input type="checkbox" value="'+ item.id +'" class="ckDelete">';
+                        template += '<span class="text">Allow</span>';
+                        template += '</label>';
+                        template += '</td>';
+                        template += '</tr>';
+                    });
+                    $("#lst-data-function").html(template);
+                    // Handle action when user click check all checkbox
+                    $("#ckCheckAllView").on("click", function () {
+                        $(".ckView").prop('checked', $(this).prop('checked'));
+                    })
+                    $("#ckCheckAllCreate").on("click", function () {
+                        $(".ckAdd").prop('checked', $(this).prop('checked'));
+                    })
+                    $("#ckCheckAllEdit").on("click", function () {
+                        $(".ckEdit").prop('checked', $(this).prop('checked'));
+                    })
+                    $("#ckCheckAllDelete").on("click", function () {
+                        $(".ckDelete").prop('checked', $(this).prop('checked'));
+                    })
+
+                    // Checked on CheckAllView when click into lasted CkView
+                    $(".ckView").on("click", function () {
+                        $("#ckCheckAllView").prop("checked", $(".ckView:checked").length === response.length);
+                    })
+                    $(".ckAdd").on("click", function () {
+                        $("#ckCheckAllCreate").prop("checked", $(".ckAdd:checked").length === response.length);
+                    })
+                    $(".ckEdit").on("click", function () {
+                        $("#ckCheckAllEdit").prop("checked", $(".ckEdit:checked").length === response.length);
+                    })
+                    $(".ckDelete").on("click", function () {
+                        $("#ckCheckAllDelete").prop("checked", $(".ckDelete:checked").length === response.length);
+                    })
+                    fillPermission($("#hideId").val());
+                }
+            })
+        }
+
+        function buildTree(functions) {
+            var result = [];
+            const parentIds = functions.filter(t => t.parentId == null);
+            parentIds.forEach(item => {
+                item.childs = [];
+                result.push(item);
+                buildNestedTree(functions, item);
+            })
+            return result;
+        }
+
+        function buildNestedTree(functions, parent) {
+            functions.forEach(item => {
+                if (item.parentId == parent.id) {
+                    item.childs = [];
+                    parent.childs.push(item);
+                    const nestedNode = functions.filter(t => t.parentId == item.id);
+                    if (nestedNode.length > 0) {
+                        buildNestedTree(functions, item);
+                    }
+                }
+            })
+        }
+
+        function buildTreeTemplate(datas) {
+            var template = '';
+            template += '<div class="panel-group" id="accordion">';
+            template += '<div class="panel panel-default" id="panel1">';
+            template += '<div class="panel-heading">';
+            template += '<h4 class="panel-title">';
+            template += '<div class="row">';
+            template += '<div class="col-sm-6">' + datas.name + '</div>';
+            template += '<div class="col-sm-6 text-right">';
+            template += '<a data-toggle="collapse" data-target="#collapse' + datas.id + '" href="#collapse' + datas.id + '"><i class="fa fa-minus" aria-hidden="true"></i></a>';
+            template += '<i class="fa fa-minus" aria-hidden="true"></i>';
+            template += '</div>';
+            template += '</div>';
+            template += '</h4>';
+            template += '</div>';
+            template += '<div id="collapse' + datas.id +'" class="panel-collapse collapse in">';
+            if (datas.childs.length > 0) {
+            template += '<div class="panel-body">';
+            datas.childs.forEach(item => {
+            template += buildTreeTemplate(item);
+            });
+            template += '</div>';
+            }
+            template += '</div>';
+            template += '</div>';
+            template += '</div>';
+            template += '</div>';
+            return template;
+        }
+
+        function fillPermission(roleId) {
+            $.ajax({
+                type: "Post",
+                url: "/admin/role/listAllFunction",
+                data: {
+                    roleId: roleId
+                },
+                dataType: "json",
+                beforeSend: function () {
+                    
+                },
+                success: function (listPermission) {
+                    $.each($("#tblFunction tbody tr", function (i, item) {
+                        $.each(listPermission, function (j, jtem) {
+                            if (jtem.FunctionId == $(item).data('id')) {
+                                $(item).find(".ckView").first().prop("checked", jtem.CanRead);
+                                $(item).find(".ckAdd").first().prop("checked", jtem.CanCreate);
+                                $(item).find(".ckEdit").first().prop("checked", jtem.CanUpdate);
+                                $(item).find(".ckDelete").first().prop("checked", jtem.CanDelete);
+                            }
+                        })
+                    }));
+                    var checkAllView = $(".ckView:checked").length == $("#tblFunction tbody tr .ckAdd").length;
+                    $("#ckCheckAllView").prop("checked", checkAllView);
+                    var checkAllAdd = $(".ckAdd:checked").length == $("#tblFunction tbody tr .ckAdd").length;
+                    $("#ckCheckAllCreate").prop("checked", checkAllAdd);
+                    var checkAllEdit = $(".ckEdit:checked").length == $("#tblFunction tbody tr .ckEdit").length;
+                    $("#ckCheckAllEdit").prop("checked", checkAllEdit);
+                    var checkAllDelete = $(".ckDelete:checked").length == $("#tblFunction tbody tr .ckDelete").length;
+                    $("#ckCheckAllDelete").prop("checked", checkAllDelete);
+                },
+                error: function (error) {
+                    console.log('error:', error);
+                }
+            })
         }
     }
 }

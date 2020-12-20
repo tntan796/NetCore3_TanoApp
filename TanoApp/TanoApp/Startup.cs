@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -18,6 +19,7 @@ using Microsoft.Extensions.Logging;
 using TanoApp.Application.AutoMapper;
 using TanoApp.Application.Implementation;
 using TanoApp.Application.Interfaces;
+using TanoApp.Authorization;
 using TanoApp.Data.EF.EF;
 using TanoApp.Data.EF.Repositories;
 using TanoApp.Data.Entities;
@@ -73,6 +75,7 @@ namespace TanoApp
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
+            services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
 
             // Unit of work
             services.AddTransient<IUnitOfWork, EFUnitOfWork>();

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using TanoApp.Application.Interfaces;
 using TanoApp.Application.ViewModels.System;
 using TanoApp.Extensions;
+using TanoApp.Utilities.Constants;
 
 namespace TanoApp.Areas.Admin.Components
 {
@@ -21,7 +22,7 @@ namespace TanoApp.Areas.Admin.Components
         {
             var roles = ((ClaimsPrincipal)User).GetSpecificClaim("Roles");
             List<FunctionViewModel> functionViewModels;
-            if (roles.Split(";").Contains("Admin"))
+            if (roles.Split(";").Contains(CommonConstants.AppRole.AdminRole))
             {
                 functionViewModels = await _functionService.GetAll(string.Empty);
             } else

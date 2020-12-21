@@ -5,3 +5,16 @@
 .pagination li.active a {
     color: white !important;
 }
+
+
+#modalImportExcel .modal-header, #modalAddEdit .modal-header {
+    background: dodgerblue;
+    color: white;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em
+}
+
+
+#modalImportExcel .modal-content, #modalAddEdit .modal-content {
+    border-radius: 1em;
+}

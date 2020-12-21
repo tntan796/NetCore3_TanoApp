@@ -28,7 +28,7 @@
     <div class="card-header"><h5 class="card-header-text">Danh sách sản phẩm</h5></div>
     <div class="card-block">
         <div class="row">
-            <div class="col-md-4 form-group ">
+            <div class="col-md-3 form-group ">
                 <label>Tìm kiếm</label>
                 <div class="input-group">
                     <input id="txtKeyword" type="text" class="form-control" placeholder="Nhập nội dung tìm kiếm...">
@@ -37,15 +37,25 @@
                     </span>
                 </div>
             </div>
-            <div class="col-md-4 form-group">
+            <div class="col-md-3 form-group">
                 <label>Danh mục</label>
                 <select class="form-control " id="ddlCategorySearch">
                     <option>-- Chọn danh mục --</option>
                 </select>
             </div>
-            <div class="col-md-4 form-group text-right">
+            <div class="col-md-6 form-group text-right">
                 <label></label><br />
-                <button class="btn btn-primary" id="btnCreate"><i class="fa fa-plus" aria-hidden="true"></i> Thêm mới</button>
+                <span>
+                    <button class="btn btn-primary waves-effect waves-light" id="btnCreate">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Add
+                    </button>
+                    <a class="btn btn-skype waves-effect waves-light" title="Download Template" id="btnDownloadTemplate" href="~/templates/ProductImportTemplate.xlsx">
+                        <i class="fa fa-cloud-download pr-0" aria-hidden="true"></i> 
+                    </a>
+                    <button class="btn btn-success waves-effect waves-light" title="Import Excel" id="btnImportExel">
+                        <i class="fa fa-file-excel-o" aria-hidden="true"></i> 
+                    </button>
+                </span>
             </div>
             <div class="table-responsive" data-pattern="priority-columns">
                 <table cellspacing="0" id="tech-companies-1" class="table table-small-font table-bordered">
@@ -108,3 +118,4 @@
     </script>
 
     @Html.Partial("_AddEditProduct.cshtml")
+    @Html.Partial("_ImportExcelModal.cshtml")

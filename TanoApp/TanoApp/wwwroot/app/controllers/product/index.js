@@ -7,7 +7,7 @@
     }
 
     function registerControls() {
-        CKEDITOR.replace('txtContent', {});
+        //CKEDITOR.replace('txtContent', {});
         //$.fn.modal.Constructor.prototype.enforceFocus = function () {
         //    $(document)
         //        .off('focusin.bs.modal')// Guard agains infinity focus loop 
@@ -85,141 +85,18 @@
 
         $("body").on("click", ".btn-edit", function (e) {
             e.preventDefault();
-            var that = $(this).data('id');
-            $.ajax({
-                type: "GET",
-                url: "/admin/product/getById",
-                data: { id: that },
-                dataType: "json",
-                beforeSend: function () {
-                    tano.startLoading();
-                },
-                success: function (response) {
-                    var data = response;
-                    $("#hidIdM").val(data.id);
-                    $("#txtNameM").val(data.name);
-                    initTreeDropCategory(data.categoryId);
-                    $("#txtDescM").val(data.description);
-                    $("#txtUnitM").val(data.unit);
-                    $("#txtPriceM").val(data.price);
-                    $("#txtOriginalPriceM").val(data.originalPrice);
-                    $("#txtPromotionPriceM").val(data.promotionPrice);
-                    //$("#txtImageM").val(data.thumbailImage);
-                    $("#txtTagM").val(data.tags);
-                    $("#txtMetakeywordM").val(data.seoKeywords);
-                    $("#txtMetaDescriptionM").val(data.seoDescription);
-                    $("#txtSeoPageTitleM").val(data.seoPageTitle);
-                    $("#txtSeoAliasM").val(data.seoAlias);
-                    CKEDITOR.instances.txtContent.setData(data.content);
-                    $("#ckStatusM").prop("checked", data.status == 1);
-                    $("#ckHotM").prop("checked", data.hotFlag);
-                    $("#ckShowHomeM").prop("checked", data.homeFlag);
-                    $("#modalAddEdit").modal("show");
-                    tano.stopLoading();
-                },
-                error(error) {
-                    tano.stopLoading();
-                    console.log("Get product id faild:", error);
-                }
-            })
+            var id = $(this).data('id');
+            loadDetailProduct(id);
         })
 
         $("body").on("click", ".btn-delete", function (e) {
             e.preventDefault();
-            var that = $(this).data("id");
-            if (confirm("Bạn có chắc chắn muốn xóa không?")) {
-                $.ajax({
-                    type: "delete",
-                    url: "/admin/product/delete",
-                    data: { id: that },
-                    dataType: "json",
-                    beforeSend: function () {
-                        tano.startLoading();
-                    },
-                    success: function (response) {
-                        customNotify("DELETE SUCCESS", types.success);
-                        tano.stopLoading();
-                        loadData();
-                    },
-                    error: function (error) {
-                        customNotify("Delete Fail!", types.danger);
-                        console.log('Delete error:', error);
-                        tano.stopLoading();
-                    }
-                })
-            }
+            var id = $(this).data("id");
+            handleDelete(id);
         })
 
         $("#btnSave").on("click", function (e) {
-            if ($("#frmMaintainance").valid()) {
-                e.preventDefault();
-                var id = $("#hidIdM").val();
-                var name = $("#txtNameM").val();
-                var categoryId = $("#ddlCategoryIdM").combotree('getValue');
-                var description = $("#txtDescM").val();
-                var unit = $("#txtUnitM").val();
-                var price = $("#txtPriceM").val();
-                var originalPrice = $("#txtOriginalPriceM").val();
-                var promotionPrice = $("#txtPromotionPriceM").val();
-                var image = $("#txtImageM").val();
-                var tags = $("#txtTagM").val();
-                var seoKeyword = $("#txtMetakeywordM").val();
-                var seoMetaDescription = $("#txtMetaDescriptionM").val();
-                var seoPageTitle = $("#txtSeoPageTitleM").val();
-                var seoAlias = $("#txtSeoAliasM").val();
-                var content = CKEDITOR.instances.txtContent.getData();
-                var status = $("#ckStatusM").prop("checked") == true ? 1 : 0;
-                var hot = $("#ckHotM").prop("checked");
-                var showHome = $("#ckShowHomeM").prop("checked");
-                $.ajax({
-                    type: "POST",
-                    url: "/admin/product/saveEntity",
-                    data: {
-                        Id: id,
-                        CategoryId: categoryId,
-                        Name: name,
-                        Image: '',
-                        Price: price,
-                        OriginalPrice: originalPrice,
-                        PromotionPrice: promotionPrice,
-                        Description: description,
-                        Content: content,
-                        HomeFlag: showHome,
-                        HotFlag: hot,
-                        Tags: tags,
-                        Unit: unit,
-                        Status: status,
-                        SeoPageTitle: seoPageTitle,
-                        SeoAlias: seoAlias,
-                        SeoKeywords: seoKeyword,
-                        SeoDescription: seoMetaDescription
-                    },
-                    dataType: "JSON",
-                    beforeSend: function () {
-                        tano.startLoading();
-                    },
-                    success: function (response) {
-                        resetFormMaintainance();
-                        tano.stopLoading();
-                        loadData(true);
-                        if (id) {
-                            customNotify("Cập nhật thành công", types.success);
-                        } else {
-                            customNotify("Thêm mới thành công", types.success);
-                        }
-                        $('#modalAddEdit').modal('hide');
-                    },
-                    error: function (e) {
-                        console.log('Cập nhật thất bại: ', e);
-                        if (id) {
-                            customNotify("Cập nhật thất bại", types.danger);
-                        } else {
-                            customNotify("Thêm mới thất bại", types.danger);
-                        }
-                        tano.stopLoading();
-                    }
-                })
-            }
+            handleSave(e);
         })
 
         $("#btnSelectImg").on("click", function () {
@@ -247,6 +124,171 @@
                     customNotify("Upload image fail!", types.danger);
                 }
             })
+        })
+
+        $("#btnImportExel").on("click", function () {
+            $("#modalImportExcel").modal("show");
+            initTreeDropCategory('');
+        })
+
+        $("#btnImportExcel").on("click", function () {
+            var fileUpload = $("#fileInputExcel").get(0);
+            var files = fileUpload.files;
+            // Create FormData object
+            var fileData = new FormData();
+            // Looping over all files and add it to FormData obejct
+            for (var i = 0; i < files.length; i++) {
+                fileData.append('files', files[i]);
+            }
+            var category = $("#ddlImportExcel").combotree("getValue");
+            fileData.append("categoryid", category);
+            $.ajax({
+                url: "/admin/product/importexcel",
+                type: "post",
+                data: fileData,
+                processData: false,
+                contentType: false,
+                success: function (data) {
+                    $("#modalImportExcel").modal("hide");
+                    loadData();
+                }
+            })
+            return false;
+        })
+    }
+
+    function handleDelete(id) {
+        if (confirm("Bạn có chắc chắn muốn xóa không?")) {
+            $.ajax({
+                type: "delete",
+                url: "/admin/product/delete",
+                data: { id: id },
+                dataType: "json",
+                beforeSend: function () {
+                    tano.startLoading();
+                },
+                success: function (response) {
+                    customNotify("DELETE SUCCESS", types.success);
+                    tano.stopLoading();
+                    loadData();
+                },
+                error: function (error) {
+                    customNotify("Delete Fail!", types.danger);
+                    console.log('Delete error:', error);
+                    tano.stopLoading();
+                }
+            })
+        }
+    }
+
+    function handleSave(e) {
+        if ($("#frmMaintainance").valid()) {
+            e.preventDefault();
+            var id = $("#hidIdM").val();
+            var name = $("#txtNameM").val();
+            var categoryId = $("#ddlCategoryIdM").combotree('getValue');
+            var description = $("#txtDescM").val();
+            var unit = $("#txtUnitM").val();
+            var price = $("#txtPriceM").val();
+            var originalPrice = $("#txtOriginalPriceM").val();
+            var promotionPrice = $("#txtPromotionPriceM").val();
+            var image = $("#txtImageM").val();
+            var tags = $("#txtTagM").val();
+            var seoKeyword = $("#txtMetakeywordM").val();
+            var seoMetaDescription = $("#txtMetaDescriptionM").val();
+            var seoPageTitle = $("#txtSeoPageTitleM").val();
+            var seoAlias = $("#txtSeoAliasM").val();
+            var content = CKEDITOR.instances.txtContent.getData();
+            var status = $("#ckStatusM").prop("checked") == true ? 1 : 0;
+            var hot = $("#ckHotM").prop("checked");
+            var showHome = $("#ckShowHomeM").prop("checked");
+            $.ajax({
+                type: "POST",
+                url: "/admin/product/saveEntity",
+                data: {
+                    Id: id,
+                    CategoryId: categoryId,
+                    Name: name,
+                    Image: image,
+                    Price: price,
+                    OriginalPrice: originalPrice,
+                    PromotionPrice: promotionPrice,
+                    Description: description,
+                    Content: content,
+                    HomeFlag: showHome,
+                    HotFlag: hot,
+                    Tags: tags,
+                    Unit: unit,
+                    Status: status,
+                    SeoPageTitle: seoPageTitle,
+                    SeoAlias: seoAlias,
+                    SeoKeywords: seoKeyword,
+                    SeoDescription: seoMetaDescription
+                },
+                dataType: "JSON",
+                beforeSend: function () {
+                    tano.startLoading();
+                },
+                success: function (response) {
+                    resetFormMaintainance();
+                    tano.stopLoading();
+                    loadData(true);
+                    if (id) {
+                        customNotify("Cập nhật thành công", types.success);
+                    } else {
+                        customNotify("Thêm mới thành công", types.success);
+                    }
+                    $('#modalAddEdit').modal('hide');
+                },
+                error: function (e) {
+                    console.log('Cập nhật thất bại: ', e);
+                    if (id) {
+                        customNotify("Cập nhật thất bại", types.danger);
+                    } else {
+                        customNotify("Thêm mới thất bại", types.danger);
+                    }
+                    tano.stopLoading();
+                }
+            })
+        }
+    }
+
+    function loadDetailProduct(id) {
+        $.ajax({
+            type: "GET",
+            url: "/admin/product/getById",
+            data: { id: id },
+            dataType: "json",
+            beforeSend: function () {
+                tano.startLoading();
+            },
+            success: function (response) {
+                var data = response;
+                $("#hidIdM").val(data.id);
+                $("#txtNameM").val(data.name);
+                initTreeDropCategory(data.categoryId);
+                $("#txtDescM").val(data.description);
+                $("#txtUnitM").val(data.unit);
+                $("#txtPriceM").val(data.price);
+                $("#txtOriginalPriceM").val(data.originalPrice);
+                $("#txtPromotionPriceM").val(data.promotionPrice);
+                //$("#txtImageM").val(data.thumbailImage);
+                $("#txtTagM").val(data.tags);
+                $("#txtMetakeywordM").val(data.seoKeywords);
+                $("#txtMetaDescriptionM").val(data.seoDescription);
+                $("#txtSeoPageTitleM").val(data.seoPageTitle);
+                $("#txtSeoAliasM").val(data.seoAlias);
+                CKEDITOR.instances.txtContent.setData(data.content);
+                $("#ckStatusM").prop("checked", data.status == 1);
+                $("#ckHotM").prop("checked", data.hotFlag);
+                $("#ckShowHomeM").prop("checked", data.homeFlag);
+                $("#modalAddEdit").modal("show");
+                tano.stopLoading();
+            },
+            error(error) {
+                tano.stopLoading();
+                console.log("Get product id faild:", error);
+            }
         })
     }
 
@@ -289,6 +331,9 @@
                 });
                 var arr = tano.unflattern(data);
                 $("#ddlCategoryIdM").combotree({
+                    data: arr
+                });
+                $("#ddlImportExcel").combotree({
                     data: arr
                 });
                 if (selectedId != undefined) {

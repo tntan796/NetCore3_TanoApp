@@ -68,6 +68,10 @@ namespace TanoApp
             services.AddTransient<ITagRepository, TagRepository>();
             services.AddTransient<IProductTagRepository, ProductTagRepository>();
             services.AddTransient<IPermissionRepository, PermissionRepository>();
+            services.AddTransient<IColorRepository, ColorRepository>();
+            services.AddTransient<ISizeRepository, SizeRepository>();
+            services.AddTransient<IBillRepository, BillRepository>();
+            services.AddTransient<IBillDetailRepository, BillDetailRepository>();
 
             // Services
             services.AddTransient<IFunctionService, FunctionService>();
@@ -76,7 +80,7 @@ namespace TanoApp
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
-
+            services.AddTransient<IBillService, BillService>();
             // Unit of work
             services.AddTransient<IUnitOfWork, EFUnitOfWork>();
 

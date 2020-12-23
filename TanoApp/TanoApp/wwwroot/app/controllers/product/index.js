@@ -131,6 +131,22 @@
             initTreeDropCategory('');
         })
 
+        $("#btnExportExel").on("click", function () {
+            $.ajax({
+                type: "post",
+                url: "/admin/product/ExportExcel",
+                success: function (response) {
+                    console.log(response);
+                    window.location.href = response;
+                    customNotify("Export Successful", types.success);
+                },
+                error: function (error) {
+                    console.log(error);
+                    customNotify("Export Fail!", types.danger);
+                }
+            })
+        })
+
         $("#btnImportExcel").on("click", function () {
             var fileUpload = $("#fileInputExcel").get(0);
             var files = fileUpload.files;
@@ -158,7 +174,7 @@
     }
 
     function handleDelete(id) {
-        if (confirm("Bạn có chắc chắn muốn xóa không?")) {
+        if (confirm("Are you sure to delete product?")) {
             $.ajax({
                 type: "delete",
                 url: "/admin/product/delete",

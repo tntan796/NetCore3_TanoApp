@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using OfficeOpenXml;
 using TanoApp.Application.Interfaces;
 using TanoApp.Application.ViewModels.Products;
 using TanoApp.Utilities.Helpers;
@@ -123,6 +124,35 @@ namespace TanoApp.Areas.Admin.Controllers
                 return new OkObjectResult(filePath);
             }
             return new NoContentResult();
+        }
+
+        [HttpPost]
+        public IActionResult ExportExcel()
+        {
+            string sWebRootFolder = _hostingEnvironment.WebRootPath;
+            string directory = Path.Combine(sWebRootFolder, "export-files");
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+            string sFileName = $"Product_{DateTime.Now: yyyyMMddhhmmss}.xlsx";
+            string fileUrl = $"{Request.Scheme}://{Request.Host}/export-files/{sFileName}";
+            FileInfo file = new FileInfo(Path.Combine(sWebRootFolder + "\\export-files", sFileName));
+            if (file.Exists)
+            {
+                file.Delete();
+                file = new FileInfo(Path.Combine(sWebRootFolder, sFileName));
+            }
+            var products = _productService.GetListProduct();
+            using(ExcelPackage package = new ExcelPackage(file))
+            {
+                // Add a new worksheet to the empty
+                ExcelWorksheet worksheet = package.Workbook.Worksheets.Add("Products");
+                worksheet.Cells["A1"].LoadFromCollection(products, true, OfficeOpenXml.Table.TableStyles.Light1);
+                worksheet.Cells.AutoFitColumns();
+                package.Save(); // Save the workbook
+            }
+            return new OkObjectResult(fileUrl);
         }
     }
 }

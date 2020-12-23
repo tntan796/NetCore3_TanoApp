@@ -293,6 +293,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\admin-side\bower_components\ckeditor\samples\toolbarconfigurator\lib\" />
     <Folder Include="wwwroot\admin-side\plugins\ckeditor\samples\toolbarconfigurator\lib\" />
+    <Folder Include="wwwroot\export-files\" />
     <Folder Include="wwwroot\templates\" />
     <Folder Include="wwwroot\uploaded\excels\" />
   </ItemGroup>

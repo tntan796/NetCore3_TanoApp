@@ -1,0 +1,121 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div class="modal fade" id="billDetailModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog  modal-lg" style="max-width: 85%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="bootbox-close-button close waves-effect" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Bill Detail</h4>
+            </div>
+            <div class="modal-body">
+                <div id="horizontal-form">
+                    <form class="form-horizontal row" role="form" id="frmMaintainance">
+                        <div class="form-group col-12 col-sm-6">
+                            <input type="hidden" id="hideId" value="0" />
+                            <label for="txtCustomerName">Customer Name</label>
+                            <input type="text" name="txtCustomerName" class="form-control" id="txtCustomerName">
+                        </div>
+                        <div class="form-group  col-12 col-sm-6">
+                            <label>Address <span class="text-danger">*</span></label>
+                            <input id="txtAddress" required class="form-control" name="txtAddress" value="">
+                        </div>
+                        <div class="form-group col-12">
+                            <label for="txtPhone">Phone</label>
+                            <input id="txtPhone" class="form-control" name="txtPhone" value="">
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label for="txtMessage">Message</label>
+                            <input type="text" name="txtMessage" class="form-control" id="txtMessage">
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Sell price</label>
+                            <input type="text" name="txtPriceM" class="form-control" id="txtPriceM">
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Payment method</label>
+                            <select class="form-control" id="ddlPaymentMethod"></select>
+                        </div>
+                        <div class="form-group col-12 col-sm-6">
+                            <label>Bill Status</label>
+                            <select class="form-control" id="ddlBillStatus"></select>
+                        </div>
+                        <div class="form-group col-12 col-sm-12">
+                            <label>Details</label>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Product Name</th>
+                                        <th>Color</th>
+                                        <th>Size</th>
+                                        <th>Quantity</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                              <tbody id="tblBillDetail">
+                              </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="5">
+                                            <button class="btn btn-primary shadow-none addon-btn waves-effect waves-light" id="btnAddDetail" type="button">Add</button>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <div class="form-group col-12 text-right">
+                            <button type="button" id="btnSave" class="btn btn-primary waves-effect">
+                                <i class="fa fa-floppy-o" aria-hidden="true"></i> Save changes
+                            </button>
+                            <button type="button" id="btnConfirm" class="btn btn-success waves-effect">
+                                <i class="fa fa-check" aria-hidden="true"></i> Confirm Payment
+                            </button>
+                            <button type="button" id="btnPending" class="btn btn-primary waves-effect">
+                                <i class="fa fa-spinner" aria-hidden="true"></i> Pending
+                            </button>
+                            <button type="button" id="btnCancel" class="btn btn-warning waves-effect">
+                                <i class="fa fa-reply-all" aria-hidden="true"></i> Cancel
+                            </button>
+                            <button type="button" id="btnExport" class="btn btn-info waves-effect">
+                                <i class="fa fa-pie-chart" aria-hidden="true"></i> Export
+                            </button>
+                            <button type="button" id="btnCancel" data-dismiss="modal" class="btn btn-danger waves-effect">
+                                <i class="fa fa-times" aria-hidden="true"></i> Close
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="x-tmpl-mustache" id="template-table-bill-details">
+    <tr data-id="{{Id}}">
+        <td>{{{Products}}}</td>
+        <td>{{{Colors}}}</td>
+        <td>{{{Sizes}}}</td>
+        <td>
+            <input type="number" class="txtQuantity form-control" value="{{Quantity}}"/>
+        </td>
+        <td>
+            <button class="btn btn-danger waves-effect">
+            <i class="fa fa-trash"></i>Delete</button>
+        </td>
+    </tr>
+</script>
+
+@section Scripts {
+    <!-- Model animation js -->
+    <script type="text/javascript" src="~/admin-side/bower_components/classie/js/classie.js"></script>
+    <script src="~/admin-side/plugins/ModalWindowEffects/js/modalEffects.js"></script>
+    <!-- custom js -->
+    <script src="~/admin-side/pages/modal.js"></script>
+}
+
+@section Styles {
+    <!-- Modal animation CSS -->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/plugins/modal/css/component.css">
+    <!-- Responsive.css-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/css/responsive.css">
+}

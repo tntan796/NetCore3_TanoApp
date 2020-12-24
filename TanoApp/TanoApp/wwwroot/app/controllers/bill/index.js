@@ -11,21 +11,49 @@
             loadPaymentMethod(),
             loadColors(),
             loadSizes(),
+            loadStatus(),
             loadProducts()
         ).then(() => {
                 loadData()
-                registerEvent();
             }
         );
+        registerEvent();
+    }
+
+    function loadStatus() {
+        return $.ajax({
+            method: 'get',
+            url: '/admin/bill/getBillStatus',
+            dataType: 'json',
+            success: function (response) {
+                cacheObj.billStatus = response;
+                console.log('cacheObj:', cacheObj);
+                var render = "";
+                response.forEach(item => {
+                    render += "<option value='" + item.value + "'>" + item.name + "</option>";
+                });
+                $("#ddlBillStatus").html(render);
+            },
+            error: function (error) {
+
+            }
+        });
     }
 
     function loadPaymentMethod() {
-        $.ajax({
+        return $.ajax({
             method: 'get',
-            url: '/admin/bill/getall',
+            url: '/admin/bill/getPaymentMethod',
             dataType: 'json',
             success: function (response) {
+                cacheObj.paymentMethods = response;
+                console.log('cacheObj:', cacheObj);
 
+                var render = "";
+                response.forEach(item => {
+                    render += "<option value='" + item.value + "'>" + item.name + "</option>";
+                });
+                $("#ddlPaymentMethod").html(render);
             },
             error: function (error) {
 
@@ -36,10 +64,10 @@
     function loadColors() {
         $.ajax({
             method: 'get',
-            url: '/admin/bill/getall',
+            url: '/admin/bill/getcolors',
             dataType: 'json',
             success: function (response) {
-
+                cacheObj.colors = response;
             },
             error: function (error) {
 
@@ -50,10 +78,10 @@
     function loadSizes() {
         $.ajax({
             method: 'get',
-            url: '/admin/bill/getall',
+            url: '/admin/bill/getsizes',
             dataType: 'json',
             success: function (response) {
-
+                cacheObj.sizes = response;
             },
             error: function (error) {
 
@@ -64,10 +92,10 @@
     function loadProducts() {
         $.ajax({
             method: 'get',
-            url: '/admin/bill/getall',
+            url: '/admin/product/getall',
             dataType: 'json',
             success: function (response) {
-
+                cacheObj.products = response;
             },
             error: function (error) {
 
@@ -78,10 +106,36 @@
     function loadData() {
         $.ajax({
             method: 'get',
-            url: '/admin/bill/getall',
+            url: '/admin/bill/getAllPaging',
             dataType: 'json',
+            data: {
+                startDate: $('txtFromDate').val(),
+                endDate: $('txtEndDate').val(),
+                keyWord: $("txtKeyWord").val(),
+                page: tano.configs.pageIndex,
+                pageSize: tano.configs.pageSize
+            },
             success: function (response) {
-              
+                var template = $("#table-template").html();
+                var render = "";
+                if (response.rowCount > 0) {
+                    $.each(response.results, function (i, item) {
+                        render += Mustache.render(template, {
+                            CustomerName: item.customerName,
+                            Id: item.id,
+                            Description: item.description
+                        });
+                    });
+                    $("#lblTotalRecords").text(response.RowCount);
+                    if (render != undefined) {
+                        $("#tbl-content").html(render);
+                    }
+                    wrapPaging(response.rowCount, function () {
+                        loadData();
+                    }, isPageChanged);
+                } else {
+                    $("#tbl-context").html("");
+                }
             },
             error: function (error) {
 
@@ -89,31 +143,93 @@
         })
     }
 
+    function getProductOptions(selectedId) {
+        var products = "<select class='form-control ddlProductId'>";
+        $.each(cacheObj.products, function (i, product) {
+            if (selectedId === product.id) {
+                products += "<options value='" + product.id + "' selected='selected'>" + product.name + "</option>";
+            } else {
+                products += "<options value='" + product.id + "'>" + product.name + "</option>";
+            }
+        })
+        products += "</select>";
+        return products;
+    }
+
+    function getColorOptions(selectedId) {
+        var colors = "<select class='form-control ddlColorId'>";
+        $.each(cacheObj.colors, function (i, color) {
+            if (selectedId === color.id) {
+                colors += "<options value='" + color.id + "' selected='selected'>" + color.name + "</option>";
+            } else {
+                colors += "<options value='" + color.id + "'>" + color.name + "</option>";
+            }
+        })
+        colors += "</select>";
+        return colors;
+    }
+
+    function getSizeOptions(selectedId) {
+        var sizes = "<select class='form-control ddlSizeId'>";
+        $.each(cacheObj.sizes, function (i, size) {
+            if (selectedId === color.id) {
+                sizes += "<options value='" + size.id + "' selected='selected'>" + size.name + "</option>";
+            } else {
+                sizes += "<options value='" + size.id + "'>" + size.name + "</option>";
+            }
+        })
+        sizes += "</select>";
+        return sizes;
+    }
+
     function registerEvent() {
-        $("")
+        $('.datepicker').datepicker({
+            format: 'mm/dd/yyyy',
+            autoclose: true,
+            todayHighlight: true,
+            orientation: 'auto bottom'
+        });
 
         $("#frmMaintainance").validate({
             errorClass: 'text-danger',
             ignore: [],
             lang: 'vi',
             rules: {
-                txtNameM: { required: true },
-                txtOrderM: { number: true },
-                txtHomeOrderM: { number: true }
-            },
-            messages: {
-
-            }
+                txtName: { required: true },
+                txtAddress: { required: true },
+                txtPhone: { required: true },
+                txtMessage: { required: true },
+                ddlBillStatus: { required: true }
+            }           
         });
         $("#btnCreate").off('click').on('click', function () {
             resetFormMaintainance();
             $("#billDetailModal").modal("show");
         })
-        $("body").on('click', '#btnEdit', function (e) {
-            var id = $("#hideIdMenu").val();
+
+        $("#txtKeyword").keypress(function (e) {
+            if (e.which === 13) {
+                e.preventDefault();
+                loadData();
+            }
+        })
+
+
+        $("#ddlShowPage").on("change", function () {
+            tano.configs.pageSize = $(this).val();
+            tano.configs.pageIndex = 1;
+            loadData(true);
+        })
+
+        $("#btnSearch").on("click", function () {
+            loadData();
+        })
+        $("body").on('click', '.btn-edit', function (e) {
+            e.preventDefault();
+            var id = $("#hideId").val();
             $.ajax({
                 type: 'GET',
-                url: '/admin/productcategory/getbyid',
+                url: '/admin/bill/getbyid',
                 data: { id: id },
                 dataType: 'json',
                 beforeSend: function () {
@@ -121,21 +237,33 @@
                 },
                 success: function (response) {
                     var data = response;
-                    $("#hideIdMenu").val(data.id);
-                    $("#txtNameM").val(data.name);
-                    initTreeDropCategory(data.categoryId);
-                    $("#txtDescM").val(data.description);
-                    $("#txtImageM").val(data.thumbnailImage);
-                    $("#txtSeoKeywordM").val(data.seoKeywords);
-                    $("#txtSeDescriptionM").val(data.seoDescription);
-                    $("#txtSeoPageTitleM").val(data.seoPageTitle);
-                    $("#txtSeoAliasM").val(data.seoAlias);
-                    $("#ckStatusM").prop('checked', data.state == 1);
-                    $("#ckShowHomeM").prop('checked', data.homeFlag)
-                    $("#txtHomeOrderM").val(data.homeOrder);
-                    $("#txtOrderM").val(data.sortOrder);
-
+                    $("#hideId").val(data.id);
+                    $("#txtName").val(data.customerName);
+                    $("#txtAddress").val(data.customerAddress);
+                    $("#txtPhone").val(data.customerMobile);
+                    $("#txtMessage").val(data.customerMessage);
+                    $("#ddlPaymentMethod").val(data.paymentMethod);
+                    $("#ddlBillStatus").val(data.billStatus);
                     $("#billDetailModal").modal('show');
+
+                    var billDetails = data.billDetails;
+                    if (data.billDetails !== null && data.billDetails.length > 0) {
+                        var render = '';
+                        var templateDetails = $("#template-table-bill-details").html();
+                        billDetails.forEach(item => {
+                            var products = getProductOptions(item.productId);
+                            var colors = getColorOptions(item.colorId);
+                            var sizes = getSizeOptions(item.sizeId);
+                            render += Mustache.render(templateDetails, {
+                                Id: item.id,
+                                Products: products,
+                                Colors: colors,
+                                Sizes: sizes,
+                                Quantity: item.quantity
+                            });
+                            $("#tblBillDetail").html(render);
+                        })
+                    }
                     tano.stopLoading();
                 },
                 error: function (status) {
@@ -144,62 +272,45 @@
             })
         })
 
-        $("body").on('click', '#btnDelete', function (e) {
-            var id = $("#hideIdMenu").val();
-            if (confirm("Bạn có chắc chắn muốn xóa?")) {
-                $.ajax({
-                    type: 'post',
-                    url: '/admin/productcategory/delete',
-                    data: { id: id },
-                    beforeSend: function () {
-                        tano.startLoading();
-                    },
-                    success: function (response) {
-                        alert("xóa thành công");
-                        tano.stopLoading();
-                        loadData();
-                    },
-                    error: function (status) {
-                        alert("xóa thất bại");
-                        tano.stopLoading();
-                    }
-                })
-            }
+        $("body").on('click', '.btnDeleteDetail', function (e) {
+            $(this).parent().parent().remove();
         })
 
         $("body").on("click", "#btnSave", function (e) {
             e.preventDefault();
             if ($("#frmMaintainance").valid()) {
-                let id = $("#hideIdMenu").val();
-                let name = $("#txtNameM").val();
-                let parentId = $("#ddlCategoryIdM").combotree("getValue");
-                let description = $("txtDescM").val();
-                let image = $("#txtImageM").val();
-                let order = $("#txtOrderM").val();
-                let homeOrder = $("#txtHomeOrderM").val();
-                let seoKeyWord = $("#txtSeoKeywordM").val();
-                let seoMetaDescription = $("#txtSeoDescriptionM").val();
-                let seoPageTitle = $("#txtSeoPageTitleM").val();
-                let seoAlias = $("#txtSeoAliasM").val();
-                let status = $("#ckStatusM").prop("checked") == true ? 1 : 0;
-                let showHome = $("#ckShowHomeM").prop("checked");
+                let id = $("#hideId").val();
+                let name = $("#txtName").val();
+                let address = $("#txtAddress").val();
+                let phone = $("txtPhone").val();
+                let message = $("#txtMessage").val();
+                let paymentMethod = $("#ddlPaymentMethod").val();
+                let billStatus = $("#ddlBillStatus").val();
+                var billDetails = [];
+                $.each($('tblBillDetails tr'), function (i, item) {
+                    billDetails.push({
+                        Id: $(item).data("id"),
+                        ProductId: $(item).find("select.ddlProductId").first().val(),
+                        Quantity: $(item).find("input.txtQuantity").first().val(),
+                        ColorId: $(item).find("select.ddlColorId").first().val(),
+                        SizeId: $(item).find("select.ddlSizeId").first().val(),
+                        BillId: id
+                    });
+                })
                 $.ajax({
                     type: "post",
-                    url: "/admin/productcategory/saveentity",
+                    url: "/admin/bill/saveentity",
                     data: {
                         Id: id,
-                        Name: name,
-                        Description: description,
-                        ParentId: parentId,
-                        HomeOrder: homeOrder,
-                        Image: image,
-                        HomeFlag: showHome,
-                        SortOrder: order,
-                        Status: status,
-                        SeoPageTitle: seoPageTitle,
-                        SeoAlias: seoAlias,
-                        SeoKeywords: seoKeyWord,
-                        SeoDescription: seoMetaDescription
+                        BillStatus: billStatus,
+                        CustomerAddress: customerAddress,
+                        CustomerId: customerId,
+                        CustomerMessage: customerMessage,
+                        CustomerMobile: customerMobile,
+                        CustomerName: customerName,
+                        PaymentMethod: paymentMethod,
+                        Status: 1,
+                        BillDetails: billDetails
                     },
                     dataType: 'json',
                     beforeSend: function () {
@@ -220,21 +331,68 @@
             }
             return false;
         });
+
+        $("#btnExport").on("click", function () {
+            var id = $("#hideId").val();
+            $.ajax({
+                type: "post",
+                url: "/admin/bill/exportExcel",
+                data: { billId: id },
+                success: function (response) {
+                    window.location.ref = response;
+                },
+                error: function (error) {
+                    console.log('error:', error);
+                }
+            })
+        })
+
+        $('#btnAddDetail').on("click", function () {
+            var template = $("#template-table-bill-details").html();
+            var products = getProductOptions(null);
+            var colors = getColorOptions(null);
+            var sizes = getSizeOptions(null);
+            var render = Mustache.render(template, {
+                Id: 0,
+                Products: products,
+                Colors: colors,
+                Sizes: sizes,
+                Quantity: 0,
+                Total: 0
+            });
+            $("#tblBillDetails").append(render);
+        })
     }
 
     function resetFormMaintainance() {
-        $("#hideIdMenu").val(0);
-        $("#txtNameM").val('');
-        initTreeDropCategory('');
-        $("#txtDescM").val('');
-        $("#txtImageM").val('');
-        $("#txtSeoKeywordM").val('');
-        $("#txtSeDescriptionM").val('');
-        $("#txtSeoPageTitleM").val('');
-        $("#txtSeoAliasM").val('');
-        $("#ckStatusM").prop('checked', true);
-        $("#ckShowHomeM").prop('checked', false)
-        $("#txtHomeOrderM").val('');
+        $("#hideId").val(0);
+        $("#txtName").val('');
+        $("#txtAddress").val('');
+        $("#txtPhone").val('');
+        $("#txtMessage").val('');
+    }
+
+    function wrapPaging(recordCount, callBack, changePageSize) {
+        var totalsize = Math.ceil(recordCount / tedu.configs.pageSize);
+        //Unbind pagination if it existed or click change pagesize
+        if ($('#paginationUL a').length === 0 || changePageSize === true) {
+            $('#paginationUL').empty();
+            $('#paginationUL').removeData("twbs-pagination");
+            $('#paginationUL').unbind("page");
+        }
+        //Bind Pagination Event
+        $('#paginationUL').twbsPagination({
+            totalPages: totalsize,
+            visiblePages: 7,
+            first: 'Đầu',
+            prev: 'Trước',
+            next: 'Tiếp',
+            last: 'Cuối',
+            onPageClick: function (event, p) {
+                tedu.configs.pageIndex = p;
+                setTimeout(callBack(), 200);
+            }
+        });
     }
    
 }

@@ -18,6 +18,8 @@
     <link href="~/admin-side/plugins/jquery-easyui-1.9.9/themes/material-blue/easyui.css" rel="stylesheet" />
     <link href="~/admin-side/plugins/jquery-easyui-1.9.9/themes/icon.css" rel="stylesheet" />
     <link href="~/app/controllers/bill/index.css" rel="stylesheet" />
+    <link href="~/lib/libman/bootstrap-datepicker/css/bootstrap-datepicker.css" rel="stylesheet" />
+    <link href="~/lib/libman/bootstrap-datepicker/css/bootstrap-datepicker3.css" rel="stylesheet" />
 }
 <div class="card" id="resp-table">
     <ul id="breadcrumb-triangle">
@@ -29,42 +31,25 @@
     <div class="card-header"><h5 class="card-header-text">Bill List</h5></div>
     <div class="card-block">
         <div class="row">
-            <div class="col-md-2 form-group ">
-                <label>Tìm kiếm</label>
-                <div class="input-group">
-                    <input id="txtKeyword" type="text" class="form-control" placeholder="Press to search...">
-                    <span class="input-group-btn" id="btn-addon2">
-                        <button type="button" id="btnSearch" class="btn btn-primary shadow-none addon-btn waves-effect waves-light">Search!</button>
-                    </span>
-                </div>
+            <div class="col-md-3 form-group ">
+                <label>Search</label>
+                <input id="txtKeyword" type="text" class="form-control" placeholder="Press to search...">
             </div>
-            <div class="col-md-2 form-group">
+            <div class="col-md-3 form-group">
                 <label>From Date</label>
-                <div id="datepicker" class="input-group date" data-date-format="dd-mm-yyyy">
-                    <input class="form-control" readonly="" type="text" id="txtFromDate">
-                    <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-calendar"></i>
-                    </span>
-                </div>
+                <input class="datepicker form-control" data-date-format="dd/mm/yyyy">
             </div>
-            <div class="col-md-2 form-group">
+            <div class="col-md-3 form-group">
                 <label>To Date</label>
-                <div id="datepicker" class="input-group date" data-date-format="dd-mm-yyyy">
-                    <input class="form-control" readonly="" type="text" id="txtToDate">
-                    <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-calendar"></i>
-                    </span>
-                </div>
+                <input class="datepicker form-control" data-date-format="dd/mm/yyyy">
             </div>
-            <div class="col-md-2 form-group">
+            <div class="col-md-1 form-group">
                 <label></label>
                 <div class="input-group">
-                     <button class="btn btn-success waves-effect waves-light" title="Import Excel" id="btnImportExel">
-                    <i class="fa fa-file-excel-o" aria-hidden="true"></i>
-                </button>
+                    <button type="button" id="btnSearch" class="btn btn-primary shadow-none addon-btn waves-effect waves-light">Search!</button>
                 </div>
             </div>
-            <div class="col-md-4 form-group text-right">
+            <div class="col-md-2 form-group text-right">
                 <label></label><br />
                 <span>
                     <button class="btn btn-primary waves-effect waves-light" id="btnCreate">

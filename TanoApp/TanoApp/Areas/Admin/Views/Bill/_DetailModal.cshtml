@@ -13,24 +13,20 @@
                     <form class="form-horizontal row" role="form" id="frmMaintainance">
                         <div class="form-group col-12 col-sm-6">
                             <input type="hidden" id="hideId" value="0" />
-                            <label for="txtCustomerName">Customer Name</label>
-                            <input type="text" name="txtCustomerName" class="form-control" id="txtCustomerName">
+                            <label for="txtName">Customer Name</label>
+                            <input type="text" name="txtName" class="form-control" id="txtName">
                         </div>
                         <div class="form-group  col-12 col-sm-6">
                             <label>Address <span class="text-danger">*</span></label>
                             <input id="txtAddress" required class="form-control" name="txtAddress" value="">
                         </div>
-                        <div class="form-group col-12">
+                        <div class="form-group col-12 col-sm-6">
                             <label for="txtPhone">Phone</label>
                             <input id="txtPhone" class="form-control" name="txtPhone" value="">
                         </div>
                         <div class="form-group col-12 col-sm-6">
                             <label for="txtMessage">Message</label>
                             <input type="text" name="txtMessage" class="form-control" id="txtMessage">
-                        </div>
-                        <div class="form-group col-12 col-sm-6">
-                            <label>Sell price</label>
-                            <input type="text" name="txtPriceM" class="form-control" id="txtPriceM">
                         </div>
                         <div class="form-group col-12 col-sm-6">
                             <label>Payment method</label>
@@ -41,27 +37,30 @@
                             <select class="form-control" id="ddlBillStatus"></select>
                         </div>
                         <div class="form-group col-12 col-sm-12">
-                            <label>Details</label>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Product Name</th>
-                                        <th>Color</th>
-                                        <th>Size</th>
-                                        <th>Quantity</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                              <tbody id="tblBillDetail">
-                              </tbody>
-                                <tfoot>
-                                    <tr>
-                                        <td colspan="5">
-                                            <button class="btn btn-primary shadow-none addon-btn waves-effect waves-light" id="btnAddDetail" type="button">Add</button>
-                                        </td>
-                                    </tr>
-                                </tfoot>
-                            </table>
+                            <div class="row mt-1">
+                                <div class="col-sm-6">
+                                    <label>Details</label>
+                                </div>
+                                <div class="col-sm-6 text-right">
+                                    <button class="btn btn-primary shadow-none addon-btn waves-effect waves-light" id="btnAddDetail" type="button">Add</button>
+                                </div>
+                            </div>
+                            <div class="table-responsive" data-pattern="priority-columns">
+                                <table cellspacing="0" id="tech-companies-1" class="table table-small-font table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Product Name</th>
+                                            <th>Color</th>
+                                            <th>Size</th>
+                                            <th>Quantity</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tblBillDetail">
+                                    </tbody>
+
+                                </table>
+                            </div>
                         </div>
                         <div class="form-group col-12 text-right">
                             <button type="button" id="btnSave" class="btn btn-primary waves-effect">
@@ -96,11 +95,12 @@
         <td>{{{Colors}}}</td>
         <td>{{{Sizes}}}</td>
         <td>
-            <input type="number" class="txtQuantity form-control" value="{{Quantity}}"/>
+            <input type="number" class="txtQuantity form-control" value="{{Quantity}}" />
         </td>
         <td>
-            <button class="btn btn-danger waves-effect">
-            <i class="fa fa-trash"></i>Delete</button>
+            <button class="btn btn-danger waves-effect btnDeleteDetail">
+                <i class="fa fa-trash"></i>Delete
+            </button>
         </td>
     </tr>
 </script>

@@ -1,7 +1,10 @@
-﻿namespace TanoApp.Application.ViewModels.Products
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TanoApp.Application.ViewModels.Products
 {
     public class BillDetailViewModel
     {
+
         public int Id { get; set; }
         public int BillId { set; get; }
         public int ProductId { set; get; }

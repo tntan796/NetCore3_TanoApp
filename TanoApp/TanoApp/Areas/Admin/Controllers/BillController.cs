@@ -151,5 +151,19 @@ namespace TanoApp.Areas.Admin.Controllers
             }
             return new OkObjectResult(url);
         }
+   
+        [HttpGet]
+        public IActionResult GetColors()
+        {
+            var colors = _billService.GetColors();
+            return new OkObjectResult(colors);
+        }
+
+        [HttpGet]
+        public IActionResult GetSizes()
+        {
+            var sizes = _billService.GetSizes();
+            return new OkObjectResult(sizes);
+        }
     }
 }

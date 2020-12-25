@@ -76,6 +76,8 @@ namespace TanoApp.Application.Implementation
                 query = query.Where(x => x.DateCreated <= end);
             }
             var totalRow = query.Count();
+
+            var t = query.OrderByDescending(x => x.DateCreated).ToList();
             var data = query.OrderByDescending(x => x.DateCreated)
                             .Skip((pageIndex - 1) * pageSize)
                             .Take(pageSize)
@@ -128,7 +130,7 @@ namespace TanoApp.Application.Implementation
             var newDetails = bill.BillDetails;
             var addDetails = newDetails.Where(x => x.Id == 0).ToList();
             var updateDetails = newDetails.Where(x => x.Id != 0).ToList();
-            var existDetails = _billDetailRepository.FindAll(x => x.BillId == billVm.Id);
+            var existDetails = _billDetailRepository.FindAll(x => x.BillId == billVm.Id).ToList();
             bill.BillDetails.Clear();
             foreach (var detail in updateDetails)
             {
@@ -138,7 +140,9 @@ namespace TanoApp.Application.Implementation
             {
                 _billDetailRepository.Add(detail);
             }
-            _billDetailRepository.RemoveMultiple(existDetails.Except(updateDetails).ToList());
+            var except = existDetails.Except(updateDetails).ToList();
+
+            _billDetailRepository.RemoveMultiple(except);
             _billRepository.Update(bill);
         }
 

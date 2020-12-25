@@ -28,7 +28,6 @@
         <li><a href="#"><span class="icofont icofont-double-right"></span> Product</a></li>
         <li><a href="#"><span class="icofont icofont-rocket-alt-2"> </span> Manage Bill</a></li>
     </ul>
-    <div class="card-header"><h5 class="card-header-text">Bill List</h5></div>
     <div class="card-block">
         <div class="row">
             <div class="col-md-3 form-group ">
@@ -37,25 +36,31 @@
             </div>
             <div class="col-md-3 form-group">
                 <label>From Date</label>
-                <input class="datepicker form-control" data-date-format="dd/mm/yyyy">
+                <input class="datepicker form-control  custom-datepicker" data-date-format="dd/mm/yyyy" placeholder="DD/MM/YYYY">
             </div>
             <div class="col-md-3 form-group">
                 <label>To Date</label>
-                <input class="datepicker form-control" data-date-format="dd/mm/yyyy">
+                <input class="datepicker form-control custom-datepicker" data-date-format="dd/mm/yyyy"  placeholder="DD/MM/YYYY">
             </div>
-            <div class="col-md-1 form-group">
-                <label></label>
-                <div class="input-group">
-                    <button type="button" id="btnSearch" class="btn btn-primary shadow-none addon-btn waves-effect waves-light">Search!</button>
+            <div class="col-md-3 form-group">
+                <div class="row">
+                    <div class="col-md-6  form-group">
+                        <label class="non-opacity">Method</label>
+                        <div>
+                            <button type="button" id="btnSearch" class="btn btn-primary waves-effect waves-light">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 text-right  form-group">
+                        <label class="non-opacity">Method</label>
+                        <div>
+                            <button class="btn btn-primary waves-effect waves-light" id="btnCreate">
+                                <i class="fa fa-plus" aria-hidden="true"></i> Add
+                            </button>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-2 form-group text-right">
-                <label></label><br />
-                <span>
-                    <button class="btn btn-primary waves-effect waves-light" id="btnCreate">
-                        <i class="fa fa-plus" aria-hidden="true"></i> Add
-                    </button>
-                </span>
             </div>
         </div>
         <div class="row">

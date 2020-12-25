@@ -101,9 +101,15 @@ namespace TanoApp.Areas.Admin.Controllers
         public IActionResult ExportExcel(int billId)
         {
             string sWebRootFolder = _hostingEnviroment.WebRootPath;
-            string sFileName = $"Bill_{billId}.xlxs";
-            string templateDocument = Path.Combine(sWebRootFolder, "templates", "BillTemplate.xlxs");
-            string url = string.Format("{0}://{1}/{2}", Request.Scheme, Request.Host, sFileName);
+            string directory = Path.Combine(sWebRootFolder, "export-files");
+            if (!Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            string sFileName = $"Bill_{billId}.xlsx";
+            string templateDocument = Path.Combine(sWebRootFolder, "templates", "BillTemplate.xlsx");
+            string url = $"{Request.Scheme}://{Request.Host}/export-files/{sFileName}";
             FileInfo file = new FileInfo(Path.Combine(sWebRootFolder, "export-files", sFileName));
             if (file.Exists)
             {

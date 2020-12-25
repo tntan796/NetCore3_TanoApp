@@ -47,8 +47,6 @@
             dataType: 'json',
             success: function (response) {
                 cacheObj.paymentMethods = response;
-                console.log('cacheObj:', cacheObj);
-
                 var render = "";
                 response.forEach(item => {
                     render += "<option value='" + item.value + "'>" + item.name + "</option>";
@@ -250,8 +248,8 @@
                     $("#ddlBillStatus").val(data.billStatus);
                     $("#billDetailModal").modal('show');
                     var billDetails = data.billDetails;
+                    var render = '';
                     if (data.billDetails !== null && data.billDetails.length > 0) {
-                        var render = '';
                         var templateDetails = $("#template-table-bill-details").html();
                         billDetails.forEach(item => {
                             var products = getProductOptions(item.productId);
@@ -264,9 +262,9 @@
                                 Sizes: sizes,
                                 Quantity: item.quantity
                             });
-                            $("#tblBillDetail").html(render);
                         })
                     }
+                    $("#tblBillDetail").html(render);
                     tano.stopLoading();
                 },
                 error: function (status) {
@@ -346,9 +344,11 @@
                 url: "/admin/bill/exportExcel",
                 data: { billId: id },
                 success: function (response) {
-                    window.location.ref = response;
+                    window.location.href = response;
+                    customNotify("Export Successful", types.success);
                 },
                 error: function (error) {
+                    customNotify("Export Failure!", types.danger);
                     console.log('error:', error);
                 }
             })
@@ -377,6 +377,9 @@
         $("#txtAddress").val('');
         $("#txtPhone").val('');
         $("#txtMessage").val('');
+        $("#tblBillDetail").html('');
+        $("#ddlPaymentMethod").val(0);
+        $("#ddlBillStatus").val(0);
     }
 
     function getPaymentMethodName(paymentMethod) {
@@ -387,6 +390,7 @@
             return method[0].name;
         else return '';
     }
+
     function getBillStatusName(status) {
         var status = $.grep(cacheObj.billStatus, function (element, index) {
             return element.value == status;

@@ -20,6 +20,7 @@ namespace TanoApp.Application.Implementation
         private readonly IColorRepository _colorRepository;
         private readonly ISizeRepository _sizeRepository;
         private readonly IUnitOfWork _unitOfWork;
+        private readonly IProductRepository _productRepository;
         private IMapper _mapper;
         public BillService(
             IBillRepository billRepository,
@@ -27,7 +28,8 @@ namespace TanoApp.Application.Implementation
             IColorRepository colorRepository,
             ISizeRepository sizeRepository,
             IUnitOfWork unitOfWork,
-            IMapper mapper)
+            IMapper mapper,
+            IProductRepository productRepository)
         {
             _billRepository = billRepository;
             _billDetailRepository = billDetailRepository;
@@ -35,11 +37,17 @@ namespace TanoApp.Application.Implementation
             _sizeRepository = sizeRepository;
             _unitOfWork = unitOfWork;
             _mapper = mapper;
+            _productRepository = productRepository;
         }
         public void Create(BillViewModel billVm)
         {
             var bill = _mapper.Map<BillViewModel, Bill>(billVm);
             var billDetails = _mapper.Map< List<BillDetailViewModel>, List<BillDetail>>(billVm.BillDetails);
+            foreach(var detail in billDetails)
+            {
+                var product = _productRepository.FindById(detail.ProductId);
+                detail.Price = product.Price;
+            }
             bill.BillDetails = billDetails;
             _billRepository.Add(bill);
         }
@@ -93,14 +101,30 @@ namespace TanoApp.Application.Implementation
 
         public List<BillDetailViewModel> GetBillDetails(int billId)
         {
-            var billDetails =  _billDetailRepository
-                                .FindAll(x => x.BillId == billId,
-                                         c => c.Bill,
-                                         c => c.Color,
-                                         c => c.Size,
-                                         c => c.Product)
-                                .ToList();
-            return _mapper.Map<List<BillDetail>, List<BillDetailViewModel>>(billDetails);
+            var products = _productRepository.FindAll();
+            var colors = _colorRepository.FindAll();
+            var sizes = _sizeRepository.FindAll();
+            var billDetails = _billDetailRepository.FindAll(x => x.BillId == billId);
+            var query =
+                from b in billDetails
+                join p in products on b.ProductId equals p.Id
+                join s in sizes on b.SizeId equals s.Id
+                join c in colors on b.ColorId equals c.Id
+                where b.BillId == billId
+                select new BillDetailViewModel() {
+                    Bill = _mapper.Map<Bill, BillViewModel>(b.Bill),
+                    BillId = billId,
+                    ColorId = c.Id,
+                    Color = _mapper.Map<Color, ColorViewModel>(c),
+                    Id = b.Id,
+                    Price = b.Price,
+                    Product = _mapper.Map<Product, ProductViewModel>(p),
+                    ProductId = p.Id,
+                    Quantity = b.Quantity,
+                    Size = _mapper.Map<Size, SizeViewModel>(s),
+                    SizeId = s.Id
+                };
+            return query.ToList();
         }
 
         public List<ColorViewModel> GetColors()
@@ -138,6 +162,8 @@ namespace TanoApp.Application.Implementation
             }
             foreach (var detail in addDetails)
             {
+                var product = _productRepository.FindById(detail.ProductId);
+                detail.Price = product.Price;
                 _billDetailRepository.Add(detail);
             }
             var except = existDetails.Except(updateDetails).ToList();

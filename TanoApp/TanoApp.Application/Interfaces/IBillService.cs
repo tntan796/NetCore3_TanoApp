@@ -16,6 +16,7 @@ namespace TanoApp.Application.Interfaces
         BillViewModel GetDetail(int billId);
         BillDetailViewModel CreateBillDetail(BillDetailViewModel billDetailVm);
         void DeleteDetail(int productId, int billId, int colorId, int sizeId);
+        void Delete(int id);
         void UpdateStatus(int orderId, BillStatus status);
         List<BillDetailViewModel> GetBillDetails(int billId);
         List<ColorViewModel> GetColors();

@@ -183,5 +183,20 @@ namespace TanoApp.Application.Implementation
         {
             _unitOfWork.Commit();
         }
+
+        public void Delete(int id)
+        {
+            try
+            {
+                var bill = _billRepository.FindById(id);
+                _billRepository.Remove(bill);
+                Save();
+            }
+            catch (Exception ex)
+            {
+                throw;
+            }
+          
+        }
     }
 }

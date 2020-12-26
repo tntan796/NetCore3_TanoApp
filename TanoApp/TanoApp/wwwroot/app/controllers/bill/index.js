@@ -102,6 +102,7 @@
     }
 
     function loadData(isPageChanged) {
+        $("#tbl-content").html("");
         $.ajax({
             method: 'get',
             url: '/admin/bill/getAllPaging',
@@ -135,7 +136,7 @@
                         loadData();
                     }, isPageChanged);
                 } else {
-                    $("#tbl-context").html("");
+                    $("#tbl-content").html("");
                 }
             },
             error: function (error) {
@@ -207,6 +208,31 @@
         $("#btnCreate").off('click').on('click', function () {
             resetFormMaintainance();
             $("#billDetailModal").modal("show");
+        })
+
+        $("body").on("click", ".btn-delete", function () {
+            const id = $(this).data("id");
+            $.ajax({
+                type: "delete",
+                url: "/admin/bill/delete",
+                data: {
+                    Id: id
+                },
+                dataType: 'json',
+                beforeSend: function () {
+                    tano.startLoading();
+                },
+                success: function (response) {
+                    tano.stopLoading();
+                    customNotify(MESSAGE.DELETE_SUCCESSFUL, types.success);
+                    loadData(true);
+                },
+                error: function (err) {
+                    customNotify(MESSAGE.DELETE_FAIL, types.danger);
+                    console.log(err);
+                    tano.stopLoading();
+                }
+            });
         })
 
         $("#txtKeyword").keypress(function (e) {
@@ -322,14 +348,22 @@
                         tano.startLoading();
                     },
                     success: function (response) {
-                        alert("Thanh  cong");
+                        if (id) {
+                            customNotify(MESSAGE.UPDATE_SUCCESSFUL, types.success);
+                        } else {
+                            customNotify(MESSAGE.UPDATE_FAIL, types.success);
+                        }
                         $("#billDetailModal").modal("hide");
                         resetFormMaintainance();
                         tano.stopLoading();
                         loadData(true);
                     },
                     error: function () {
-                        alert("Cap nhat danh muc loi");
+                        if (id) {
+                            customNotify(MESSAGE.UPDATE_FAIL, types.danger);
+                        } else {
+                            customNotify(MESSAGE.ADD_FAIL, types.danger);
+                        }
                         tano.stopLoading();
                     }
                 });

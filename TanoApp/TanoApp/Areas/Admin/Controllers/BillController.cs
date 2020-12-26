@@ -171,5 +171,12 @@ namespace TanoApp.Areas.Admin.Controllers
             var sizes = _billService.GetSizes();
             return new OkObjectResult(sizes);
         }
+
+        [HttpDelete] 
+        public IActionResult Delete(int id)
+        {
+            _billService.Delete(id);
+            return Ok(id);
+        }
     }
 }

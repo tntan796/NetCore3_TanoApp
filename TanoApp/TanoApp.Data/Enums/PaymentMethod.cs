@@ -6,7 +6,7 @@ namespace TanoApp.Data.Enums
     {
         [Description("Cash on delivery")]
         CashOnDelivery,
-        [Description("Onlin Banking")]
+        [Description("Online Banking")]
         OnlinBanking,
         [Description("Payment Gateway")]
         PaymentGateway,

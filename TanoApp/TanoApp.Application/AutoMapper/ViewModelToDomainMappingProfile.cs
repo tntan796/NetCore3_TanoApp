@@ -18,6 +18,10 @@ namespace TanoApp.Application.AutoMapper
             CreateMap<AppUserViewModel, AppUser>();
             CreateMap<AppRoleViewModel, AppRole>();
             CreateMap<PermissionViewModel, Permission>();
+            CreateMap<BillViewModel, Bill>();
+            CreateMap<BillDetailViewModel, BillDetail>();
+            CreateMap<SizeViewModel, Size>();
+            CreateMap<ColorViewModel, Color>();
         }
     }
 }

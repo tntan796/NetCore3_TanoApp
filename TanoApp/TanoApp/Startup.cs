@@ -41,7 +41,9 @@ namespace TanoApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews()
+                .AddNewtonsoftJson(options => 
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore);
             services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
              o => o.MigrationsAssembly("TanoApp.Data.EntityFramework")));
 
@@ -68,6 +70,10 @@ namespace TanoApp
             services.AddTransient<ITagRepository, TagRepository>();
             services.AddTransient<IProductTagRepository, ProductTagRepository>();
             services.AddTransient<IPermissionRepository, PermissionRepository>();
+            services.AddTransient<IColorRepository, ColorRepository>();
+            services.AddTransient<ISizeRepository, SizeRepository>();
+            services.AddTransient<IBillRepository, BillRepository>();
+            services.AddTransient<IBillDetailRepository, BillDetailRepository>();
 
             // Services
             services.AddTransient<IFunctionService, FunctionService>();
@@ -76,7 +82,7 @@ namespace TanoApp
             services.AddTransient<IUserService, UserService>();
             services.AddTransient<IRoleService, RoleService>();
             services.AddTransient<IAuthorizationHandler, BaseResourceAuthorizationHandler>();
-
+            services.AddTransient<IBillService, BillService>();
             // Unit of work
             services.AddTransient<IUnitOfWork, EFUnitOfWork>();
 
@@ -120,8 +126,6 @@ namespace TanoApp
 
             app.UseEndpoints(endpoints =>
             {
-              
-
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

@@ -7,10 +7,10 @@ using TanoApp.Data.IRepositories;
 
 namespace TanoApp.Data.EF.Repositories
 {
-    public class ColorRepository: EFRepository<Color, int>, IColorRepository
+    public class ProductQuantityRepository: EFRepository<ProductQuantity, int>, IProductQuantityRepository
     {
         private AppDbContext _context;
-        public ColorRepository(AppDbContext dbContext): base(dbContext)
+        public ProductQuantityRepository(AppDbContext dbContext): base(dbContext)
         {
             _context = dbContext;
         }

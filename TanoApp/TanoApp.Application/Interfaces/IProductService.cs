@@ -15,5 +15,7 @@ namespace TanoApp.Application.Interfaces
         ProductViewModel GetById(int id);
         void Save();
         void ImportExcel(string filePath, int categoryId);
+        void AddQuantity(int productId, List<ProductQuantityViewModel> quantities);
+        List<ProductQuantityViewModel> GetQuantities(int productId);
     }
 }

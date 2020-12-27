@@ -1,12 +1,9 @@
 ﻿using AutoMapper;
-using Microsoft.EntityFrameworkCore;
 using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.WebSockets;
-using System.Threading.Tasks;
 using TanoApp.Application.Interfaces;
 using TanoApp.Application.ViewModels.Products;
 using TanoApp.Data.Entities;
@@ -26,13 +23,21 @@ namespace TanoApp.Application.Implementation
         IProductTagRepository _productTagRepository;
         ITagRepository _tagRepository;
         IUnitOfWork _unitOfWork;
-        public ProductService(IProductRepository productRepository, IMapper mapper, IProductTagRepository productTagRepository, ITagRepository tagRepository, IUnitOfWork unitOfWork)
+        IProductQuantityRepository _productQuantityRepository;
+        public ProductService(
+            IProductRepository productRepository,
+            IMapper mapper,
+            IProductTagRepository productTagRepository,
+            ITagRepository tagRepository,
+            IUnitOfWork unitOfWork,
+            IProductQuantityRepository productQuantityRepository)
         {
             _productRepository = productRepository;
             _mapper = mapper;
             _productTagRepository = productTagRepository;
             _tagRepository = tagRepository;
             _unitOfWork = unitOfWork;
+            _productQuantityRepository = productQuantityRepository;
         }
 
         public ProductViewModel Add(ProductViewModel productVm)
@@ -188,6 +193,27 @@ namespace TanoApp.Application.Implementation
                 product.ProductTags.Add(tag);
             }
             _productRepository.Update(product);
+        }
+
+        public List<ProductQuantityViewModel> GetQuantities(int productId)
+        {
+            var productQuantities = _productQuantityRepository.FindAll(x => x.ProductId == productId).ToList();
+            return _mapper.Map<List<ProductQuantity>, List<ProductQuantityViewModel>>(productQuantities);
+        }
+
+        public void AddQuantity(int productId, List<ProductQuantityViewModel> quantities)
+        {
+            var oldQuantity = _productQuantityRepository.FindAll(x => x.ProductId == productId).ToList();
+            _productQuantityRepository.RemoveMultiple(oldQuantity);
+            foreach( var quantity in quantities)
+            {
+                var newProductQuantity = new ProductQuantity();
+                newProductQuantity.ProductId = productId;
+                newProductQuantity.ColorId = quantity.ColorId;
+                newProductQuantity.SizeId = quantity.SizeId;
+                newProductQuantity.Quantity = quantity.Quantity;
+                _productQuantityRepository.Add(newProductQuantity);
+            }
         }
     }
 }

@@ -22,6 +22,7 @@ namespace TanoApp.Application.AutoMapper
             CreateMap<BillDetailViewModel, BillDetail>();
             CreateMap<SizeViewModel, Size>();
             CreateMap<ColorViewModel, Color>();
+            CreateMap<ProductQuantityViewModel, ProductQuantity>();
         }
     }
 }

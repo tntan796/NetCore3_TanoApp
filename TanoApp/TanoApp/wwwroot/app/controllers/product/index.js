@@ -1,5 +1,6 @@
 ﻿var productController = function () {
     var quantityProductManagerment = new QuantityProductManagerment();
+    var imageProduct = new ImageProduct();
 
     this.initializer = function () {
         loadCategories();
@@ -7,6 +8,7 @@
         registerEvent();
         registerControls();
         quantityProductManagerment.initializer();
+        imageProduct.initializer();
     }
 
     function registerControls() {

@@ -7,6 +7,7 @@
     <script src="~/admin-side/plugins/jquery-easyui-1.9.9/jquery.easyui.min.js"></script>
     <script src="~/app/controllers/product/quantity-product-management.js"></script>
     <script src="~/app/controllers/product/index.js"></script>
+    <script src="~/app/controllers/product/product-image.js"></script>
     <script>
         var product = new productController();
         product.initializer();
@@ -109,20 +110,24 @@
             {{ ^isActive}}
             <td><label class="label bg-danger">{{status}}</label></td>
             {{/isActive}}
-            <td>
-                <button class="btn btn-primary waves-effect btn-edit" title="Sửa" data-id={{id}}>
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-success waves-effect btn-quantity-management" title="Số lượng" data-id={{id}}>
-                    <i class="fa fa-tasks" aria-hidden="true"></i>
-                </button>
-                <button class="btn btn-danger waves-effect btn-delete" title="Xóa" data-id={{id}}>
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                </button>
-            </td>
+        <td>
+            <button class="btn btn-primary waves-effect btn-edit" title="Edit" data-id={{id}}>
+                <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-success waves-effect btn-quantity-management" title="Quantity Manage" data-id={{id}}>
+                <i class="fa fa-tasks" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-dark waves-effect btn-image-management" title="Image Manage" data-id={{id}}>
+                <i class="fa fa-tasks" aria-hidden="true"></i>
+            </button>
+            <button class="btn btn-danger waves-effect btn-delete" title="Delete" data-id={{id}}>
+                <i class="fa fa-trash-o" aria-hidden="true"></i>
+            </button>
+        </td>
         </tr>
     </script>
 
     @Html.Partial("_AddEditProduct.cshtml")
     @Html.Partial("_ImportExcelModal.cshtml")
     @Html.Partial("_QuantityManagermentModal.cshtml")
+    @Html.Partial("_ProductImageModal.cshtml")

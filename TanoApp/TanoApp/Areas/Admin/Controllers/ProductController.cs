@@ -170,5 +170,18 @@ namespace TanoApp.Areas.Admin.Controllers
             return new OkObjectResult(quantities);
         }
 
+        [HttpGet]
+        public IActionResult GetImages(int productId)
+        {
+            return Ok(_productService.GetImages(productId));
+        }
+
+        [HttpPost]
+        public IActionResult AddImages(int productId, string[] images)
+        {
+            _productService.AddImages(productId, images);
+            _productService.Save();
+            return new OkObjectResult(images);
+        }
     }
 }

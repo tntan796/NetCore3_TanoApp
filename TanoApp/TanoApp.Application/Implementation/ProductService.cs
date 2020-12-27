@@ -24,13 +24,15 @@ namespace TanoApp.Application.Implementation
         ITagRepository _tagRepository;
         IUnitOfWork _unitOfWork;
         IProductQuantityRepository _productQuantityRepository;
+        IProductImageRepository _productImageRepository;
         public ProductService(
             IProductRepository productRepository,
             IMapper mapper,
             IProductTagRepository productTagRepository,
             ITagRepository tagRepository,
             IUnitOfWork unitOfWork,
-            IProductQuantityRepository productQuantityRepository)
+            IProductQuantityRepository productQuantityRepository,
+            IProductImageRepository productImageRepository)
         {
             _productRepository = productRepository;
             _mapper = mapper;
@@ -38,6 +40,7 @@ namespace TanoApp.Application.Implementation
             _tagRepository = tagRepository;
             _unitOfWork = unitOfWork;
             _productQuantityRepository = productQuantityRepository;
+            _productImageRepository = productImageRepository;
         }
 
         public ProductViewModel Add(ProductViewModel productVm)
@@ -214,6 +217,25 @@ namespace TanoApp.Application.Implementation
                 newProductQuantity.Quantity = quantity.Quantity;
                 _productQuantityRepository.Add(newProductQuantity);
             }
+        }
+
+        public void AddImages(int productId, string[] images)
+        {
+            _productImageRepository.RemoveMultiple(_productImageRepository.FindAll(x => x.ProductId == productId).ToList());
+            foreach(var image in images)
+            {
+                _productImageRepository.Add(new ProductImage()
+                {
+                    Path = image,
+                    ProductId = productId,
+                    Caption = string.Empty
+                });
+            }
+        }
+        public List<ProductImageViewModel> GetImages(int productId)
+        {
+            var productImages = _productImageRepository.FindAll(x => x.ProductId == productId).ToList();
+            return _mapper.Map<List<ProductImage>, List<ProductImageViewModel>>(productImages);
         }
     }
 }

@@ -1,0 +1,54 @@
+﻿<div class="modal fade" id="product-image-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog  modal-lg" style="max-width: 85%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="bootbox-close-button close waves-effect" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Manage Image</h4>
+            </div>
+            <div id="horizontal-form">
+                <form class="form-horizontal" role="form" id="frmMaintainance">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label no-padding-right">Ảnh đã chọn</label>
+                        <div class="col-sm-10">
+                            <input type="hidden" id="hideId" value="" />
+                            <div id="image-list" class="col-md-12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="txtName" class="col-sm-2 control-label no-padding-right">Chọn ảnh</label>
+                        <div class="col-sm-10">
+                            <div class="input-group">
+                                <input type="file" id="fileImage" />
+                            </div><!-- /input-group -->
+                        </div>
+                    </div>
+                </form>
+
+             
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-12 text-right">
+                    <button type="button" id="btnSaveImages" class="btn btn-success">Save</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Model animation js -->
+    <script type="text/javascript" src="~/admin-side/bower_components/classie/js/classie.js"></script>
+    <script src="~/admin-side/plugins/ModalWindowEffects/js/modalEffects.js"></script>
+    <!-- custom js -->
+    <script src="~/admin-side/pages/modal.js"></script>
+}
+
+@section Styles {
+    <!-- Modal animation CSS -->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/plugins/modal/css/component.css">
+    <!-- Responsive.css-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/css/responsive.css">
+}

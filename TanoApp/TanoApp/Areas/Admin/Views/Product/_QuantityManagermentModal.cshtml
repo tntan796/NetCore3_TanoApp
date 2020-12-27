@@ -1,0 +1,64 @@
+﻿<div class="modal fade" id="modalQuantityProductManagerment" tabindex="-1" role="dialog">
+    <div class="modal-dialog  modal-lg" style="max-width: 85%">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="bootbox-close-button close waves-effect" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Add edit product</h4>
+            </div>
+            <div id="horizontal-form">
+                <form class="form-horizontal" role="form" id="frmMaintainance">
+                    <input type="hidden" id="hideId" value="" />
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <td>Màu sắc</td>
+                                <td>Kích thước</td>
+                                <td>Số lượng</td>
+                                <td></td>
+                            </tr>
+                        </thead>
+                        <tbody id="table-quantity-content"></tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="4">
+                                    <button class="btn btn-xs btn-success" type="button" id="btn-add-quantity">Thêm</button>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </form>
+
+                <script type="x-tmpl-mustache" id="template-table-quantity">
+                    <tr data-id="{{Id}}">
+                        <td>{{{Colors}}}</td>
+                        <td>{{{Sizes}}}</td>
+                        <td><input type="number" class="txtQuantity form-control" value="{{Quantity}}" /></td>
+                        <td><button class="btn btn-xs btn-danger btn-delete-quantity" type="button"><i class="fa fa-trash"></i></button></td>
+                    </tr>
+                </script>
+            </div>
+            <div class="modal-footer">
+                <div class="col-sm-12 text-right">
+                    <button type="button" id="btnSaveQuantity" class="btn btn-success">Lưu lại</button>
+                    <button type="button" data-dismiss="modal" class="btn btn-danger">Đóng</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts {
+    <!-- Model animation js -->
+    <script type="text/javascript" src="~/admin-side/bower_components/classie/js/classie.js"></script>
+    <script src="~/admin-side/plugins/ModalWindowEffects/js/modalEffects.js"></script>
+    <!-- custom js -->
+    <script src="~/admin-side/pages/modal.js"></script>
+}
+
+@section Styles {
+    <!-- Modal animation CSS -->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/plugins/modal/css/component.css">
+    <!-- Responsive.css-->
+    <link rel="stylesheet" type="text/css" href="~/admin-side/css/responsive.css">
+}

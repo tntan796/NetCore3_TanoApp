@@ -11,15 +11,17 @@ namespace TanoApp.Application.AutoMapper
         {
             CreateMap<ProductCategory, ProductCategoryViewModel>();
 
-            CreateMap<Function, FunctionViewModel>();
-            CreateMap<Product, ProductViewModel>();
-            CreateMap<AppUser, AppUserViewModel>();
-            CreateMap<AppRole, AppRoleViewModel>();
-            CreateMap<Permission, PermissionViewModel>();
-            CreateMap<Bill, BillViewModel>();
-            CreateMap<BillDetail, BillDetailViewModel>();
-            CreateMap<Size, SizeViewModel>();
-            CreateMap<Color, ColorViewModel>();
+            CreateMap<Function, FunctionViewModel>().MaxDepth(2);
+            CreateMap<Product, ProductViewModel>().MaxDepth(2);
+            CreateMap<AppUser, AppUserViewModel>().MaxDepth(2);
+            CreateMap<AppRole, AppRoleViewModel>().MaxDepth(2);
+            CreateMap<Permission, PermissionViewModel>().MaxDepth(2);
+            CreateMap<Bill, BillViewModel>().MaxDepth(2);
+            CreateMap<BillDetail, BillDetailViewModel>().MaxDepth(2);
+            CreateMap<Size, SizeViewModel>().MaxDepth(2);
+            CreateMap<Color, ColorViewModel>().MaxDepth(2);
+            CreateMap<ProductQuantity, ProductQuantityViewModel>().MaxDepth(2);
+            CreateMap<ProductImage, ProductImageViewModel>().MaxDepth(2);
         }
     }
 }

@@ -5,32 +5,39 @@
                 <button type="button" class="bootbox-close-button close waves-effect" data-dismiss="modal" aria-hidden="true">×</button>
                 <h4 class="modal-title">Manage Image</h4>
             </div>
-            <div id="horizontal-form">
+            <div id="horizontal-form" class="p-2">
                 <form class="form-horizontal" role="form" id="frmMaintainance">
                     <div class="form-group">
-                        <label class="col-sm-2 control-label no-padding-right">Ảnh đã chọn</label>
+                        <label for="txtName" class="col-sm-2 control-label no-padding-right">Select Image</label>
                         <div class="col-sm-10">
-                            <input type="hidden" id="hideId" value="" />
-                            <div id="image-list" class="col-md-12">
+                            <div class="input-group">
+                                <label for="fileImage" class="btn btn-primary">Select Image</label>
+                                <input type="file" id="fileImage" hidden/>
                             </div>
                         </div>
                     </div>
+
                     <div class="form-group">
-                        <label for="txtName" class="col-sm-2 control-label no-padding-right">Chọn ảnh</label>
+                        <label class="col-sm-2 control-label no-padding-right">Seletecd Images</label>
                         <div class="col-sm-10">
-                            <div class="input-group">
-                                <input type="file" id="fileImage" />
-                            </div><!-- /input-group -->
+                            <input type="hidden" id="hideId" value="" />
+                            <div id="image-list" class="row">
+                            </div>
                         </div>
                     </div>
+
                 </form>
 
              
             </div>
             <div class="modal-footer">
                 <div class="col-sm-12 text-right">
-                    <button type="button" id="btnSaveImages" class="btn btn-success">Save</button>
-                    <button type="button" data-dismiss="modal" class="btn btn-danger">Cancel</button>
+                    <button type="button" id="btnSaveImages" class="btn btn-success waves-effect">
+                        <i class="fa fa-floppy-o" aria-hidden="true"></i> Save
+                    </button>
+                    <button type="button" data-dismiss="modal" class="btn btn-danger waves-effect">
+                        <i class="fa fa-times" aria-hidden="true"></i> Cancel
+                    </button>
                 </div>
             </div>
         </div>

@@ -37,8 +37,12 @@
                 success: function (path) {
                     clearFileInput($("#fileImage"));
                     images.push(path);
-                    $("#image-list").append("<div class='col-md-3'><img width='100' data-path='" + path + "' src='" + path + "'/></div>")
-                    alert("thanh cong");
+                    let render = '';
+                    render += '<div class="col-md-3 image-item">';
+                    render += '<img src = "' + path + '" />';
+                    render += '<br/><a href="#" class="btn-delete-image btn-danger text-white">x</a>';
+                    render += '</div >';
+                    $("#image-list").append(render);
                 },
                 error: function (err) {
                     console.log(err);
@@ -69,18 +73,23 @@
         })
 
         function loadImages() {
+            var id = $("#hideId").val();
             $.ajax({
                 url: '/admin/product/GetImages',
                 data: {
-                    productId: $("hideId").val()
+                    productId: id
                 },
                 type: 'get',
                 dataType: 'json',
                 success: function (response) {
                     var render = '';
                     $.each(response, function (i, item) {
-                        render += '<div class="col-md-3"> <img width="100" src="' + item.path + '"/> <br/><a href="#" class="btn btn-delete-iamge btn-danger">Delete</a> </div>'
+                        render += '<div class="col-md-3 image-item">';
+                        render += '<img src = "' + item.path + '" />';
+                        render += '<br/><a href="#" class="bg-danger btn-delete-image text-white">x</a>';
+                        render += '</div >';
                     })
+                    $("#image-list").html(render);
                 }
             })
         }

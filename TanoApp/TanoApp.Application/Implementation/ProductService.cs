@@ -25,6 +25,7 @@ namespace TanoApp.Application.Implementation
         IUnitOfWork _unitOfWork;
         IProductQuantityRepository _productQuantityRepository;
         IProductImageRepository _productImageRepository;
+        IWholePriceRepository _wholePriceRepository;
         public ProductService(
             IProductRepository productRepository,
             IMapper mapper,
@@ -32,7 +33,8 @@ namespace TanoApp.Application.Implementation
             ITagRepository tagRepository,
             IUnitOfWork unitOfWork,
             IProductQuantityRepository productQuantityRepository,
-            IProductImageRepository productImageRepository)
+            IProductImageRepository productImageRepository,
+            IWholePriceRepository wholePriceRepository)
         {
             _productRepository = productRepository;
             _mapper = mapper;
@@ -41,6 +43,7 @@ namespace TanoApp.Application.Implementation
             _unitOfWork = unitOfWork;
             _productQuantityRepository = productQuantityRepository;
             _productImageRepository = productImageRepository;
+            _wholePriceRepository = wholePriceRepository;
         }
 
         public ProductViewModel Add(ProductViewModel productVm)
@@ -236,6 +239,29 @@ namespace TanoApp.Application.Implementation
         {
             var productImages = _productImageRepository.FindAll(x => x.ProductId == productId).ToList();
             return _mapper.Map<List<ProductImage>, List<ProductImageViewModel>>(productImages);
+        }
+
+        public void AddWholePrices(int productId, List<WholePriceViewModel> wholePrices)
+        {
+            var oldWholePrices = _wholePriceRepository.FindAll(x => x.ProductId == productId).ToList(); ;
+            _wholePriceRepository.RemoveMultiple(oldWholePrices);
+            foreach(var wholePrice in wholePrices)
+            {
+                _wholePriceRepository.Add(new WholePrice()
+                {
+                    ProductId = productId,
+                    FromQuantity = wholePrice.FromQuantity,
+                    ToQuantity = wholePrice.ToQuantity,
+                    Price = wholePrice.Price
+                });
+
+            }
+        }
+
+        public List<WholePriceViewModel> GetWholePrice(int productId)
+        {
+            var wholePrices = _wholePriceRepository.FindAll(x => x.ProductId == productId).ToList();
+            return _mapper.Map<List<WholePrice>, List<WholePriceViewModel>>(wholePrices);
         }
     }
 }

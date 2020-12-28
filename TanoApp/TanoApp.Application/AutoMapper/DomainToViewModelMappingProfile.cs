@@ -22,6 +22,7 @@ namespace TanoApp.Application.AutoMapper
             CreateMap<Color, ColorViewModel>().MaxDepth(2);
             CreateMap<ProductQuantity, ProductQuantityViewModel>().MaxDepth(2);
             CreateMap<ProductImage, ProductImageViewModel>().MaxDepth(2);
+            CreateMap<WholePrice, WholePriceViewModel>().MaxDepth(2);
         }
     }
 }

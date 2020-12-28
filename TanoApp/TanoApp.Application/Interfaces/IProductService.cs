@@ -20,5 +20,8 @@ namespace TanoApp.Application.Interfaces
 
         void AddImages(int productId, string[] images);
         List<ProductImageViewModel> GetImages(int productId);
+
+        void AddWholePrices(int productId, List<WholePriceViewModel> wholePrices);
+        List<WholePriceViewModel> GetWholePrice(int productId);
     }
 }

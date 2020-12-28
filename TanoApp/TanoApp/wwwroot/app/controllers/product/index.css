@@ -30,3 +30,30 @@
     border-top-left-radius: 5px !important;
     border-top-right-radius: 5px !important;
 }
+
+
+#image-list .image-item {
+    margin: 0.5em;
+    box-shadow: 0 0 3px gray;
+    position: relative;
+    text-align: center;
+    max-height: 20vh;
+    overflow: hidden;
+    margin-bottom: 0.5em;
+    border-radius: 10px;
+}
+
+#image-list .btn-delete-image {
+    height: 1.5em;
+    width: 1.5em;
+    z-index: 1000;
+    position: absolute;
+    border-radius: 50%;
+    top: 0.3em;
+    right: 0.3em;
+}
+
+#image-list img {
+    max-height: 100%;
+
+}

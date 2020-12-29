@@ -1,6 +1,6 @@
 ﻿namespace TanoApp.Application.ViewModels.Products
 {
-    public class WholePriveViewModel
+    public class WholePriceViewModel
     {
         public int Id { set; get; }
         public int ProductId { get; set; }

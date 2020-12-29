@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using OfficeOpenXml;
 using TanoApp.Application.Interfaces;
 using TanoApp.Application.ViewModels.Products;
+using TanoApp.Data.Entities;
 using TanoApp.Utilities.Helpers;
 
 namespace TanoApp.Areas.Admin.Controllers
@@ -182,6 +183,20 @@ namespace TanoApp.Areas.Admin.Controllers
             _productService.AddImages(productId, images);
             _productService.Save();
             return new OkObjectResult(images);
+        }
+
+        [HttpGet]
+        public IActionResult GetWholePrice(int productId)
+        {
+            return Ok(_productService.GetWholePrice(productId));
+        }
+
+        [HttpPost]
+        public IActionResult AddWholePrice(int productId, List<WholePriceViewModel> wholePrices)
+        {
+            _productService.AddWholePrices(productId, wholePrices);
+            _productService.Save();
+            return Ok(wholePrices);
         }
     }
 }

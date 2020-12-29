@@ -76,6 +76,7 @@ namespace TanoApp
             services.AddTransient<IBillDetailRepository, BillDetailRepository>();
             services.AddTransient<IProductQuantityRepository, ProductQuantityRepository>();
             services.AddTransient<IProductImageRepository, ProductImageRepository>();
+            services.AddTransient<IWholePriceRepository, WholePriceRepository>();
 
             // Services
             services.AddTransient<IFunctionService, FunctionService>();

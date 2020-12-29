@@ -6,8 +6,9 @@
     <script src="~/admin-side/js/jquery.twbsPagination.js"></script>
     <script src="~/admin-side/plugins/jquery-easyui-1.9.9/jquery.easyui.min.js"></script>
     <script src="~/app/controllers/product/quantity-product-management.js"></script>
-    <script src="~/app/controllers/product/index.js"></script>
+    <script src="~/app/controllers/product/whole-price-product.js"></script>
     <script src="~/app/controllers/product/product-image.js"></script>
+    <script src="~/app/controllers/product/index.js"></script>
     <script>
         var product = new productController();
         product.initializer();
@@ -71,7 +72,7 @@
                             <th data-priority="1">Price</th>
                             <th data-priority="3">Created Date</th>
                             <th data-priority="4">Status</th>
-                            <th data-priority="5">Method</th>
+                            <th data-priority="5" class="w-20vw">Method</th>
                         </tr>
                     </thead>
                     <tbody id="tbl-body">
@@ -122,6 +123,9 @@
                 <button class="btn btn-dark waves-effect btn-image-management" title="Image Manage" data-id={{id}}>
                     <i class="fa fa-picture-o" aria-hidden="true"></i>
                 </button>
+                <button class="btn btn-outline-primary waves-effect btn-whole-price" title="Whole Price Manage" data-id={{id}}>
+                    <i class="fa fa-calculator" aria-hidden="true"></i>
+                </button>
                 <button class="btn btn-danger waves-effect btn-delete" title="Delete" data-id={{id}}>
                     <i class="fa fa-trash-o" aria-hidden="true"></i>
                 </button>
@@ -133,3 +137,4 @@
     @Html.Partial("_ImportExcelModal.cshtml")
     @Html.Partial("_QuantityManagermentModal.cshtml")
     @Html.Partial("_ProductImageModal.cshtml")
+    @Html.Partial("_WholePriceModal.cshtml")
